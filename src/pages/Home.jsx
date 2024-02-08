@@ -5,6 +5,8 @@ import second from "../assets/sllider/second.jpg";
 import mainPage from "../assets/sllider/mainPage.jpg";
 import { ourProduct } from "../constants/ourProducts";
 import WhyChooseEmiko from "../components/sections/home/WhyChooseEmiko";
+import BatteryTips from "../components/sections/home/BatteryTips";
+import TestimonialSection from "../components/sections/home/TestimonialSection";
 const Home = () => {
   const [index, setIndex] = useState(0);
 
@@ -91,6 +93,8 @@ const Home = () => {
 
       {/* Why Choose Emiko */}
       <WhyChooseEmiko />
+      <BatteryTips />
+      <TestimonialSection />
     </div>
   );
 };
