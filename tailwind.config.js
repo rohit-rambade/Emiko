@@ -11,6 +11,10 @@ export default {
         secondary: "#FF5B5B",
         hoverColor: "#FF0505",
       },
+      backgroundImage: {
+        banner: "url('./assets/banner.jpg')",
+        section3banner: "url('./assets/home/section-3-banner.png')",
+      },
     },
   },
   plugins: [],

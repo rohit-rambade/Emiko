@@ -7,7 +7,10 @@ const SubMenu = ({ navMenu, index }) => {
     >
       <ul className=" flex flex-col gap-y-1 px-2 py-4">
         {navMenu.submenu.map((submenu) => (
-          <li key={submenu.id} className="p-2 w-full ">
+          <li
+            key={submenu.id}
+            className="p-2  relative  w-fit block after:block after:content-[''] after:absolute after:h-[3px] after:bg-primary after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-center cursor-pointer "
+          >
             {submenu.title}
           </li>
         ))}
