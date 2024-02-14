@@ -7,6 +7,8 @@ import { ourProduct } from "../constants/ourProducts";
 import WhyChooseEmiko from "../components/sections/home/WhyChooseEmiko";
 import BatteryTips from "../components/sections/home/BatteryTips";
 import TestimonialSection from "../components/sections/home/TestimonialSection";
+import LifeAtEmiko from "../components/sections/home/LifeAtEmiko";
+import ExploreOpportunities from "../components/sections/home/ExploreOpportunities";
 const Home = () => {
   const [index, setIndex] = useState(0);
 
@@ -39,7 +41,8 @@ const Home = () => {
             }`}
           />
         ))}
-        {/* Slider indicators */}
+        ------------------------- Slider indicators
+        -----------------------------------
         <div className="absolute z-30 flex -translate-x-1/2 bottom-5 left-1/2 space-x-3 rtl:space-x-reverse">
           {images.map((_, idx) => (
             <button
@@ -56,7 +59,6 @@ const Home = () => {
           ))}
         </div>
       </div>
-
       <div>
         <section className="text-black font-poppins">
           <div className="container px-5 py-24 mx-auto">
@@ -90,11 +92,12 @@ const Home = () => {
           </div>
         </section>
       </div>
-
       {/* Why Choose Emiko */}
       <WhyChooseEmiko />
       <BatteryTips />
       <TestimonialSection />
+      <LifeAtEmiko />
+      <ExploreOpportunities />
     </div>
   );
 };

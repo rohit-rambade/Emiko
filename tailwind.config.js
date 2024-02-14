@@ -1,13 +1,16 @@
 /** @type {import('tailwindcss').Config} */
+
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
       fontFamily: {
         poppins: ["Poppins", "sans-serif"],
+        kameron: ["Kameron", "serif"],
+        arimo: ["Arimo", "sans-serif"],
       },
       colors: {
-        primary: "#DE0606",
+        primary: "#E90404",
         secondary: "#FF5B5B",
         hoverColor: "#FF0505",
       },
