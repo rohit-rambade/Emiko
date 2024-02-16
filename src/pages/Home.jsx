@@ -9,6 +9,8 @@ import BatteryTips from "../components/sections/home/BatteryTips";
 import TestimonialSection from "../components/sections/home/TestimonialSection";
 import LifeAtEmiko from "../components/sections/home/LifeAtEmiko";
 import ExploreOpportunities from "../components/sections/home/ExploreOpportunities";
+import BlogsAndArticles from "../components/sections/home/BlogsAndArticles";
+import ProductOne from "../components/sections/products/ProductOne";
 const Home = () => {
   const [index, setIndex] = useState(0);
 
@@ -41,8 +43,8 @@ const Home = () => {
             }`}
           />
         ))}
-        ------------------------- Slider indicators
-        -----------------------------------
+        {/* Slider indicators */}
+
         <div className="absolute z-30 flex -translate-x-1/2 bottom-5 left-1/2 space-x-3 rtl:space-x-reverse">
           {images.map((_, idx) => (
             <button
@@ -98,6 +100,8 @@ const Home = () => {
       <TestimonialSection />
       <LifeAtEmiko />
       <ExploreOpportunities />
+      <BlogsAndArticles />
+      <ProductOne />
     </div>
   );
 };
