@@ -101,7 +101,6 @@ const Home = () => {
       <LifeAtEmiko />
       <ExploreOpportunities />
       <BlogsAndArticles />
-      <ProductOne />
     </div>
   );
 };
