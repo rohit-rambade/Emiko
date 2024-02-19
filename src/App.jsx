@@ -4,6 +4,9 @@ import Footer from "./components/common/Footer";
 import Home from "./pages/Home";
 import Product from "./pages/Product";
 import Faq from "./pages/Faq";
+import Timeline from "./components/sections/history/Timeline";
+import About from "./pages/About";
+import Careers from "./pages/Careers";
 
 const App = () => {
   return (
@@ -11,7 +14,10 @@ const App = () => {
       <Header />
       {/* <Home /> */}
       {/* <Product /> */}
-      <Faq />
+      <Careers />
+      {/* <Faq /> */}
+      {/* <Timeline /> */}
+      {/* <About /> */}
       <Footer />
     </>
   );

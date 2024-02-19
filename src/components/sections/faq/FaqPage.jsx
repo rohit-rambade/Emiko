@@ -12,8 +12,8 @@ const FaqPage = () => {
             className="object-center w-full h-full"
           ></img>
         </div>
-        <div>
-          <div class="relative w-full bg-white px-6 pt-10 pb-8 mt-8 shadow-xl ring-1 ring-gray-900/5 sm:mx-auto sm:max-w-2xl sm:rounded-lg sm:px-10">
+        <div className="w-full">
+          <div class="relative w-full bg-gray-200 px-6 pt-10 pb-8 mt-8  ring-gray-900/5 sm:mx-auto sm:max-w-full sm:rounded-lg sm:px-10">
             <div class="mx-auto px-5">
               <div class="flex flex-col items-center">
                 <h2 class="mt-5 text-center text-3xl font-bold tracking-tight md:text-5xl">
@@ -23,11 +23,15 @@ const FaqPage = () => {
                   Frequenty asked questions
                 </p>
               </div>
-              <div class="mx-auto mt-8 grid max-w-xl divide-y divide-neutral-200">
+              <div class="mx-auto mt-8 px-6 grid max-w-full divide-y divide-neutral-200">
                 <div class="py-5">
                   <details class="group">
-                    <summary class="flex cursor-pointer list-none items-center justify-between font-medium">
-                      <span> How does the billing work?</span>
+                    <summary class="flex cursor-pointer list-none items-center justify-between font-medium ">
+                      <span>
+                        {" "}
+                        While replacing the battery or cleaning the terminals,
+                        why is it important to remove the ground wire first?
+                      </span>
                       <span class="transition group-open:rotate-180">
                         <svg
                           fill="none"
@@ -45,18 +49,27 @@ const FaqPage = () => {
                       </span>
                     </summary>
                     <p class="group-open:animate-fadeIn mt-3 text-neutral-600">
-                      Springerdata offers a variety of billing options,
-                      including monthly and annual subscription plans, as well
-                      as pay-as-you-go pricing for certain services. Payment is
-                      typically made through a credit card or other secure
-                      online payment method.
+                      Before you start, always check the type of grounding
+                      system the vehicle has. If you remove the positive
+                      connector first in a negative ground system, a spark may
+                      be created in the process. It could happen if the metal
+                      tool you're using to remove the positive terminal
+                      connector comes in contact with any piece of metal in the
+                      car. If you are working near the battery when this occurs,
+                      it might create fire source causing the battery to
+                      explode. It's extremely important to remove the ground
+                      source first.
                     </p>
                   </details>
                 </div>
                 <div class="py-5">
                   <details class="group">
                     <summary class="flex cursor-pointer list-none items-center justify-between font-medium">
-                      <span> Can I get a refund for my subscription?</span>
+                      <span>
+                        {" "}
+                        1.Battery Recycling… How to handle used batteries with
+                        care
+                      </span>
                       <span class="transition group-open:rotate-180">
                         <svg
                           fill="none"
@@ -74,19 +87,19 @@ const FaqPage = () => {
                       </span>
                     </summary>
                     <p class="group-open:animate-fadeIn mt-3 text-neutral-600">
-                      We offer a 30-day money-back guarantee for most of its
-                      subscription plans. If you are not satisfied with your
-                      subscription within the first 30 days, you can request a
-                      full refund. Refunds for subscriptions that have been
-                      active for longer than 30 days may be considered on a
-                      case-by-case basis.
+                      Batteries contain a number of heavy metals and toxic
+                      chemicals which is why they must be disposed off with care
+                      to prevent contamination and pollution. SF Batteries
+                      recommends their customers to dispose their batteries
+                      responsibly at proper waste management centres where they
+                      can be recycled.
                     </p>
                   </details>
                 </div>
                 <div class="py-5">
                   <details class="group">
                     <summary class="flex cursor-pointer list-none items-center justify-between font-medium">
-                      <span> How do I cancel my subscription?</span>
+                      <span>Q.How do I safely jump-start my battery?</span>
                       <span class="transition group-open:rotate-180">
                         <svg
                           fill="none"
@@ -104,17 +117,41 @@ const FaqPage = () => {
                       </span>
                     </summary>
                     <p class="group-open:animate-fadeIn mt-3 text-neutral-600">
-                      To cancel your subscription, you can log in to your
-                      account and navigate to the subscription management page.
-                      From there, you should be able to cancel your subscription
-                      and stop future billing.
+                      A. WARNING:Modern vehicles with electronic management
+                      systems should not be jump started without "protected"
+                      jump starter leads and it is necessary to refer to the
+                      owner's handbook for jump starting procedures for such
+                      vehicles. Vehicle Jump Starting procedure is as follows
+                      and should be followed carefully: Ensure battery for
+                      jump-starting and vehicle battery are of the same declared
+                      voltage (say 12V) Turn off all electrical loads, check
+                      vehicles so that they are not touching each other and are
+                      in neutral. Check that vehicles have the same terminal
+                      earthed, If not, refer to manufacturers' instructions.
+                      Check that cables are not frayed or damaged. Carry out the
+                      following steps in sequence:
+                      <br />
+                      <br />
+                      On negative grounded system, connect positive of
+                      jump-starting battery to the positive of the stalled car
+                      battery . Connect one end of other cable to negative (-)
+                      terminal of booster battery. Connect other cable away from
+                      battery, to engine block or car frame of the vehicle to be
+                      started. Make sure cables are away from fan blades and
+                      other moving vehicle parts. If vehicle does not start
+                      within 30 seconds, call an auto electrician. After
+                      starting, remove cables in reverse order, starting with
+                      one connected to engine block or car frame.
                     </p>
                   </details>
                 </div>
                 <div class="py-5">
                   <details class="group">
                     <summary class="flex cursor-pointer list-none items-center justify-between font-medium">
-                      <span> Is there a free trial?</span>
+                      <span>
+                        Q.How do I know for sure that my battery needs
+                        replacement?
+                      </span>
                       <span class="transition group-open:rotate-180">
                         <svg
                           fill="none"
@@ -132,17 +169,18 @@ const FaqPage = () => {
                       </span>
                     </summary>
                     <p class="group-open:animate-fadeIn mt-3 text-neutral-600">
-                      We offer a free trial of our software for a limited time.
-                      During the trial period, you will have access to a limited
-                      set of features and functionality, but you will not be
-                      charged.
+                      Many other problems can keep a car from starting. It is
+                      advisable to do some troubleshooting. SF Batteries
+                      authorised dealers test batteries free of charge, so as a
+                      good first step visit your nearest SF Batteries Dealer to
+                      be sure of your battery.
                     </p>
                   </details>
                 </div>
                 <div class="py-5">
                   <details class="group">
                     <summary class="flex cursor-pointer list-none items-center justify-between font-medium">
-                      <span> How do I contact support?</span>
+                      <span> Q.What can excessive heat do to a battery?</span>
                       <span class="transition group-open:rotate-180">
                         <svg
                           fill="none"
@@ -160,17 +198,20 @@ const FaqPage = () => {
                       </span>
                     </summary>
                     <p class="group-open:animate-fadeIn mt-3 text-neutral-600">
-                      If you need help with our platform or have any other
-                      questions, you can contact the company's support team by
-                      submitting a support request through the website or by
-                      emailing support@ourwebsite.com.
+                      Heat can deteriorate a battery's life quicker by
+                      evaporating the water from the electrolyte, and corroding
+                      and weakening the positive grids.
                     </p>
                   </details>
                 </div>
                 <div class="py-5">
                   <details class="group">
                     <summary class="flex cursor-pointer list-none items-center justify-between font-medium">
-                      <span> Do you offer any discounts or promotions?</span>
+                      <span>
+                        {" "}
+                        Q.What are the features that should be considered when
+                        buying a battery?
+                      </span>
                       <span class="transition group-open:rotate-180">
                         <svg
                           fill="none"
@@ -188,10 +229,11 @@ const FaqPage = () => {
                       </span>
                     </summary>
                     <p class="group-open:animate-fadeIn mt-3 text-neutral-600">
-                      We may offer discounts or promotions from time to time. To
-                      stay up-to-date on the latest deals and special offers,
-                      you can sign up for the company's newsletter or follow it
-                      on social media.
+                      Size:The dimensions of your original battery. Power:The
+                      Ampere hour required to power your vehicle.
+                      Warranty:Automotive batteries are backed by a warranty
+                      package. Choose the one that is right for your vehicle's
+                      needs.
                     </p>
                   </details>
                 </div>
