@@ -13,13 +13,13 @@ const CareersSection = () => {
       <div className="flex justify-center content-center">
         <img src={circle} alt="" className="w-1/2"></img>
       </div>
-      <div className="flex justify-center  text-center">
-        <div className="bg-slate-200 w-1/2 text-blue-600 font-bold text-4xl font-kameron ">
-          <h3>
+      <div className="flex justify-center  text-center bg-gray-200 px-6">
+        <div className=" w-1/2 text-blue-600 font-bold text-4xl font-kameron ">
+          <h3 className="my-6">
             We promote a culture of collaboration, freedom and innovation.
           </h3>
         </div>
-        <div className="bg-slate-400 w-1/2">
+        <div className=" w-1/2">
           <p>
             Embrace a dynamic work culture that fosters creativity,
             collaboration, and innovation. We prioritize diversity, encourage
@@ -32,88 +32,72 @@ const CareersSection = () => {
       </div>
       {/* Our departments */}
       <div className="my-8">
-        <section class="bg-gray-300 ">
+        <section class=" ">
           <div class="container px-6 py-8 mx-auto">
             <h2 class="text-2xl font-bold text-center text-blue-800 capitalize lg:text-6xl">
               More about EMIKO Battery
             </h2>
 
-            <div class="grid gap-8 mt-8 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3">
-              <div class="w-full max-w-xs text-center bg-white">
+            <div class="grid gap-8 mt-8 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 py-4">
+              <div class="flex flex-col justify-center content-center w-full max-w-xs text-center bg-white shadow-xl">
                 <img
-                  class="object-cover object-center w-full  rounded-full p-20 bg-white"
+                  class=" object-cover object-center w-full  px-20 bg-white"
                   src={finance}
                   alt="avatar"
                 />
-
-                <div class="mt-2">
-                  <h3 class="text-lg font-medium text-black ">
-                    Blogs and Articles
-                  </h3>
-                </div>
+                <h3 class="text-lg font-medium text-black ">Finance</h3>
               </div>
 
-              <div class="w-full max-w-xs text-center">
+              <div class="flex flex-col justify-center content-center w-full max-w-xs text-center bg-white shadow-xl">
                 <img
-                  class="object-cover object-center w-full h-48 mx-auto rounded-lg"
+                  class=" object-cover object-center w-full  px-20 bg-white"
                   src={supply}
                   alt="avatar"
                 />
-
-                <div class="mt-2">
-                  <h3 class="text-lg font-medium text-black ">Careers</h3>
-                </div>
+                <h3 class="text-lg font-medium text-black ">
+                  Manufacturing &Supply Chain
+                </h3>
               </div>
 
-              <div class="w-full max-w-xs text-center">
+              <div class="flex flex-col justify-center content-center w-full max-w-xs text-center bg-white shadow-xl">
                 <img
-                  class="object-cover object-center w-full h-48 mx-auto rounded-lg"
-                  src=""
+                  class=" object-cover object-center w-full  px-20 bg-white"
+                  src={networking}
                   alt="avatar"
                 />
-
-                <div class="mt-2">
-                  <h3 class="text-lg font-medium text-black ">FAQ</h3>
-                </div>
+                <h3 class="text-lg font-medium text-black ">IT & Networking</h3>
               </div>
             </div>
             <div class="grid gap-8 mt-8 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3">
-              <div class="w-full max-w-xs text-center">
+              <div class="flex flex-col justify-center content-center w-full max-w-xs text-center bg-white shadow-xl">
                 <img
-                  class="object-cover object-center w-full h-48 mx-auto rounded-lg"
-                  src=""
+                  class=" object-cover object-center w-full  px-20 bg-white"
+                  src={research}
                   alt="avatar"
                 />
-
-                <div class="mt-2">
-                  <h3 class="text-lg font-medium text-black ">
-                    Blogs and Articles
-                  </h3>
-                </div>
+                <h3 class="text-lg font-medium text-black ">
+                  Research and design
+                </h3>
               </div>
 
-              <div class="w-full max-w-xs text-center">
+              <div class="flex flex-col justify-center content-center w-full max-w-xs text-center bg-white shadow-xl">
                 <img
-                  class="object-cover object-center w-full h-48 mx-auto rounded-lg"
-                  src=""
+                  class=" object-cover object-center w-full  px-20 bg-white"
+                  src={sales}
                   alt="avatar"
                 />
-
-                <div class="mt-2">
-                  <h3 class="text-lg font-medium text-black ">Careers</h3>
-                </div>
+                <h3 class="text-lg font-medium text-black ">
+                  Sales & Marketing
+                </h3>
               </div>
 
-              <div class="w-full max-w-xs text-center">
+              <div class="flex flex-col justify-center content-center w-full max-w-xs text-center bg-white shadow-xl">
                 <img
-                  class="object-cover object-center w-full h-48 mx-auto rounded-lg"
-                  src=""
+                  class=" object-cover object-center w-full  px-20 bg-white"
+                  src={human}
                   alt="avatar"
                 />
-
-                <div class="mt-2">
-                  <h3 class="text-lg font-medium text-black ">FAQ</h3>
-                </div>
+                <h3 class="text-lg font-medium text-black ">Human Resource</h3>
               </div>
             </div>
           </div>

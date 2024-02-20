@@ -95,7 +95,7 @@ const Home = () => {
           </div>
         </section>
       </div>
-      {/* Why Choose Emiko */}
+
       <WhyChooseEmiko />
       <BatteryTips />
       <TestimonialSection />

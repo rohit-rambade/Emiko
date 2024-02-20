@@ -7,7 +7,7 @@ const FaqPage = () => {
     <>
       <div className=" flex flex-col h-full  justify-center items-center">
         <div className="flex justify-center content-center text-center py-6">
-          <img src={faq} alt="" className=" object-center w-1/2 h-full"></img>
+          <img src={faq} alt="" className=" object-center w-3/5"></img>
         </div>
         <div className="w-full">
           <div class="relative w-full bg-gray-200 px-6 pt-10 pb-8 mt-8  ring-gray-900/5 sm:mx-auto sm:max-w-full sm:rounded-lg sm:px-10">

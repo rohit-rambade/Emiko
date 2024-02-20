@@ -30,7 +30,7 @@ const Timeline = () => {
         <div className="relative wrap overflow-hidden p-10 h-full">
           <div
             className="border-2-2 absolute border-opacity-50 border-gray-700 h-full border"
-            style={{ left: "50%" }} // Convert style attribute to an object
+            style={{ left: "50%" }}
           ></div>
           {/* <!-- right timeline --> */}
           <div className="mb-8 flex justify-between items-center w-full right-timeline">
