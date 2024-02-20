@@ -22,7 +22,7 @@ const Timeline = () => {
         </div>
       </div>
 
-      <h3 className="text-center text-4xl font-bold text-blue-800">
+      <h3 className="text-center text-4xl font-bold text-blue-800 pt-8">
         Our Journey
       </h3>
       {/* <!-- component --> */}
@@ -121,7 +121,7 @@ const Timeline = () => {
       <div className="my-8">
         <section class="bg-gray-300 ">
           <div class="container px-6 py-8 mx-auto">
-            <h2 class="text-2xl font-bold text-center text-blue-800 capitalize lg:text-6xl">
+            <h2 class="text-2xl font-bold text-center text-blue-800 capitalize lg:text-6xl py-4">
               More about EMIKO Battery
             </h2>
 
