@@ -86,17 +86,17 @@ const ProductOne = () => {
           </div>
         </div>
         {/* ------------------------------------------------------------------------------------------------------- */}
-        <div className="relative flex text-gray-700  bg-clip-border rounded-xl w-4/4  my-12">
-          <div className="relative m-4 p-4 overflow-hidden text-gray-700 bg-white shadow-2xl hover:shadow-red-300 bg-clip-border rounded-xl ">
+        <div className="relative flex flex-wrap justify-around content-center bg-clip-border rounded-xl w-full my-12">
+          <div className="relative m-4  w-1/2 md:w-1/5 overflow-hidden text-gray-700 bg-white shadow-2xl hover:shadow-red-300 bg-clip-border rounded-xl ">
             <img src={one} alt="profile-picture" />
           </div>
-          <div className="relative m-4 p-4 overflow-hidden text-gray-700 bg-white shadow-2xl hover:shadow-red-300 bg-clip-border rounded-xl ">
+          <div className="relative m-4  w-1/2 md:w-1/5 overflow-hidden text-gray-700 bg-white shadow-2xl hover:shadow-red-300 bg-clip-border rounded-xl ">
             <img src={one} alt="profile-picture" />
           </div>
-          <div className="relative m-4 p-4 overflow-hidden text-gray-700 bg-white shadow-2xl hover:shadow-red-300 bg-clip-border rounded-xl ">
+          <div className="relative m-4  w-1/2 md:w-1/5 overflow-hidden text-gray-700 bg-white shadow-2xl hover:shadow-red-300 bg-clip-border rounded-xl ">
             <img src={one} alt="profile-picture" />
           </div>
-          <div className="relative m-4 p-4 overflow-hidden text-gray-700 bg-white shadow-2xl hover:shadow-red-300 bg-clip-border rounded-xl ">
+          <div className="relative m-4  w-1/2 md:w-1/5 overflow-hidden text-gray-700 bg-white shadow-2xl hover:shadow-red-300 bg-clip-border rounded-xl ">
             <img src={one} alt="profile-picture" />
           </div>
         </div>
