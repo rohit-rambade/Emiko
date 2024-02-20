@@ -4,11 +4,11 @@ const LifeAtEmiko = () => {
   return (
     <>
       <div className="flex justify-between bg-slate-200 bg-gradient-to-r from-white to-blue-500">
-        <div>
-          <h1>Logo- Great Place To Learn</h1>
+        <div className=" bg-primary mx-8 h-fit text-white font-arimo font-bold text-xl italic p-4">
+          <h3 className="">Great Place To Learn</h3>
         </div>
 
-        <div>
+        <div className="">
           <h1 className="flex justify-center text-primary font-bold text-4xl">
             Life At Emiko
           </h1>

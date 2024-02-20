@@ -1,6 +1,9 @@
 // import React from "react";
 import battery from "../../../assets/home/section-3-battery.png";
 import banner from "../../../assets/home/section-3-banner.png";
+
+import batteryEMT from "../../../assets/home/batteryemt.png";
+
 const WhyChooseEmiko = () => {
   return (
     <div>
@@ -8,7 +11,7 @@ const WhyChooseEmiko = () => {
         <img src={banner} alt="Banner Image" class="w-full hidden md:block" />
         <div class="md:absolute -bottom-28 py-5 md:px-20 left-0 right-0 ">
           <div
-            className="flex flex-col md:flex-row md:relative justify-start items-center bg-gradient-to-r from-primary to-red-100 h-44 mx-16"
+            className="flex flex-col md:flex-row md:relative justify-start items-center bg-gradient-to-r  h-44 mx-16"
             style={{
               backgroundImage:
                 "linear-gradient(to right, rgba(255, 0, 0, 0.7), rgba(255, 255, 255, 0.7))",
@@ -32,7 +35,7 @@ const WhyChooseEmiko = () => {
             </div>
             {/* <img src={battery} alt="battery" className="w-36 " /> */}
             <div className=" p-5 md:p-0 md:absolute md:-right-12 md:w-1/4 flex justify-start">
-              <img src={battery} alt="battery" className="w-full" />
+              <img src={batteryEMT} alt="battery" className="w-full" />
             </div>
           </div>
         </div>
