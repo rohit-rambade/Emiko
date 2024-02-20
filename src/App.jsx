@@ -12,8 +12,8 @@ const App = () => {
   return (
     <>
       <Header />
-      <Home />
-      {/* <Product /> */}
+      {/* <Home /> */}
+      <Product />
       {/* <Careers /> */}
       {/* <Faq /> */}
       {/* <Timeline /> */}
