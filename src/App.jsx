@@ -7,13 +7,15 @@ import Faq from "./pages/Faq";
 import Timeline from "./components/sections/history/Timeline";
 import About from "./pages/About";
 import Careers from "./pages/Careers";
+import { Outlet } from "react-router-dom";
 
 const App = () => {
   return (
     <>
       <Header />
+      <Outlet />
       {/* <Home /> */}
-      <Product />
+      {/* <Product /> */}
       {/* <Careers /> */}
       {/* <Faq /> */}
       {/* <Timeline /> */}

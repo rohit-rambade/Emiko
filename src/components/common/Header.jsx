@@ -4,6 +4,7 @@ import logo from "../../assets/logo.png";
 import SubMenu from "./SubMenu";
 import navMenu from "../../constants/NavMenu.json";
 import { FaAlignRight, FaPhone, FaXmark } from "react-icons/fa6";
+import { Link, NavLink } from "react-router-dom";
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [activeMenu, setActiveMenu] = useState(null);
@@ -17,9 +18,12 @@ const Header = () => {
       <header>
         <nav>
           <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto ">
-            <a className="flex items-center space-x-3 rtl:space-x-reverse">
+            <Link
+              to=""
+              className="flex items-center space-x-3 rtl:space-x-reverse"
+            >
               <img src={logo} className="h-12 md:h-16" alt="Emiko Logo" />
-            </a>
+            </Link>
             <div className="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
               <button
                 type="button"
@@ -49,13 +53,17 @@ const Header = () => {
                       <div key={menu.id}>
                         {!menu.isSubMenu ? (
                           <li>
-                            <a
-                              href="#"
-                              className="relative  w-fit block after:block after:content-[''] after:absolute after:h-[3px] after:bg-primary after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-center py-3 md:py-0"
+                            <NavLink
+                              to={menu.link}
+                              className={({ isActive }) =>
+                                `relative  w-fit block after:block after:content-[''] after:absolute after:h-[3px] after:bg-primary after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-center py-3 md:py-0 ${
+                                  isActive ? "text-red-500" : "text-black"
+                                }`
+                              }
                               aria-current="page"
                             >
                               {menu.title}
-                            </a>
+                            </NavLink>
                           </li>
                         ) : (
                           <div
@@ -64,12 +72,12 @@ const Header = () => {
                             key={menu.id}
                           >
                             <li>
-                              <a
-                                href="#"
+                              <Link
+                                to={menu.submenu.link}
                                 className="relative  w-fit block after:block after:content-[''] after:absolute after:h-[3px] after:bg-primary after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-center py-3 md:py-0"
                               >
                                 {menu.title}
-                              </a>
+                              </Link>
                             </li>
                             {menu.submenu && (
                               <SubMenu navMenu={menu} index={activeMenu} />

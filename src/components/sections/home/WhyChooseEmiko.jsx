@@ -7,9 +7,13 @@ import batteryEMT from "../../../assets/home/batteryemt.png";
 const WhyChooseEmiko = () => {
   return (
     <div>
-      <div class="md:relative font-poppins  md:mb-32">
-        <img src={banner} alt="Banner Image" class="w-full hidden md:block" />
-        <div class="md:absolute -bottom-28 py-5 md:px-20 left-0 right-0 ">
+      <div className="md:relative font-poppins  md:mb-32">
+        <img
+          src={banner}
+          alt="Banner Image"
+          className="w-full hidden md:block"
+        />
+        <div className="md:absolute -bottom-28 py-5 md:px-20 left-0 right-0 ">
           <div
             className="flex flex-col md:flex-row md:relative justify-start items-center bg-gradient-to-r  h-44 mx-16"
             style={{
@@ -42,7 +46,7 @@ const WhyChooseEmiko = () => {
       </div>
     </div>
     // <div className="relative">
-    //   <section class="text-gray-600 body-font  ">
+    //   <section className="text-gray-600 body-font  ">
     //     <div className=" ">
     //       <div>
     //         <div className="">

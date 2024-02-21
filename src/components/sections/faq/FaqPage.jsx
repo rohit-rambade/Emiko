@@ -10,26 +10,26 @@ const FaqPage = () => {
           <img src={faq} alt="" className=" object-center w-3/5"></img>
         </div>
         <div className="w-full">
-          <div class="relative w-full bg-gray-200 px-6 pt-10 pb-8 mt-8  ring-gray-900/5 sm:mx-auto sm:max-w-full sm:rounded-lg sm:px-10">
-            <div class="mx-auto px-5">
-              <div class="flex flex-col items-center">
-                <h2 class="mt-5 text-center text-3xl font-bold tracking-tight md:text-5xl">
+          <div className="relative w-full bg-gray-200 px-6 pt-10 pb-8 mt-8  ring-gray-900/5 sm:mx-auto sm:max-w-full sm:rounded-lg sm:px-10">
+            <div className="mx-auto px-5">
+              <div className="flex flex-col items-center">
+                <h2 className="mt-5 text-center text-3xl font-bold tracking-tight md:text-5xl">
                   FAQ
                 </h2>
-                <p class="mt-3 text-lg text-neutral-500 md:text-xl">
+                <p className="mt-3 text-lg text-neutral-500 md:text-xl">
                   Frequenty asked questions
                 </p>
               </div>
-              <div class="mx-auto mt-8 px-6 grid max-w-full divide-y divide-neutral-200">
-                <div class="py-5">
-                  <details class="group">
-                    <summary class="flex cursor-pointer list-none items-center justify-between font-medium ">
+              <div className="mx-auto mt-8 px-6 grid max-w-full divide-y divide-neutral-200">
+                <div className="py-5">
+                  <details className="group">
+                    <summary className="flex cursor-pointer list-none items-center justify-between font-medium ">
                       <span>
                         {" "}
                         While replacing the battery or cleaning the terminals,
                         why is it important to remove the ground wire first?
                       </span>
-                      <span class="transition group-open:rotate-180">
+                      <span className="transition group-open:rotate-180">
                         <svg
                           fill="none"
                           height="24"
@@ -45,7 +45,7 @@ const FaqPage = () => {
                         </svg>
                       </span>
                     </summary>
-                    <p class="group-open:animate-fadeIn mt-3 text-neutral-600">
+                    <p className="group-open:animate-fadeIn mt-3 text-neutral-600">
                       Before you start, always check the type of grounding
                       system the vehicle has. If you remove the positive
                       connector first in a negative ground system, a spark may
@@ -59,15 +59,15 @@ const FaqPage = () => {
                     </p>
                   </details>
                 </div>
-                <div class="py-5">
-                  <details class="group">
-                    <summary class="flex cursor-pointer list-none items-center justify-between font-medium">
+                <div className="py-5">
+                  <details className="group">
+                    <summary className="flex cursor-pointer list-none items-center justify-between font-medium">
                       <span>
                         {" "}
                         1.Battery Recycling… How to handle used batteries with
                         care
                       </span>
-                      <span class="transition group-open:rotate-180">
+                      <span className="transition group-open:rotate-180">
                         <svg
                           fill="none"
                           height="24"
@@ -83,7 +83,7 @@ const FaqPage = () => {
                         </svg>
                       </span>
                     </summary>
-                    <p class="group-open:animate-fadeIn mt-3 text-neutral-600">
+                    <p className="group-open:animate-fadeIn mt-3 text-neutral-600">
                       Batteries contain a number of heavy metals and toxic
                       chemicals which is why they must be disposed off with care
                       to prevent contamination and pollution. SF Batteries
@@ -93,11 +93,11 @@ const FaqPage = () => {
                     </p>
                   </details>
                 </div>
-                <div class="py-5">
-                  <details class="group">
-                    <summary class="flex cursor-pointer list-none items-center justify-between font-medium">
+                <div className="py-5">
+                  <details className="group">
+                    <summary className="flex cursor-pointer list-none items-center justify-between font-medium">
                       <span>Q.How do I safely jump-start my battery?</span>
-                      <span class="transition group-open:rotate-180">
+                      <span className="transition group-open:rotate-180">
                         <svg
                           fill="none"
                           height="24"
@@ -113,7 +113,7 @@ const FaqPage = () => {
                         </svg>
                       </span>
                     </summary>
-                    <p class="group-open:animate-fadeIn mt-3 text-neutral-600">
+                    <p className="group-open:animate-fadeIn mt-3 text-neutral-600">
                       A. WARNING:Modern vehicles with electronic management
                       systems should not be jump started without "protected"
                       jump starter leads and it is necessary to refer to the
@@ -142,14 +142,14 @@ const FaqPage = () => {
                     </p>
                   </details>
                 </div>
-                <div class="py-5">
-                  <details class="group">
-                    <summary class="flex cursor-pointer list-none items-center justify-between font-medium">
+                <div className="py-5">
+                  <details className="group">
+                    <summary className="flex cursor-pointer list-none items-center justify-between font-medium">
                       <span>
                         Q.How do I know for sure that my battery needs
                         replacement?
                       </span>
-                      <span class="transition group-open:rotate-180">
+                      <span className="transition group-open:rotate-180">
                         <svg
                           fill="none"
                           height="24"
@@ -165,7 +165,7 @@ const FaqPage = () => {
                         </svg>
                       </span>
                     </summary>
-                    <p class="group-open:animate-fadeIn mt-3 text-neutral-600">
+                    <p className="group-open:animate-fadeIn mt-3 text-neutral-600">
                       Many other problems can keep a car from starting. It is
                       advisable to do some troubleshooting. SF Batteries
                       authorised dealers test batteries free of charge, so as a
@@ -174,11 +174,11 @@ const FaqPage = () => {
                     </p>
                   </details>
                 </div>
-                <div class="py-5">
-                  <details class="group">
-                    <summary class="flex cursor-pointer list-none items-center justify-between font-medium">
+                <div className="py-5">
+                  <details className="group">
+                    <summary className="flex cursor-pointer list-none items-center justify-between font-medium">
                       <span> Q.What can excessive heat do to a battery?</span>
-                      <span class="transition group-open:rotate-180">
+                      <span className="transition group-open:rotate-180">
                         <svg
                           fill="none"
                           height="24"
@@ -194,22 +194,22 @@ const FaqPage = () => {
                         </svg>
                       </span>
                     </summary>
-                    <p class="group-open:animate-fadeIn mt-3 text-neutral-600">
+                    <p className="group-open:animate-fadeIn mt-3 text-neutral-600">
                       Heat can deteriorate a battery's life quicker by
                       evaporating the water from the electrolyte, and corroding
                       and weakening the positive grids.
                     </p>
                   </details>
                 </div>
-                <div class="py-5">
-                  <details class="group">
-                    <summary class="flex cursor-pointer list-none items-center justify-between font-medium">
+                <div className="py-5">
+                  <details className="group">
+                    <summary className="flex cursor-pointer list-none items-center justify-between font-medium">
                       <span>
                         {" "}
                         Q.What are the features that should be considered when
                         buying a battery?
                       </span>
-                      <span class="transition group-open:rotate-180">
+                      <span className="transition group-open:rotate-180">
                         <svg
                           fill="none"
                           height="24"
@@ -225,7 +225,7 @@ const FaqPage = () => {
                         </svg>
                       </span>
                     </summary>
-                    <p class="group-open:animate-fadeIn mt-3 text-neutral-600">
+                    <p className="group-open:animate-fadeIn mt-3 text-neutral-600">
                       Size:The dimensions of your original battery. Power:The
                       Ampere hour required to power your vehicle.
                       Warranty:Automotive batteries are backed by a warranty

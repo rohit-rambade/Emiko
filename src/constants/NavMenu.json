@@ -1,124 +1,82 @@
 [
-    {
-      "id": 1,
-      "title": "Home",
-      "link": "/home",
-      "isSubMenu": false
-    },
-    {
-      "id": 2,
-      "title": "About Us",
-      "isSubMenu": true,
-      "submenu": [
-        {
-          "id": 1,
-          "title": "History",
-          "link": "/history"
-        },
-        {
-          "id": 2,
-          "title": "Vision",
-          "link": "/know"
-        },
-        {
-          "id": 3,
-          "title": "News",
-          "link": "/news"
-        },
-        {
-          "id": 4,
-          "title": "Events",
-          "link": "/events"
-        },
-        {
-          "id": 5,
-          "title": "Contact",
-          "link": "/contact"
-        }
-      ]
-    },
-    {
-      "id": 3,
-      "title": "Products",
-      "link": "/products",
-      "isSubMenu": true,
-      "submenu": [
-        {
-          "id": 1,
-          "title": "know us",
-          "link": "know"
-        },
-        {
-          "id": 2,
-          "title": "know us",
-          "link": "/know"
-        }
-      ]
-    },
-    {
-      "id": 4,
-      "title": "Carrers",
-      "link": "/carrers",
-      "isSubMenu": true,
-      "submenu": [
-        {
-          "id": 1,
-          "title": "Life @ Emiko",
-          "link": "/life-at-emiko"
-        },
-        {
-          "id": 2,
-          "title": "Explore",
-          "link": "/explore"
-        },
-        {
-          "id": 3,
-          "title": "Join",
-          "link": "/join"
-        },
-        {
-          "id": 4,
-          "title": "Learn More",
-          "link": "/learn-more"
-        },
-        {
-          "id": 5,
-          "title": "Follow us",
-          "link": "/follow-us"
-        }
-      ]
-    },
-    {
-      "id": 5,
-      "title": "Where to Buy",
-      "isSubMenu": true,
-      "submenu": [
-        {
-          "id": 1,
-          "title": "Find a Dealer",
-          "link": "/find-dealer"
-        },
-        {
-          "id": 2,
-          "title": "Become a dealer",
-          "link": "/become-dealer"
-        },
-        {
-          "id": 3,
-          "title": "Join",
-          "link": "/join"
-        },
-        {
-          "id": 4,
-          "title": "Learn More",
-          "link": "/learn-more"
-        },
-        {
-          "id": 5,
-          "title": "Follow us",
-          "link": "/follow-us"
-        }
-      ]
-    }
-  ]
-  
+  {
+    "id": 1,
+    "title": "Home",
+    "link": "",
+    "isSubMenu": false
+  },
+  {
+    "id": 2,
+    "title": "About Us",
+    "isSubMenu": true,
+    "submenu": [
+      {
+        "id": 1,
+        "title": "History",
+        "link": "/history"
+      },
+      {
+        "id": 2,
+        "title": "Vision",
+        "link": "/know"
+      },
+      {
+        "id": 3,
+        "title": "News",
+        "link": "/news"
+      },
+      {
+        "id": 4,
+        "title": "Events",
+        "link": "/events"
+      },
+      {
+        "id": 5,
+        "title": "Contact",
+        "link": "/contact"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "title": "Products",
+    "link": "/products"
+  },
+  {
+    "id": 4,
+    "title": "Carrers",
+    "link": "/carrers"
+  },
+  {
+    "id": 5,
+    "title": "Where to Buy",
+    "isSubMenu": true,
+    "submenu": [
+      {
+        "id": 1,
+        "title": "Find a Dealer",
+        "link": "/find-dealer"
+      },
+      {
+        "id": 2,
+        "title": "Become a dealer",
+        "link": "/become-dealer"
+      },
+      {
+        "id": 3,
+        "title": "Join",
+        "link": "/join"
+      },
+      {
+        "id": 4,
+        "title": "Learn More",
+        "link": "/learn-more"
+      },
+      {
+        "id": 5,
+        "title": "Follow us",
+        "link": "/follow-us"
+      }
+    ]
+  }
+]

@@ -119,48 +119,48 @@ const Timeline = () => {
       </div>
       {/* More about emiko battery div */}
       <div className="my-8">
-        <section class="bg-gray-300 ">
-          <div class="container px-6 py-8 mx-auto">
-            <h2 class="text-2xl font-bold text-center text-blue-800 capitalize lg:text-6xl py-4">
+        <section className="bg-gray-300 ">
+          <div className="container px-6 py-8 mx-auto">
+            <h2 className="text-2xl font-bold text-center text-blue-800 capitalize lg:text-6xl py-4">
               More about EMIKO Battery
             </h2>
 
-            <div class="grid gap-8 mt-8 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3">
-              <div class="w-full max-w-xs text-center">
+            <div className="grid gap-8 mt-8 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3">
+              <div className="w-full max-w-xs text-center">
                 <img
-                  class="object-cover object-center w-full h-48 mx-auto rounded-lg"
+                  className="object-cover object-center w-full h-48 mx-auto rounded-lg"
                   src={blogs}
                   alt="avatar"
                 />
 
-                <div class="mt-2">
-                  <h3 class="text-lg font-medium text-black ">
+                <div className="mt-2">
+                  <h3 className="text-lg font-medium text-black ">
                     Blogs and Articles
                   </h3>
                 </div>
               </div>
 
-              <div class="w-full max-w-xs text-center">
+              <div className="w-full max-w-xs text-center">
                 <img
-                  class="object-cover object-center w-full h-48 mx-auto rounded-lg"
+                  className="object-cover object-center w-full h-48 mx-auto rounded-lg"
                   src={career}
                   alt="avatar"
                 />
 
-                <div class="mt-2">
-                  <h3 class="text-lg font-medium text-black ">Careers</h3>
+                <div className="mt-2">
+                  <h3 className="text-lg font-medium text-black ">Careers</h3>
                 </div>
               </div>
 
-              <div class="w-full max-w-xs text-center">
+              <div className="w-full max-w-xs text-center">
                 <img
-                  class="object-cover object-center w-full h-48 mx-auto rounded-lg"
+                  className="object-cover object-center w-full h-48 mx-auto rounded-lg"
                   src={faq}
                   alt="avatar"
                 />
 
-                <div class="mt-2">
-                  <h3 class="text-lg font-medium text-black ">FAQ</h3>
+                <div className="mt-2">
+                  <h3 className="text-lg font-medium text-black ">FAQ</h3>
                 </div>
               </div>
             </div>
