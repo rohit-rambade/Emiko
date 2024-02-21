@@ -35,9 +35,9 @@ const Careers = () => {
             <div className="grid gap-8 mt-8 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 py-4">
               {departments.map((department) => {
                 return (
-                  <div className="flex flex-col justify-center content-center w-full max-w-xs text-center bg-white shadow-xl gap-y-4">
+                  <div className="flex flex-col justify-center content-center w-full max-w-xs text-center bg-white shadow-xl gap-y-4 transition-all duration-700 hover:scale-110 cursor-pointer">
                     <img
-                      className=" object-cover object-center w-full  px-20 bg-white"
+                      className=" object-cover object-center w-full  px-20 bg-white "
                       src={department.imageURL}
                       alt="avatar"
                     />
