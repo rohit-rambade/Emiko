@@ -1,12 +1,6 @@
 import React from "react";
 import Header from "./components/common/Header";
 import Footer from "./components/common/Footer";
-import Home from "./pages/Home";
-import Product from "./pages/Product";
-import Faq from "./pages/Faq";
-import Timeline from "./components/sections/history/Timeline";
-import About from "./pages/About";
-import Careers from "./pages/Careers";
 import { Outlet } from "react-router-dom";
 
 const App = () => {
@@ -14,12 +8,6 @@ const App = () => {
     <>
       <Header />
       <Outlet />
-      {/* <Home /> */}
-      {/* <Product /> */}
-      {/* <Careers /> */}
-      {/* <Faq /> */}
-      {/* <Timeline /> */}
-      {/* <About /> */}
       <Footer />
     </>
   );

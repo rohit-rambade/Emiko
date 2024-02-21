@@ -73,7 +73,7 @@ const Header = () => {
                           >
                             <li>
                               <Link
-                                to={menu.submenu.link}
+                                to={menu.link}
                                 className="relative  w-fit block after:block after:content-[''] after:absolute after:h-[3px] after:bg-primary after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-center py-3 md:py-0"
                               >
                                 {menu.title}

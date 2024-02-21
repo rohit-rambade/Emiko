@@ -9,6 +9,7 @@
     "id": 2,
     "title": "About Us",
     "isSubMenu": true,
+    "link": "aboutus",
     "submenu": [
       {
         "id": 1,
@@ -78,5 +79,10 @@
         "link": "/follow-us"
       }
     ]
+  },
+  {
+    "id": 6,
+    "title": "FAQ",
+    "link": "/faq"
   }
 ]

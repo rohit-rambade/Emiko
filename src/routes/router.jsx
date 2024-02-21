@@ -4,6 +4,8 @@ import Home from "../pages/Home";
 import Product from "../pages/Product";
 import Faq from "../pages/Faq";
 import Careers from "../pages/Careers";
+import About from "../pages/About";
+import History from "../pages/History";
 
 export const router = createBrowserRouter([
   {
@@ -19,8 +21,14 @@ export const router = createBrowserRouter([
         element: <Product />,
       },
       {
-        path: "history",
-        element: <History />,
+        path: "aboutus",
+        element: <About />,
+        children: [
+          {
+            path: "history",
+            element: <History />,
+          },
+        ],
       },
       {
         path: "faq",
@@ -29,6 +37,10 @@ export const router = createBrowserRouter([
       {
         path: "carrers",
         element: <Careers />,
+      },
+      {
+        path: "history",
+        element: <History />,
       },
     ],
   },

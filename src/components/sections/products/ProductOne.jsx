@@ -6,11 +6,11 @@ import rikshawLogo from "../../../assets/product/autoRikshaw.png";
 import carLogo from "../../../assets/product/carLogo.png";
 import one from "../../../assets/product/1.jpg";
 
-const ProductOne = () => {
+const ProductOne = ({ product }) => {
   return (
     <>
       <div>
-        <h1 className="p-2"> Products</h1>
+        {/* <h1 className="p-2"> Products</h1>
         <h3 className="font-kameron font-bold text-3xl p-2">
           Power up your life with our services
         </h3>
@@ -30,7 +30,7 @@ const ProductOne = () => {
           <button className="relative flex h-[50px] w-52  items-center justify-center overflow-hidden bg-red-100 font-bold text-black rounded-full shadow-xl transition-all before:absolute before:h-0 before:w-0 before:rounded-full before:bg-red-500 before:duration-500 before:ease-out hover:shadow-red-500 hover:before:h-56 hover:before:w-full">
             <span className="relative z-10 font-arimo">Solar Batteries</span>
           </button>
-        </div>
+        </div> */}
         <div className="relative w-full h-96 flex justify-center items-center bg-gradient-to-bl from-orange-300 to-orange-200">
           <img
             src={car}
@@ -38,12 +38,10 @@ const ProductOne = () => {
           ></img>
           <div className="absolute flex flex-col justify-center items-center">
             <h3 className="text-center font-arimo italic text-4xl font-bold backdrop-blur-sm w-fit">
-              EMIKO- Autometive Batteries
+              EMIKO- {product?.title}
             </h3>
             <p className="w-3/4 text-center backdrop-blur-sm p-2">
-              When power stops, life stops. Before the light goes out, let our
-              batteries take your load.Experience Meets Innovation to Deliver
-              Next-Gen Batteries.
+              {product?.description}
             </p>
           </div>
         </div>
@@ -75,13 +73,16 @@ const ProductOne = () => {
               FEATURES
             </h3>
             <ul className="list-disc px-8">
-              <li>Capacity. 150 Ah.</li>
+              {product?.features?.map((feature) => {
+                return <li key={feature?.id}>{feature?.title}</li>;
+              })}
+              {/* <li>Capacity. 150 Ah.</li>
               <li>Battery Type. Tall Tubular.</li>
               <li>Voltage. 12 V.</li>
               <li>Color. Red And White.</li>
               <li>Phase. Single Phase.</li>
               <li>Features. Long Back Up.</li>
-              <li>Battery Warrenty. 60 Months.</li>
+              <li>Battery Warrenty. 60 Months.</li> */}
             </ul>
           </div>
         </div>
