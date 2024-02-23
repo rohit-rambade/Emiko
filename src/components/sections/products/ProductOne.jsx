@@ -9,24 +9,24 @@ const ProductOne = ({ product }) => {
     <>
       <div>
         {/* <h1 className="p-2"> Products</h1>
-        <h3 className="font-kameron font-bold text-3xl p-2">
+        <h3 className="font-poppins font-bold text-3xl p-2">
           Power up your life with our services
         </h3>
         <div className="flex justify-evenly items-center my-8">
           <button className="relative flex h-[50px] w-52  items-center justify-center overflow-hidden bg-red-100 font-bold text-black rounded-full shadow-xl transition-all before:absolute before:h-0 before:w-0 before:rounded-full before:bg-red-500 before:duration-500 before:ease-out hover:shadow-red-500 hover:before:h-56 hover:before:w-full">
-            <span className="relative z-10 font-arimo">Autometive Battery</span>
+            <span className="relative z-10 font-poppins">Autometive Battery</span>
           </button>
           <button className="relative flex h-[50px] w-52  items-center justify-center overflow-hidden bg-red-100 font-bold text-black rounded-full shadow-xl transition-all before:absolute before:h-0 before:w-0 before:rounded-full before:bg-red-500 before:duration-500 before:ease-out hover:shadow-red-500 hover:before:h-56 hover:before:w-full">
-            <span className="relative z-10 font-arimo">Inverter</span>
+            <span className="relative z-10 font-poppins">Inverter</span>
           </button>
           <button className="relative flex h-[50px] w-52  items-center justify-center overflow-hidden bg-red-100 font-bold text-black rounded-full shadow-xl transition-all before:absolute before:h-0 before:w-0 before:rounded-full before:bg-red-500 before:duration-500 before:ease-out hover:shadow-red-500 hover:before:h-56 hover:before:w-full">
-            <span className="relative z-10 font-arimo">Marine Battery</span>
+            <span className="relative z-10 font-poppins">Marine Battery</span>
           </button>
           <button className="relative flex h-[50px] w-52  items-center justify-center overflow-hidden bg-red-100 font-bold text-black rounded-full shadow-xl transition-all before:absolute before:h-0 before:w-0 before:rounded-full before:bg-red-500 before:duration-500 before:ease-out hover:shadow-red-500 hover:before:h-56 hover:before:w-full">
-            <span className="relative z-10 font-arimo"> E-Rickshaws</span>
+            <span className="relative z-10 font-poppins"> E-Rickshaws</span>
           </button>
           <button className="relative flex h-[50px] w-52  items-center justify-center overflow-hidden bg-red-100 font-bold text-black rounded-full shadow-xl transition-all before:absolute before:h-0 before:w-0 before:rounded-full before:bg-red-500 before:duration-500 before:ease-out hover:shadow-red-500 hover:before:h-56 hover:before:w-full">
-            <span className="relative z-10 font-arimo">Solar Batteries</span>
+            <span className="relative z-10 font-poppins">Solar Batteries</span>
           </button>
         </div> */}
         <div className="relative w-full h-96 flex justify-center items-center bg-gradient-to-bl from-orange-300 to-orange-200">
@@ -35,7 +35,7 @@ const ProductOne = ({ product }) => {
             className="  absolute object-cover w-full h-full opacity-50 mix-blend-normal"
           ></img>
           <div className="absolute flex flex-col justify-center items-center">
-            <h3 className="text-center font-arimo italic text-4xl font-bold backdrop-blur-sm w-fit">
+            <h3 className="text-center font-poppins italic text-4xl font-bold backdrop-blur-sm w-fit">
               EMIKO- {product?.title}
             </h3>
             <p className="w-3/4 text-center backdrop-blur-sm p-2">
@@ -67,7 +67,7 @@ const ProductOne = ({ product }) => {
             <img src={autometive} alt="" className="w-96 h-72"></img>
           </div>
           <div className="">
-            <h3 className="font-kameron font-bold text-4xl underline underline-offset-8 decoration-red-400 py-1">
+            <h3 className="font-poppins font-bold text-4xl underline underline-offset-8 decoration-red-400 py-1">
               FEATURES
             </h3>
             <ul className="list-disc px-8">
@@ -95,7 +95,7 @@ const ProductOne = ({ product }) => {
         {/* --------------------------------------------------------------------------------------------------------- */}
         { product?.isApplication ? <div className="h-96 bg-gradient-to-b from-red-500 to-white flex flex-col justify-center items-center">
           <div className="py-4">
-            <h3 className="font-kameron text-white text-6xl font-bold">
+            <h3 className="font-poppins text-white text-6xl font-bold">
               APPLICATION
             </h3>
           </div>

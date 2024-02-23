@@ -17,19 +17,19 @@ h1 {
 
 h2 {
   font-size: 2.25rem; /*Main Heading for pages other than homepage */
-  font-family: "Kameron", serif;
+  font-family: "Poppins", sans-serif;
   font-weight: 700;
-  color: #e90404;
+  color: #e90404; 
 }
 
 p {
-  font-family: "Kameron", serif; /*all the paragraph over all the pages*/
+  font-family: "Poppins", sans-serif;
   font-size: 1.25rem;
   line-height: 2rem;
 }
 
 ul {
-  font-family: "Kameron", serif;
+  font-family: "Poppins", sans-serif;
   font-size: 1.125rem;
   font-weight: 400;
 }

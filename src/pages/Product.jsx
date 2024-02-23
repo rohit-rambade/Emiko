@@ -16,7 +16,7 @@ const Product = () => {
   return (
     <div>
       <h1 className="p-2"> Products</h1>
-      <h3 className="font-kameron font-bold text-3xl p-2">
+      <h3 className="font-poppins font-bold text-3xl p-2">
         Power up your life with our services
       </h3>
       <div className="flex justify-evenly items-center my-8">
@@ -27,7 +27,7 @@ const Product = () => {
               key={product.id}
               onClick={() => handleProductClick(product)}
             >
-              <span className="relative z-10 font-arimo">{product.name}</span>
+              <span className="relative z-10 font-poppins">{product.name}</span>
             </button>
           );
         })}

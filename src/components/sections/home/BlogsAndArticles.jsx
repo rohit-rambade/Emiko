@@ -4,7 +4,7 @@ const BlogsAndArticles = () => {
   return (
     <>
       <div className="bg-stone-300 h-full">
-        <h3 className="text-center font-kameron font-normal text-5xl text-primary py-8">
+        <h3 className="text-center font-poppins font-normal text-5xl text-primary py-8">
           Latest from blogs & Articles
         </h3>
         <div className="flex flex-col md:flex-row gap-y-4 md:gap-y-0  justify-center content-center p-6">

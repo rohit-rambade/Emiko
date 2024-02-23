@@ -15,7 +15,7 @@ const WhyChooseEmiko = () => {
         />
         <div className="md:absolute -bottom-28 py-5 md:px-20 left-0 right-0 ">
           <div
-            className="flex flex-col md:flex-row md:relative justify-start items-center bg-gradient-to-r  h-44 mx-16"
+            className="flex flex-col md:flex-row md:relative justify-start items-center bg-gradient-to-r  md:h-44 md:mx-16"
             style={{
               backgroundImage:
                 "linear-gradient(to right, rgba(255, 0, 0, 0.7), rgba(255, 255, 255, 0.7))",

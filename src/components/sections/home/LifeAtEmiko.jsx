@@ -4,7 +4,7 @@ const LifeAtEmiko = () => {
   return (
     <>
       <div className="  flex flex-col md:flex-row justify-center container mx-auto">
-        <div className=" bg-primary items-center text-white md:text-left text-center font-arimo font-bold text-xl italic p-4">
+        <div className=" bg-primary items-center text-white md:text-left text-center font-poppins font-bold text-xl italic p-4">
           <h3 className="">Great Place To Learn</h3>
         </div>
 

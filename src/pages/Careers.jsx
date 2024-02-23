@@ -8,7 +8,7 @@ const Careers = () => {
         <img src={circle} alt="" className="md:w-1/2"></img>
       </div>
       <div className="flex flex-col md:flex-row justify-center text-left md:text-center bg-gray-200 px-6 py-4 md:py-8">
-        <div className=" md:w-1/2 text-blue-600 font-bold text-4xl font-kameron ">
+        <div className=" md:w-1/2 text-blue-600 font-bold text-4xl font-poppins ">
           <h3 className="my-6 ">
             We promote a culture of collaboration, freedom and innovation.
           </h3>
