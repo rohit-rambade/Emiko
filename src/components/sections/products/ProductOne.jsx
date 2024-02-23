@@ -1,10 +1,8 @@
 import React from "react";
-import car from "../../../assets/product/car.jpg";
 import autometive from "../../../assets/product/autometive.png";
 import scooterLogo from "../../../assets/product/scooterLogo.png";
 import rikshawLogo from "../../../assets/product/autoRikshaw.png";
 import carLogo from "../../../assets/product/carLogo.png";
-import one from "../../../assets/product/1.jpg";
 
 const ProductOne = ({ product }) => {
   return (
@@ -33,7 +31,7 @@ const ProductOne = ({ product }) => {
         </div> */}
         <div className="relative w-full h-96 flex justify-center items-center bg-gradient-to-bl from-orange-300 to-orange-200">
           <img
-            src={car}
+            src={product?.banner}
             className="  absolute object-cover w-full h-full opacity-50 mix-blend-normal"
           ></img>
           <div className="absolute flex flex-col justify-center items-center">
@@ -95,7 +93,7 @@ const ProductOne = ({ product }) => {
           })}
         </div>
         {/* --------------------------------------------------------------------------------------------------------- */}
-        <div className="h-96 bg-gradient-to-b from-red-500 to-white flex flex-col justify-center items-center">
+        { product?.isApplication ? <div className="h-96 bg-gradient-to-b from-red-500 to-white flex flex-col justify-center items-center">
           <div className="py-4">
             <h3 className="font-kameron text-white text-6xl font-bold">
               APPLICATION
@@ -127,7 +125,7 @@ const ProductOne = ({ product }) => {
               ></img>
             </div>
           </div>
-        </div>
+        </div>: ""}
       </div>
     </>
   );

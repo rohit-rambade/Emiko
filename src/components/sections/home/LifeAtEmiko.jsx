@@ -3,12 +3,12 @@ import React from "react";
 const LifeAtEmiko = () => {
   return (
     <>
-      <div className="flex justify-between bg-slate-200 bg-gradient-to-r from-white to-blue-500">
-        <div className=" bg-primary mx-8 h-fit text-white font-arimo font-bold text-xl italic p-4">
+      <div className="  flex flex-col md:flex-row justify-center container mx-auto">
+        <div className=" bg-primary items-center text-white md:text-left text-center font-arimo font-bold text-xl italic p-4">
           <h3 className="">Great Place To Learn</h3>
         </div>
 
-        <div className="">
+        <div className="bg-slate-200 bg-gradient-to-r from-white to-blue-500">
           <h1 className="flex justify-center text-primary font-bold text-4xl">
             Life At Emiko
           </h1>

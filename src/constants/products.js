@@ -1,16 +1,21 @@
 import { automotiveBattery } from "./products/autometiveBattery";
-
+import { eRikshawBattery } from "./products/eRikshaw";
+import { inverterBattery } from "./products/inverter";
+import { marineBattery } from "./products/marine";
+import { solarBattery } from "./products/solor";
+import inverterBanner from "../assets/product/banners/Inverter.jpg"
+import marineBanner from "../assets/product/banners/ship.jpeg"
+import solarBanner from "../assets/product/banners/solar.jpg"
+import carBanner from "../assets/product/banners/car.jpg"
 export const products = [
   {
-    //banner
     id: 1,
     name: "Autometive Battery",
     title: "Autometive Batteries",
     description: `When power stops, life stops. Before the light goes out, let our
     batteries take your load.Experience Meets Innovation to Deliver
     Next-Gen Batteries.`,
-
-    //
+    banner: carBanner,
 
     tagline: "Rev Up Your Drive with Reliable Energy",
     desc: `Elevate Your Drive with Advanced Technology: Our Automotive
@@ -59,6 +64,7 @@ export const products = [
     ],
     rangesOfBatteries: automotiveBattery,
     application: "Application",
+    isApplication: true,
     applicationDetails: [
       {
         id: 1,
@@ -75,13 +81,12 @@ export const products = [
     ],
   },
   {
-    //banner
+
     id: 2,
     name: "Inverter",
     title: "Inverter Batteries",
     description: `When power stops, life stops. Before the light goes out, let our batteries take your load.Experience Meets Innovation to Deliver Next-Gen Batteries.`,
-
-    //
+    banner: inverterBanner,
 
     tagline: "Power Back up for Every Need",
     desc: `We use high surface carbon in our tubular batteries. It not only improves the discharge performance of the batteries but also ensures fast recovery in the deep cycle. Suited for frequent and long power cuts these batteries have a long life cycle and can lighten up every moment of your life. Use of special grade polyethylene separator results in high volume porosity and higher mechanical strength. Our tubular batteries require low water top up and have a life expectancy up to 5-6 years. From household application to industrial use these batteries will run for life and power your world with brightness forever`,
@@ -117,12 +122,8 @@ export const products = [
         title: "Safety",
       },
     ],
-    rangesOfBatteries: [
-      {
-        id: 1,
-        imgUrl: "https://dummyimage.com/300",
-      },
-    ],
+    rangesOfBatteries: inverterBattery,
+    isApplication: true,
     application: "Application",
     applicationDetails: [
       {
@@ -140,35 +141,21 @@ export const products = [
     ],
   },
   {
-    //banner
+
     id: 3,
     name: "Marine Battery",
-    title: "Marine Battery",
-    description: ` 2nd componenet When power stops, life stops. Before the light goes out, let our
-    batteries take your load.Experience Meets Innovation to Deliver
-    Next-Gen Batteries.`,
+    title: "Marine Batteries",
+    description: `When power stops, life stops. Before the light goes out, let our batteries take your load.Experience Meets Innovation to Deliver Next-Gen Batteries.`,
+    banner: marineBanner,
 
-    //
-
-    tagline: "Rev Up Your Drive with Reliable Energy",
-    desc: `Elevate Your Drive with Advanced Technology: Our Automotive
-    Batteries Redefine Performance. Featuring high-surface carbon for
-    enhanced discharge capabilities and rapid deep cycle recovery, our
-    batteries are designed to thrive in the face of frequent and
-    prolonged power demands. Crafted with a special-grade polyethylene
-    separator, our batteries boast high volume porosity and superior
-    mechanical strength. With minimal water top-up requirements and an
-    impressive life expectancy of up to 5-6 years, these batteries
-    guarantee a reliable and enduring power source. Whether for everyday
-    commuting or heavy-duty industrial applications, our automotive
-    batteries are engineered to power your journey with lasting
-    brilliance`,
+    tagline: "Uninterrupted Energy on the Open Seas",
+    desc: `Navigate with Confidence: Our Marine Batteries Set Sail with High Surface Carbon for Peak Performance. Specially crafted for deep cycles, these batteries offer swift recovery and enduring power in the roughest waters. Featuring a unique polyethylene separator, they boast superior porosity and robust mechanical strength. Designed for low water top-up, these marine batteries have an impressive life expectancy of up to 5-6 years. Whether for leisure or professional marine applications, our batteries are built to endure, lighting up your maritime adventures with unwavering reliability`,
     featureSectionImage: "https://dummyimage.com/300",
 
     features: [
       {
         id: 1,
-        title: "Capacity. 150 Ah.",
+        title: "Capacity. 200 Ah.",
       },
       {
         id: 2,
@@ -180,67 +167,36 @@ export const products = [
       },
       {
         id: 4,
-        title: "Color. Red And White.",
+        title: "Long Back Up",
       },
       {
         id: 5,
-        title: "Phase. Single Phase.",
+        title: "Size. 120x96x200 mm.",
       },
       {
         id: 6,
-        title: "Features. Long Back Up.",
+        title: "Frequency. 50 Hz.",
       },
       {
-        id: 6,
-        title: "Battery Warrenty. 60 Months.",
+        id: 7,
+        title: "Phase. Single Phase",
       },
     ],
-    rangesOfBatteries: [
-      {
-        id: 1,
-        imgUrl: "https://dummyimage.com/300",
-      },
-    ],
-    application: "Application",
-    applicationDetails: [
-      {
-        id: 1,
-        name: "Two Wheeler",
-      },
-      {
-        id: 2,
-        name: "Three Wheeler",
-      },
-      {
-        id: 3,
-        name: "Four Wheeler",
-      },
-    ],
+    rangesOfBatteries: marineBattery,
+    isApplication: false,
+
   },
   {
-    //banner
+
     id: 4,
-    name: "E-Rickshaws Batteries",
+    name: "E-Rickshaws",
     title: "E-Rickshaws Batteries",
-    description: ` 2nd componenet When power stops, life stops. Before the light goes out, let our
-    batteries take your load.Experience Meets Innovation to Deliver
-    Next-Gen Batteries.`,
+    description: `When power stops, life stops. Before the light goes out, let our batteries take your load.Experience Meets Innovation to Deliver Next-Gen Batteries.`,
 
-    //
+    banner: "",
 
-    tagline: "Rev Up Your Drive with Reliable Energy",
-    desc: `Elevate Your Drive with Advanced Technology: Our Automotive
-    Batteries Redefine Performance. Featuring high-surface carbon for
-    enhanced discharge capabilities and rapid deep cycle recovery, our
-    batteries are designed to thrive in the face of frequent and
-    prolonged power demands. Crafted with a special-grade polyethylene
-    separator, our batteries boast high volume porosity and superior
-    mechanical strength. With minimal water top-up requirements and an
-    impressive life expectancy of up to 5-6 years, these batteries
-    guarantee a reliable and enduring power source. Whether for everyday
-    commuting or heavy-duty industrial applications, our automotive
-    batteries are engineered to power your journey with lasting
-    brilliance`,
+    tagline: "Uninterrupted Energy on the Open Seas",
+    desc: `Empower Your E-Rickshaw with Cutting-Edge Energy: Our tubular batteries, featuring high surface carbon technology, elevate the performance of E-Rickshaws with enhanced discharge capabilities and rapid deep cycle recovery. Specially designed for prolonged and frequent use in demanding urban environments, these batteries boast an extended life cycle, providing reliable power for an uninterrupted journey. The utilization of advanced polyethylene separators ensures optimal porosity and mechanical strength, minimizing maintenance with low water top-ups. With a life expectancy of up to 5-6 years, our tubular batteries are engineered to meet the rigorous demands of E-Rickshaws, lighting up the path for sustainable and efficient transportation, from city streets to industrial zones`,
     featureSectionImage: "https://dummyimage.com/300",
 
     features: [
@@ -273,52 +229,20 @@ export const products = [
         title: "Battery Warrenty. 60 Months.",
       },
     ],
-    rangesOfBatteries: [
-      {
-        id: 1,
-        imgUrl: "https://dummyimage.com/300",
-      },
-    ],
-    application: "Application",
-    applicationDetails: [
-      {
-        id: 1,
-        name: "Two Wheeler",
-      },
-      {
-        id: 2,
-        name: "Three Wheeler",
-      },
-      {
-        id: 3,
-        name: "Four Wheeler",
-      },
-    ],
+    rangesOfBatteries: eRikshawBattery,
+    isApplication: false,
   },
   {
-    //banner
+
     id: 5,
     name: "Solor Batteries",
     title: "Solor Batteries",
-    description: ` 2nd componenet When power stops, life stops. Before the light goes out, let our
-    batteries take your load.Experience Meets Innovation to Deliver
-    Next-Gen Batteries.`,
+    description: `When power stops, life stops. Before the light goes out, let our batteries take your load.Experience Meets Innovation to Deliver Next-Gen Batteries.`,
 
-    //
+    banner: solarBanner,
 
-    tagline: "Rev Up Your Drive with Reliable Energy",
-    desc: `Elevate Your Drive with Advanced Technology: Our Automotive
-    Batteries Redefine Performance. Featuring high-surface carbon for
-    enhanced discharge capabilities and rapid deep cycle recovery, our
-    batteries are designed to thrive in the face of frequent and
-    prolonged power demands. Crafted with a special-grade polyethylene
-    separator, our batteries boast high volume porosity and superior
-    mechanical strength. With minimal water top-up requirements and an
-    impressive life expectancy of up to 5-6 years, these batteries
-    guarantee a reliable and enduring power source. Whether for everyday
-    commuting or heavy-duty industrial applications, our automotive
-    batteries are engineered to power your journey with lasting
-    brilliance`,
+    tagline: "Empowering Tomorrow, Solar Batteries for Sustainable Power Today",
+    desc: `Harvest the Sun's Power with Superior Solar Batteries. Our solar batteries utilize high surface carbon technology for enhanced discharge performance and swift recovery in deep cycles, making them ideal for areas with frequent and prolonged power cuts. With an extended life cycle and a lifespan of up to 5-6 years, these tubular batteries are designed to illuminate every moment of your life. The use of special-grade polyethylene separators ensures high volume porosity and superior mechanical strength. Low water top-up requirements and versatility for both household and industrial applications make our solar batteries the enduring choice to power your world with everlasting brightness`,
     featureSectionImage: "https://dummyimage.com/300",
 
     features: [
@@ -351,12 +275,8 @@ export const products = [
         title: "Battery Warrenty. 60 Months.",
       },
     ],
-    rangesOfBatteries: [
-      {
-        id: 1,
-        imgUrl: "https://dummyimage.com/300",
-      },
-    ],
+    rangesOfBatteries: solarBattery,
+    isApplication: true,
     application: "Application",
     applicationDetails: [
       {

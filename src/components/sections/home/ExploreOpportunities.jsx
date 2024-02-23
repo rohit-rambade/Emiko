@@ -3,8 +3,8 @@ import carrer from "../../../assets/carrer.png";
 const ExploreOpportunities = () => {
   return (
     <>
-      <div className="flex justify-center items-center p-4 m-14">
-        <div className="w-1/2  p-8">
+      <div className="flex flex-col md:flex-row justify-center items-center p-4 md:m-14">
+        <div className="md:w-1/2  p-8">
           {" "}
           <h1 className=" ">Explore Opportunities</h1>
           <p className="max-w-lg h-56 py-10">
@@ -27,7 +27,7 @@ const ExploreOpportunities = () => {
             </span>
           </button>
         </div>
-        <div className="  w-1/2   p-8">
+        <div className="md:w-1/2   p-8">
           <img src={carrer} alt=""></img>
         </div>
       </div>

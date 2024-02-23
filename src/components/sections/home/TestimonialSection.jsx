@@ -21,9 +21,9 @@ const TestimonialSection = () => {
     },
   ];
   return (
-    <div>
+    <div className="container mx-auto">
       <section className="font-poppins">
-        <div className="container  py-10 mx-auto flex flex-col md:flex-row ">
+        <div className="py-10 mx-auto flex flex-col md:flex-row ">
           <div className="lg:w-3/5 bg-gray-400 p-3 space-y-6">
             <h1 className="text-4xl font-bold text-primary">
               Trust in our Expertise, Experience, and Dedication.
