@@ -23,16 +23,11 @@
       },
       {
         "id": 3,
-        "title": "News",
-        "link": "/news"
-      },
-      {
-        "id": 4,
         "title": "Events",
         "link": "/events"
       },
       {
-        "id": 5,
+        "id": 4,
         "title": "Contact",
         "link": "/contact"
       }
@@ -67,16 +62,6 @@
         "id": 3,
         "title": "Join",
         "link": "/join"
-      },
-      {
-        "id": 4,
-        "title": "Learn More",
-        "link": "/learn-more"
-      },
-      {
-        "id": 5,
-        "title": "Follow us",
-        "link": "/follow-us"
       }
     ]
   },
