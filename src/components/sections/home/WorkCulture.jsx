@@ -20,7 +20,7 @@ const WorkCulture = () => {
           <img
             src={emikoCube}
             alt="cube"
-            className="w-5/6 md:w-4/6 py-2 transition duration-1000 ease-in-out transform hover:scale-110 hover:saturate-100 shadow-[10px_10px_5px_2px_rgba(0,0,0,0.2)] hover:shadow"
+            className="w-5/6 md:w-4/6 py-2 transition duration-1000 ease-in-out transform hover:scale-110 hover:saturate-100 shadow-[10px_10px_5px_2px_rgba(255,0,0,0.2)] hover:shadow"
           ></img>
         </div>
       </div>

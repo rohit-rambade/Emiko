@@ -23,13 +23,13 @@ const WhyChooseEmiko = () => {
           >
             <div className="flex flex-col space-y-9 md:flex-row items-center p-2 md:p-5 ">
               <div className="w-fit">
-                <h1 className="text-3xl text-white font-semibold">
+                <h1 className="text-2xl text-white font-semibold">
                   Why Choose EMIKO?
                 </h1>
               </div>
 
               <div>
-                <ul className="md:flex md:justify-center space-y-6 md:space-y-0 justify-center  md:space-x-10 text-xl list-disc font-semibold md:text-lg px-8">
+                <ul className="md:flex md:justify-normal space-y-6 md:space-y-0 justify-center  md:space-x-10  list-disc font-semibold md:text-lg px-8">
                   <li className="md:w-1/3 ">
                     Exceptional Performance & durability
                   </li>

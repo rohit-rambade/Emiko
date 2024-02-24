@@ -11,10 +11,10 @@ const About = () => {
         <div className="container mx-auto py-16 px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-8 ">
             <div className="max-w-lg">
-              <h2 className="text-3xl font-extrabold text-primary sm:text-4xl">
+              <h2 className="text-3xl font-semibold text-primary sm:text-4xl">
                 About Us
               </h2>
-              <p className="mt-4 text-gray-600 text-lg">
+              <p className="mt-4 text-black text-lg">
                 JPG Batteries Pvt. Ltd., a subsidiary of a prominent 700 crore
                 group company involved in the lead acid battery industry since
                 1988, is embarking on a new venture in the realm of alternative
@@ -50,10 +50,10 @@ const About = () => {
               ></img>
             </div>
             <div className="max-w-lg">
-              <h2 className="text-3xl font-extrabold text-primary sm:text-4xl">
+              <h2 className="text-3xl font-semibold text-primary sm:text-4xl">
                 OUR MISSION
               </h2>
-              <p className="mt-4 text-gray-600 text-lg">
+              <p className="mt-4 text-black text-lg">
                 We will lead the innovation and delivery of energy storage
                 solutions to power the world safely and sustainably.
                 <br />
