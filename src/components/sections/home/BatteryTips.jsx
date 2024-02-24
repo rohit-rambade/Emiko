@@ -3,13 +3,13 @@ import batteryCharge from "../../../assets/battry-charge.png";
 const BatteryTips = () => {
   return (
     <div>
-      <section className="text-black font-poppins">
-        <div className="container px-5 py-24 mx-auto">
-          <div className="text-center mb-20">
-            <h1 className="sm:text-4xl text-2xl font-medium title-font text-primary mb-4 ">
+      <section className="text-black font-poppins px-4">
+        <div className="container px-5 mx-auto">
+          <div className="text-center py-4">
+            <h1 className="sm:text-4xl text-4xl font-semibold italic  text-primary py-8 ">
               Battery Tips
             </h1>
-            <p className="text-2xl leading-relaxed mx-auto font-semibold">
+            <p className="text-xl leading-relaxed mx-auto font-semibold">
               Know how to take care of your battery
             </p>
           </div>
@@ -19,7 +19,7 @@ const BatteryTips = () => {
                 <img src={batteryCharge} alt="" className="w-32" />
               </div>
               <div className="flex-grow">
-                <p className=" text-sm  font-semibold mb-3">
+                <p className=" text-lg font-semibold">
                   How do i know that my battery needs replacement?
                 </p>
               </div>
@@ -29,7 +29,7 @@ const BatteryTips = () => {
                 <img src={batteryCharge} alt="" className="w-32" />
               </div>
               <div className="flex-grow">
-                <p className=" text-sm  font-semibold mb-3">
+                <p className=" text-lg font-semibold">
                   Tips while replacing the battery or cleaning terminals
                 </p>
               </div>
@@ -39,7 +39,7 @@ const BatteryTips = () => {
                 <img src={batteryCharge} alt="" className="w-32" />
               </div>
               <div className="flex-grow">
-                <p className=" text-sm  font-semibold mb-3">
+                <p className=" text-lg font-semibold">
                   Battery Recycling- how to handle and used batteries with care
                 </p>
               </div>
