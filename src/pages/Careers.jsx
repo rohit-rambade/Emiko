@@ -41,7 +41,7 @@ const Careers = () => {
                       src={department.imageURL}
                       alt="avatar"
                     />
-                    <h3 className="text-lg font-medium text-black p-4 ">
+                    <h3 className="text-lg font-normal text-black p-4 ">
                       {department.name}
                     </h3>
                   </div>

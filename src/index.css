@@ -15,13 +15,6 @@ h1 {
   font-weight: bold;
 }
 
-h2 {
-  font-size: 2.25rem; /*Main Heading for pages other than homepage */
-  font-family: "Poppins", sans-serif;
-  font-weight: 700;
-  color: #e90404; 
-}
-
 p {
   font-family: "Poppins", sans-serif;
   font-size: 1.25rem;

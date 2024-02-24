@@ -25,7 +25,7 @@ export const ourProduct = [
   },
   {
     id: 5,
-    name: "Solor Batteries",
+    name: "Solar Batteries",
     imgUrl: battery,
   },
 ];

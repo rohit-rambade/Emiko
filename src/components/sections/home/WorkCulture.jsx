@@ -6,7 +6,7 @@ const WorkCulture = () => {
     <>
       <div className="flex flex-col justify-center content-center text-center">
         <div>
-          <h3 className="font-poppins text-6xl py-8 ">Our work culture</h3>
+          <h3 className="font-kameron text-6xl py-8 ">Our work culture</h3>
           <p className="px-12">
             Embrace a dynamic work culture that fosters creativity,
             collaboration, and innovation. We prioritize diversity, encourage
@@ -16,8 +16,12 @@ const WorkCulture = () => {
             inclusive workplace
           </p>
         </div>
-        <div className=" flex content-center justify-center">
-          <img src={emikoCube} alt="" className="w-5/6 py-4"></img>
+        <div className=" flex content-center justify-center py-4 md:py-16">
+          <img
+            src={emikoCube}
+            alt="cube"
+            className="w-4/6 md:w-3/6 py-4 transition duration-1000 ease-in-out transform hover:scale-125 hover:saturate-100 "
+          ></img>
         </div>
       </div>
     </>

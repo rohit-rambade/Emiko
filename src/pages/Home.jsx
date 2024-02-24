@@ -84,7 +84,7 @@ const Home = () => {
                       <img src={product.imgUrl} alt="" />
                     </div>
                     <div className="flex-grow">
-                      <h2 className=" text-lg  font-bold mb-3">
+                      <h2 className=" text-lg mb-3">
                         {product.name}
                       </h2>
                     </div>
