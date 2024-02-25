@@ -7,6 +7,11 @@ import inverterBanner from "../assets/product/banners/Inverter.jpg";
 import marineBanner from "../assets/product/banners/ship.jpeg";
 import solarBanner from "../assets/product/banners/solar.jpg";
 import carBanner from "../assets/product/banners/car.jpg";
+import automotiveImg from "../assets/product/Automotive/autometive.png"
+import inverterImg from "../assets/product/Inverter/InverterBattery.png"
+import marineImg from "../assets/product/Marine/MarineBattery.png"
+import eRikshawImg from "../assets/product/E-ric/ErikshawBattery.png"
+import solarImg from "../assets/product/Solar/SolarBattery.png"
 export const products = [
   {
     id: 1,
@@ -30,7 +35,7 @@ export const products = [
     commuting or heavy-duty industrial applications, our automotive
     batteries are engineered to power your journey with lasting
     brilliance`,
-    featureSectionImage: "https://dummyimage.com/300",
+    featureSectionImage: automotiveImg,
 
     features: [
       {
@@ -89,7 +94,7 @@ export const products = [
 
     tagline: "Power Back up for Every Need",
     desc: `We use high surface carbon in our tubular batteries. It not only improves the discharge performance of the batteries but also ensures fast recovery in the deep cycle. Suited for frequent and long power cuts these batteries have a long life cycle and can lighten up every moment of your life. Use of special grade polyethylene separator results in high volume porosity and higher mechanical strength. Our tubular batteries require low water top up and have a life expectancy up to 5-6 years. From household application to industrial use these batteries will run for life and power your world with brightness forever`,
-    featureSectionImage: "https://dummyimage.com/300",
+    featureSectionImage: inverterImg,
 
     features: [
       {
@@ -148,7 +153,7 @@ export const products = [
 
     tagline: "Uninterrupted Energy on the Open Seas",
     desc: `Navigate with Confidence: Our Marine Batteries Set Sail with High Surface Carbon for Peak Performance. Specially crafted for deep cycles, these batteries offer swift recovery and enduring power in the roughest waters. Featuring a unique polyethylene separator, they boast superior porosity and robust mechanical strength. Designed for low water top-up, these marine batteries have an impressive life expectancy of up to 5-6 years. Whether for leisure or professional marine applications, our batteries are built to endure, lighting up your maritime adventures with unwavering reliability`,
-    featureSectionImage: "https://dummyimage.com/300",
+    featureSectionImage: marineImg,
 
     features: [
       {
@@ -193,7 +198,7 @@ export const products = [
 
     tagline: "Uninterrupted Energy on the Open Seas",
     desc: `Empower Your E-Rickshaw with Cutting-Edge Energy: Our tubular batteries, featuring high surface carbon technology, elevate the performance of E-Rickshaws with enhanced discharge capabilities and rapid deep cycle recovery. Specially designed for prolonged and frequent use in demanding urban environments, these batteries boast an extended life cycle, providing reliable power for an uninterrupted journey. The utilization of advanced polyethylene separators ensures optimal porosity and mechanical strength, minimizing maintenance with low water top-ups. With a life expectancy of up to 5-6 years, our tubular batteries are engineered to meet the rigorous demands of E-Rickshaws, lighting up the path for sustainable and efficient transportation, from city streets to industrial zones`,
-    featureSectionImage: "https://dummyimage.com/300",
+    featureSectionImage: eRikshawImg,
 
     features: [
       {
@@ -238,7 +243,7 @@ export const products = [
 
     tagline: "Empowering Tomorrow, Solar Batteries for Sustainable Power Today",
     desc: `Harvest the Sun's Power with Superior Solar Batteries. Our solar batteries utilize high surface carbon technology for enhanced discharge performance and swift recovery in deep cycles, making them ideal for areas with frequent and prolonged power cuts. With an extended life cycle and a lifespan of up to 5-6 years, these tubular batteries are designed to illuminate every moment of your life. The use of special-grade polyethylene separators ensures high volume porosity and superior mechanical strength. Low water top-up requirements and versatility for both household and industrial applications make our solar batteries the enduring choice to power your world with everlasting brightness`,
-    featureSectionImage: "https://dummyimage.com/300",
+    featureSectionImage: solarImg,
 
     features: [
       {

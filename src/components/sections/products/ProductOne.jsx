@@ -1,5 +1,4 @@
 import React from "react";
-import autometive from "../../../assets/product/autometive.png";
 import scooterLogo from "../../../assets/product/scooterLogo.png";
 import rikshawLogo from "../../../assets/product/autoRikshaw.png";
 import carLogo from "../../../assets/product/carLogo.png";
@@ -64,7 +63,11 @@ const ProductOne = ({ product }) => {
         </div>
         <div className="bg-gradient-to-r from-red-500 to-red-50 flex justify-evenly items-center my-16 ">
           <div className="">
-            <img src={autometive} alt="" className="w-96 h-72"></img>
+            <img
+              src={product?.featureSectionImage}
+              alt={product?.title}
+              className="w-96 h-72"
+            ></img>
           </div>
           <div className="">
             <h3 className="font-poppins font-bold text-4xl underline underline-offset-8 decoration-red-400 py-1">
