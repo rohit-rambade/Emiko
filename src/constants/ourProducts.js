@@ -5,7 +5,7 @@ import rickshaw from "../assets/rickshaw.png";
 export const ourProduct = [
   {
     id: 1,
-    name: "Autometive battery",
+    name: "Automotive battery",
     imgUrl: battery,
   },
   {
@@ -20,7 +20,7 @@ export const ourProduct = [
   },
   {
     id: 4,
-    name: "E-Rickshaws Batteries",
+    name: "E-Rikshaw Batteries",
     imgUrl: rickshaw,
   },
   {

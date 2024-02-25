@@ -63,17 +63,17 @@ const Home = () => {
         </div>
       </div>
       <div>
-        <section className="text-black font-poppins">
-          <div className="container px-5 py-24 mx-auto">
-            <div className="text-center mb-20">
-              <h1 className="sm:text-4xl text-2xl font-medium title-font text-primary mb-4 ">
+        <section className="text-black font-poppins px-4">
+          <div className="container px-5 mx-auto">
+            <div className="text-center py-4">
+              <h1 className=" text-4xl font-semibold italic  text-primary py-8">
                 Our Product
               </h1>
-              <p className="text-2xl leading-relaxed mx-auto font-semibold">
+              <p className="text-xl leading-relaxed mx-auto font-semibold">
                 THE ULTIMATE POWER SOURCE FOR YOUR COMMERCIAL APPLICATIONS
               </p>
             </div>
-            <div className="flex p-5 flex-wrap justify-center sm:-m-4 -mx-4 -mb-10 -mt-4 md:space-y-0 md:gap-y-5 space-y-6 md:space-x-4">
+            <div className="flex p-8 flex-wrap justify-center sm:-m-4 -mx-4 -mb-10 -mt-4 md:space-y-0 md:gap-y-5 space-y-6 md:space-x-4">
               {ourProduct.map((product) => {
                 return (
                   <div
@@ -84,9 +84,7 @@ const Home = () => {
                       <img src={product.imgUrl} alt="" />
                     </div>
                     <div className="flex-grow">
-                      <h2 className=" text-lg mb-3">
-                        {product.name}
-                      </h2>
+                      <h2 className=" text-lg mb-3">{product.name}</h2>
                     </div>
                   </div>
                 );

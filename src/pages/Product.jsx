@@ -3,7 +3,7 @@ import ProductOne from "../components/sections/products/ProductOne";
 import { products } from "../constants/products";
 const Product = () => {
   const [selectedProduct, setSelectedProduct] = useState(null);
- 
+
   useEffect(() => {
     if (products.length > 0) {
       setSelectedProduct(products[0]);
@@ -15,15 +15,18 @@ const Product = () => {
   };
   return (
     <div>
-      <h1 className="p-2"> Products</h1>
-      <h3 className="font-poppins font-bold text-3xl p-2">
+      <h1 className="text-primary text-4xl font-semibold py-8 px-4">
+        {" "}
+        Products
+      </h1>
+      <h3 className="font-semibold text-3xl px-4">
         Power up your life with our services
       </h3>
       <div className="flex justify-evenly items-center my-8">
         {products.map((product) => {
           return (
             <button
-              className="relative flex h-[50px] w-52  items-center justify-center overflow-hidden bg-red-100 font-bold text-black rounded-full shadow-2xl "
+              className="relative flex h-[50px] w-52  items-center justify-center overflow-hidden bg-red-100 font-semibold text-black rounded-full shadow-2xl "
               key={product.id}
               onClick={() => handleProductClick(product)}
             >
