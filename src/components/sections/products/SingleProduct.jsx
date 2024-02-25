@@ -3,7 +3,7 @@ import scooterLogo from "../../../assets/product/scooterLogo.png";
 import rikshawLogo from "../../../assets/product/autoRikshaw.png";
 import carLogo from "../../../assets/product/carLogo.png";
 
-const ProductOne = ({ product }) => {
+const SingleProduct = ({ product }) => {
   return (
     <>
       <div>
@@ -155,4 +155,4 @@ const ProductOne = ({ product }) => {
   );
 };
 
-export default ProductOne;
+export default SingleProduct;

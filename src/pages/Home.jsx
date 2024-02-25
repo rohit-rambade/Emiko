@@ -10,7 +10,6 @@ import TestimonialSection from "../components/sections/home/TestimonialSection";
 import LifeAtEmiko from "../components/sections/home/LifeAtEmiko";
 import ExploreOpportunities from "../components/sections/home/ExploreOpportunities";
 import BlogsAndArticles from "../components/sections/home/BlogsAndArticles";
-import ProductOne from "../components/sections/products/ProductOne";
 import WorkCulture from "../components/sections/home/WorkCulture";
 const Home = () => {
   const [index, setIndex] = useState(0);
