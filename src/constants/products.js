@@ -3,15 +3,15 @@ import { eRikshawBattery } from "./products/eRikshaw";
 import { inverterBattery } from "./products/inverter";
 import { marineBattery } from "./products/marine";
 import { solarBattery } from "./products/solor";
-import inverterBanner from "../assets/product/banners/Inverter.jpg"
-import marineBanner from "../assets/product/banners/ship.jpeg"
-import solarBanner from "../assets/product/banners/solar.jpg"
-import carBanner from "../assets/product/banners/car.jpg"
+import inverterBanner from "../assets/product/banners/Inverter.jpg";
+import marineBanner from "../assets/product/banners/ship.jpeg";
+import solarBanner from "../assets/product/banners/solar.jpg";
+import carBanner from "../assets/product/banners/car.jpg";
 export const products = [
   {
     id: 1,
-    name: "Autometive Battery",
-    title: "Autometive Batteries",
+    name: "Automotive Battery",
+    title: "Automotive Batteries",
     description: `When power stops, life stops. Before the light goes out, let our
     batteries take your load.Experience Meets Innovation to Deliver
     Next-Gen Batteries.`,
@@ -81,7 +81,6 @@ export const products = [
     ],
   },
   {
-
     id: 2,
     name: "Inverter",
     title: "Inverter Batteries",
@@ -141,7 +140,6 @@ export const products = [
     ],
   },
   {
-
     id: 3,
     name: "Marine Battery",
     title: "Marine Batteries",
@@ -184,13 +182,11 @@ export const products = [
     ],
     rangesOfBatteries: marineBattery,
     isApplication: false,
-
   },
   {
-
     id: 4,
-    name: "E-Rickshaws",
-    title: "E-Rickshaws Batteries",
+    name: "E-Rikshaw",
+    title: "E-Rickshaw Batteries",
     description: `When power stops, life stops. Before the light goes out, let our batteries take your load.Experience Meets Innovation to Deliver Next-Gen Batteries.`,
 
     banner: "",
@@ -233,10 +229,9 @@ export const products = [
     isApplication: false,
   },
   {
-
     id: 5,
-    name: "Solor Batteries",
-    title: "Solor Batteries",
+    name: "Solar Batteries",
+    title: "Solar Batteries",
     description: `When power stops, life stops. Before the light goes out, let our batteries take your load.Experience Meets Innovation to Deliver Next-Gen Batteries.`,
 
     banner: solarBanner,

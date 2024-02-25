@@ -14,7 +14,7 @@ const Careers = () => {
           </h3>
         </div>
         <div className="md:w-1/2">
-          <p className="text-xl leading-8">
+          <p className="text-xl">
             Embrace a dynamic work culture that fosters creativity,
             collaboration, and innovation. We prioritize diversity, encourage
             continuous learning, and value work-life balance. Join a team-driven
