@@ -13,8 +13,9 @@ const Footer = () => {
             </div>
             <div className="flex flex-col">
               <p className="mt-4 max-w-xs">
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Esse
-                non cupiditate quae nam molestias.
+                EMIKO, by JPG Batteries, enters alternative energy with
+                cutting-edge tech, aiming to revolutionize the industry across
+                diverse segments like solar, e-rickshaws, and batteries.
               </p>
 
               <ul className="mt-8 flex gap-6 flex-col">
@@ -27,10 +28,7 @@ const Footer = () => {
                         className="mt-2"
                       />
                     </div>
-                    <p>
-                      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                      Eum, aperiam.
-                    </p>
+                    <p>EMIKO House, Viman Nagar, Pune, Maharashtra, India.</p>
                   </div>
                 </li>
                 <li>
@@ -119,7 +117,7 @@ const Footer = () => {
                     href="#"
                     className="text-white transition hover:opacity-75"
                   >
-                    Autometive battery
+                    Automotive battery
                   </a>
                 </li>
                 <li>
@@ -143,7 +141,7 @@ const Footer = () => {
                     href="#"
                     className="text-white transition hover:opacity-75"
                   >
-                    E-Rikshaws
+                    E-Rikshaw
                   </a>
                 </li>
                 <li>
@@ -151,7 +149,7 @@ const Footer = () => {
                     href="#"
                     className="text-white transition hover:opacity-75"
                   >
-                    Solor Batteries
+                    Solar Batteries
                   </a>
                 </li>
               </ul>

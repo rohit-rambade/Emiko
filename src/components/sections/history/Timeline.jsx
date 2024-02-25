@@ -12,7 +12,7 @@ const Timeline = () => {
           className=" opacity-40 absolute object-cover w-full h-full"
         ></img>
         <div className="absolute flex flex-col justify-center items-center ">
-          <h3 className="font-arimo font-bold   text-4xl py-4">
+          <h3 className="font-poppins font-bold   text-4xl py-4">
             EMIKO SUCCESS THROUGH THE YEARS
           </h3>
           <p>
