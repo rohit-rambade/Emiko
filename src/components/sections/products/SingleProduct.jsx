@@ -80,7 +80,7 @@ const SingleProduct = ({ product }) => {
                 APPLICATION
               </h3>
             </div>
-            <div className="flex">
+            <div className="flex justify-center flex-wrap">
               <div className="flex  p-2 rounded-full bg-white m-4 ">
                 <img
                   src={scooterLogo}

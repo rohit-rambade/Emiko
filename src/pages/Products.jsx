@@ -37,11 +37,11 @@ const Product = () => {
       <h3 className="font-semibold text-3xl px-4">
         Power up your life with our services
       </h3>
-      <div className="flex justify-evenly items-center my-8">
+      <div className="flex flex-wrap gap-y-3 md:gapy justify-evenly items-center my-8">
         {products.map((product) => {
           return (
             <button
-              className="relative flex h-[50px] w-52  items-center justify-center overflow-hidden bg-red-100 font-semibold text-black rounded-full shadow-2xl "
+              className="relative flex h-[50px] p-2 w-28 md:w-52 text-sm md:text-base  items-center justify-center overflow-hidden bg-red-100 font-semibold text-black rounded-full shadow-2xl "
               key={product.id}
               onClick={() => handleProductClick(product)}
             >
