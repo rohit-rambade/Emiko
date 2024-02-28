@@ -6,6 +6,7 @@ import Faq from "../pages/Faq";
 import Careers from "../pages/Careers";
 import About from "../pages/About";
 import History from "../pages/History";
+import FindDealer from "../components/sections/whereToBuy/FindDealer";
 
 export const router = createBrowserRouter([
   {
@@ -41,6 +42,10 @@ export const router = createBrowserRouter([
       {
         path: "history",
         element: <History />,
+      },
+      {
+        path: "where-to-buy",
+        element: <FindDealer />,
       },
     ],
   },

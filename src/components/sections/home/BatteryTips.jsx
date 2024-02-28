@@ -19,7 +19,7 @@ const BatteryTips = () => {
                 <img src={batteryCharge} alt="" className="w-32" />
               </div>
               <div className="flex-grow">
-                <p className=" text-lg font-semibold">
+                <p className=" text-lg ">
                   How do i know that my battery needs replacement?
                 </p>
               </div>
@@ -29,7 +29,7 @@ const BatteryTips = () => {
                 <img src={batteryCharge} alt="" className="w-32" />
               </div>
               <div className="flex-grow">
-                <p className=" text-lg font-semibold">
+                <p className=" text-lg ">
                   Tips while replacing the battery or cleaning terminals
                 </p>
               </div>
@@ -39,7 +39,7 @@ const BatteryTips = () => {
                 <img src={batteryCharge} alt="" className="w-32" />
               </div>
               <div className="flex-grow">
-                <p className=" text-lg font-semibold">
+                <p className=" text-lg  ">
                   Battery Recycling- how to handle and used batteries with care
                 </p>
               </div>
