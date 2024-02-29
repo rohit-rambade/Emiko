@@ -20,7 +20,7 @@ export const ourProduct = [
   },
   {
     id: 4,
-    name: "E-Rikshaw Batteries",
+    name: "E-Rickshaw Batteries",
     imgUrl: rickshaw,
   },
   {

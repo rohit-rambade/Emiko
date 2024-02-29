@@ -7,11 +7,11 @@ import inverterBanner from "../assets/product/banners/Inverter.jpg";
 import marineBanner from "../assets/product/banners/ship.jpeg";
 import solarBanner from "../assets/product/banners/solar.jpg";
 import carBanner from "../assets/product/banners/car.jpg";
-import automotiveImg from "../assets/product/Automotive/autometive.png"
-import inverterImg from "../assets/product/Inverter/InverterBattery.png"
-import marineImg from "../assets/product/Marine/MarineBattery.png"
-import eRikshawImg from "../assets/product/E-ric/ErikshawBattery.png"
-import solarImg from "../assets/product/Solar/SolarBattery.png"
+import automotiveImg from "../assets/product/Automotive/autometive.png";
+import inverterImg from "../assets/product/Inverter/InverterBattery.png";
+import marineImg from "../assets/product/Marine/MarineBattery.png";
+import eRikshawImg from "../assets/product/E-ric/ErikshawBattery.png";
+import solarImg from "../assets/product/Solar/SolarBattery.png";
 export const products = [
   {
     id: 1,
@@ -190,7 +190,7 @@ export const products = [
   },
   {
     id: 4,
-    name: "E-Rikshaw",
+    name: "E-Rickshaw",
     title: "E-Rickshaw Batteries",
     description: `When power stops, life stops. Before the light goes out, let our batteries take your load.Experience Meets Innovation to Deliver Next-Gen Batteries.`,
 
