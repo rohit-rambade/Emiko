@@ -72,7 +72,7 @@ const Home = () => {
                 THE ULTIMATE POWER SOURCE FOR YOUR COMMERCIAL APPLICATIONS
               </p>
             </div>
-            <div className="flex p-8 flex-wrap justify-center sm:-m-4 -mx-4 -mb-10 -mt-4 md:space-y-0 md:gap-y-5 space-y-6 md:space-x-4">
+            <div className="flex p-8 flex-wrap justify-center items-center sm:-m-4 -mx-4 -mb-10 -mt-4 md:space-y-0 md:gap-y-5 space-y-6 md:space-x-4">
               {ourProduct.map((product) => {
                 return (
                   <div

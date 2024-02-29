@@ -7,7 +7,7 @@ const SingleProduct = ({ product }) => {
   return (
     <>
       <div>
-        <div className="relative w-full h-72 md:h-96 flex justify-center items-center bg-gradient-to-bl from-orange-300 to-orange-200">
+        <div className="relative w-full h-72  md:h-96 flex justify-center items-center bg-gradient-to-bl from-orange-300 to-orange-200">
           <img
             src={product?.banner}
             className="  absolute object-cover w-full h-full opacity-50 mix-blend-normal"
@@ -23,21 +23,10 @@ const SingleProduct = ({ product }) => {
         </div>
         <div className="flex flex-col justify-center content-center px-4 md:px-28">
           <h2 className="text-left md:text-center py-8 text-3xl md:text-4xl font-semibold text-primary">
-            Rev Up Your Drive with Reliable Energy
+            {product?.tagline}
           </h2>
           <p className=" text-left text-lg md:text-xl md:text-center">
-            Elevate Your Drive with Advanced Technology: Our Automotive
-            Batteries Redefine Performance. Featuring high-surface carbon for
-            enhanced discharge capabilities and rapid deep cycle recovery, our
-            batteries are designed to thrive in the face of frequent and
-            prolonged power demands. Crafted with a special-grade polyethylene
-            separator, our batteries boast high volume porosity and superior
-            mechanical strength. With minimal water top-up requirements and an
-            impressive life expectancy of up to 5-6 years, these batteries
-            guarantee a reliable and enduring power source. Whether for everyday
-            commuting or heavy-duty industrial applications, our automotive
-            batteries are engineered to power your journey with lasting
-            brilliance.
+            {product?.desc}
           </p>
         </div>
         <div className="flex flex-col md:flex-row bg-gradient-to-b md:bg-gradient-to-r from-red-500 to-white justify-evenly items-center my-16 ">

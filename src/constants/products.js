@@ -4,7 +4,9 @@ import { inverterBattery } from "./products/inverter";
 import { marineBattery } from "./products/marine";
 import { solarBattery } from "./products/solor";
 import inverterBanner from "../assets/product/banners/Inverter.jpg";
-import marineBanner from "../assets/product/banners/ship.jpeg";
+
+import marineBanner from "../assets/product/banners/ship.jpg";
+
 import solarBanner from "../assets/product/banners/solar.jpg";
 import carBanner from "../assets/product/banners/car.jpg";
 import automotiveImg from "../assets/product/Automotive/autometive.png";
@@ -15,7 +17,7 @@ import solarImg from "../assets/product/Solar/SolarBattery.png";
 export const products = [
   {
     id: 1,
-    name: "Automotive Battery",
+    name: "Automotive",
     title: "Automotive Batteries",
     description: `When power stops, life stops. Before the light goes out, let our
     batteries take your load.Experience Meets Innovation to Deliver
@@ -146,7 +148,7 @@ export const products = [
   },
   {
     id: 3,
-    name: "Marine Battery",
+    name: "Marine",
     title: "Marine Batteries",
     description: `When power stops, life stops. Before the light goes out, let our batteries take your load.Experience Meets Innovation to Deliver Next-Gen Batteries.`,
     banner: marineBanner,
@@ -235,7 +237,7 @@ export const products = [
   },
   {
     id: 5,
-    name: "Solar Batteries",
+    name: "Solar ",
     title: "Solar Batteries",
     description: `When power stops, life stops. Before the light goes out, let our batteries take your load.Experience Meets Innovation to Deliver Next-Gen Batteries.`,
 
