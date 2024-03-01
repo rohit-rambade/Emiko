@@ -32,13 +32,13 @@ const Home = () => {
 
   return (
     <div>
-      <div className="relative  h-[88vh]">
+      <div className="relative h-72 md:h-[88vh]">
         {images.map((image, idx) => (
           <img
             key={idx}
             src={image}
             alt={`slide-${idx}`}
-            className={`absolute top-0 left-0 w-full h-full object-left object-cover md:object-fill transition-opacity duration-1000 ${
+            className={`absolute top-0 left-0 md:w-full h-full object-center md:object-left object-contain md:object-fill transition-opacity duration-1000 ${
               idx === index ? "opacity-100" : "opacity-0"
             }`}
           />

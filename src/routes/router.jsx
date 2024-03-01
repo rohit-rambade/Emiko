@@ -9,6 +9,7 @@ import History from "../pages/History";
 import FindDealer from "../components/sections/whereToBuy/FindDealer";
 import BecomeDealer from "../components/sections/whereToBuy/BecomeDealer";
 import BecomeDistributor from "../components/sections/whereToBuy/BecomeDistributor";
+import WhereToBuy from "../pages/WhereToBuy";
 
 export const router = createBrowserRouter([
   {
@@ -23,10 +24,7 @@ export const router = createBrowserRouter([
         path: "products",
         element: <Products />,
       },
-      {
-        path: "aboutus",
-        element: <About />,
-      },
+
       {
         path: "faq",
         element: <Faq />,
@@ -41,7 +39,7 @@ export const router = createBrowserRouter([
       },
       {
         path: "where-to-buy",
-        element: <FindDealer />,
+        element: <WhereToBuy />,
       },
       {
         path: "find-dealer",
