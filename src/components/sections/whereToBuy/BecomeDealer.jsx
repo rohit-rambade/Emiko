@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import findDealer from "../../../assets/whereToBuy/findDealer3.jpg";
 
 const BecomeDealer = () => {
   const [phoneNumber, setPhoneNumber] = useState("");
@@ -30,8 +31,32 @@ const BecomeDealer = () => {
 
   return (
     <>
-      <div className="">
+      <div>
+        {/* -----------------------------------------Banner------------------------------------ */}
+        <div class="relative font-[sans-serif] before:absolute before:w-full before:h-full before:inset-0 before:bg-black before:opacity-50 before:z-10">
+          <img
+            src={findDealer}
+            alt="Banner Image"
+            class="absolute inset-0 w-full h-full object-cover"
+          />
+          <div class="min-h-[500px] relative z-20 h-full max-w-6xl mx-auto flex flex-col justify-center items-center text-center text-white p-6">
+            <h2 class="sm:text-6xl text-2xl font-bold mb-6">Grow With Us!</h2>
+            <p class="text-xl md:text-3xl text-center text-gray-200 font-semibold">
+              Empower Your Business: Become A Dealer Today!
+            </p>
+            <a
+              href="javascript:void(0)"
+              class="mt-8 bg-transparent text-white text-base font-semibold py-2.5 px-6 border-2 border-white hover:border-primary rounded hover:bg-primary hover:text-black transition duration-300 ease-in-out"
+            >
+              Contact Us
+            </a>
+          </div>
+        </div>
+        {/* -----------------------------------------Banner------------------------------------ */}
         <div className="max-w-screen-md mx-auto p-5 ">
+          <h1 className=" text-center text-2xl md:text-4xl font-semibold text-primary py-4">
+            QUICK ENQUIRY
+          </h1>
           <div className="grid grid-cols-1  border">
             <form className="md:col-span-8 p-10" onSubmit={handleSubmit}>
               <div className="flex flex-wrap -mx-3 mb-6">
@@ -66,6 +91,23 @@ const BecomeDealer = () => {
                     placeholder="Doe"
                   />
                 </div>
+              </div>
+              <div className="mb-6">
+                <label
+                  htmlFor="location"
+                  className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+                >
+                  Business Name
+                </label>
+                <textarea
+                  id="location"
+                  name="location"
+                  value={location}
+                  onChange={handleLocationChange}
+                  placeholder="Enter your company name"
+                  rows={1} // Increase the number of rows
+                  className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                ></textarea>
               </div>
               <div className="mb-6">
                 <label
@@ -108,14 +150,68 @@ const BecomeDealer = () => {
                   htmlFor="location"
                   className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
                 >
-                  Preferred Location
+                  business Address
                 </label>
                 <textarea
                   id="location"
                   name="location"
                   value={location}
                   onChange={handleLocationChange}
-                  placeholder="Enter your preferred location"
+                  placeholder="Please enter your full address [City, District,  State, Country]"
+                  rows={5} // Increase the number of rows
+                  className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                ></textarea>
+              </div>
+              <div className="mb-6">
+                <label
+                  htmlFor="location"
+                  className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+                >
+                  Type of business
+                </label>
+                <textarea
+                  id="location"
+                  name="location"
+                  value={location}
+                  onChange={handleLocationChange}
+                  placeholder="e.g. Retail, Service"
+                  rows={5} // Increase the number of rows
+                  className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                ></textarea>
+              </div>
+              <div className="mb-6">
+                <label
+                  htmlFor="phoneNumber"
+                  className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+                >
+                  Number of years in business
+                </label>
+                <input
+                  type="num"
+                  id="noOfYears"
+                  name="phoneNumber"
+                  value={phoneNumber}
+                  onChange={handlePhoneNumberChange}
+                  placeholder="Enter number of years in business"
+                  className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                />
+                {phoneNumberError && (
+                  <span style={{ color: "red" }}>{phoneNumberError}</span>
+                )}
+              </div>
+              <div className="mb-6">
+                <label
+                  htmlFor="location"
+                  className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+                >
+                  Why do you want to become a dealer for Emiko Battery?
+                </label>
+                <textarea
+                  id="location"
+                  name="location"
+                  value={location}
+                  onChange={handleLocationChange}
+                  placeholder=""
                   rows={5} // Increase the number of rows
                   className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
                 ></textarea>

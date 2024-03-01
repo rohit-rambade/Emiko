@@ -39,14 +39,16 @@ const FindDealer = () => {
             alt="Banner Image"
             class="absolute inset-0 w-full h-full object-cover"
           />
-          <div class="min-h-[300px] relative z-50 h-full max-w-6xl mx-auto flex flex-col justify-center items-center text-center text-white p-6">
-            <h2 class="sm:text-4xl text-2xl font-bold mb-6">Find A Dealer</h2>
-            <p class="text-lg text-center text-gray-200">
+          <div class="min-h-[500px] relative z-20 h-full max-w-6xl mx-auto flex flex-col justify-center items-center text-center text-white p-6 ">
+            <h2 class="sm:text-6xl text-2xl font-bold mb-6">
+              Find Your Nearest Dealer
+            </h2>
+            <p class="text-xl md:text-3xl text-center text-gray-200 font-semibold">
               Looking for an emiko battery shop nearby ?
             </p>
             <a
               href="javascript:void(0)"
-              class="mt-8 bg-transparent text-white text-base font-semibold py-2.5 px-6 border-2 border-white rounded hover:bg-white hover:text-black transition duration-300 ease-in-out"
+              class="mt-8 bg-transparent text-white text-base font-semibold py-2.5 px-6 border-2 border-white hover:border-primary rounded hover:bg-primary hover:text-black transition duration-300 ease-in-out"
             >
               Contact Us
             </a>
@@ -54,9 +56,12 @@ const FindDealer = () => {
         </div>
         {/* -----------------------------------------Banner------------------------------------ */}
         <div>
-          <div className="max-w-screen-md mx-auto p-5 ">
-            <div className="grid grid-cols-1  border shadow-2xl">
-              <form className="md:col-span-8 p-10" onSubmit={handleSubmit}>
+          <div className="max-w-screen-md mx-auto p-5 py-12">
+            <h1 className=" text-center text-2xl md:text-4xl font-semibold text-primary py-4">
+              QUICK ENQUIRY
+            </h1>
+            <div className="grid grid-cols-1  border shadow-2xl ">
+              <form className="md:col-span-8 p-10 " onSubmit={handleSubmit}>
                 <div className="flex flex-wrap -mx-3 mb-6">
                   <div className="w-full md:w-1/2 px-3 mb-6 md:mb-0">
                     <label
