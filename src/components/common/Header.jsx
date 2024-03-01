@@ -25,13 +25,14 @@ const Header = () => {
               <img src={logo} className="h-12 md:h-16" alt="Emiko Logo" />
             </Link>
             <div className="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
-              <button
+              <a
                 type="button"
+                href="tel:18001204954"
                 className="text-black flex w-auto space-x-2 bg-primary hover:bg-secondary focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center  "
               >
                 <FaPhone size={20} color="black" />
                 <span>18001204954</span>
-              </button>
+              </a>
               <button
                 onClick={() => setIsOpen(!isOpen)}
                 data-collapse-toggle="navbar-sticky"

@@ -1,10 +1,11 @@
 import React from "react";
 import { FaLocationArrow, FaPhone } from "react-icons/fa6";
 import { MdEmail } from "react-icons/md";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
-    <footer className="bg-gray-400 text-white p-5">
+    <footer id="footer-section" className="bg-gray-400 text-white p-5">
       <div className="">
         <div className="flex flex-col md:flex-row gap-y-6">
           <div className="md:w-1/4">
@@ -20,7 +21,7 @@ const Footer = () => {
 
               <ul className="mt-8 flex gap-6 flex-col">
                 <li>
-                  <div className="flex   gap-x-4">
+                  <div className="flex   gap-x-4 items-center">
                     <div>
                       <FaLocationArrow
                         size={30}
@@ -32,19 +33,19 @@ const Footer = () => {
                   </div>
                 </li>
                 <li>
-                  <div className="flex gap-x-4">
+                  <div className="flex gap-x-4 items-center">
                     <div>
                       <FaPhone size={30} color="black" className="mt-1" />
                     </div>
-                    <p>18001204954</p>
+                    <a href="tel:18001204954">18001204954</a>
                   </div>
                 </li>
                 <li>
-                  <div className="flex gap-x-4">
+                  <div className="flex gap-x-4 items-center">
                     <div>
                       <MdEmail size={30} color="black" className="mt-1" />
                     </div>
-                    <p>connect@emiko.co.in</p>
+                    <a href="mailto:connect@emiko.co.in">connect@emiko.co.in</a>
                   </div>
                 </li>
               </ul>
@@ -58,52 +59,49 @@ const Footer = () => {
 
                 <ul className="mt-6 space-y-4 text-xl uppercase">
                   <li>
-                    <a
-                      href="#"
+                    <Link
+                      to="/"
                       className="text-white transition hover:opacity-75"
                     >
                       Home
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a
-                      href="#"
+                    <Link
+                      to="/aboutus"
                       className="text-white transition hover:opacity-75"
                     >
                       About Us
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a
-                      href="#"
+                    <Link
+                      to="products"
                       className="text-white transition hover:opacity-75"
                     >
                       Products
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a
-                      href="#"
+                    <Link
+                      to="carrers"
                       className="text-white transition hover:opacity-75"
                     >
                       Careers
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a
-                      href="#"
+                    <Link
+                      to="/where-to-buy"
                       className="text-white transition hover:opacity-75"
                     >
                       Where to buy
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a
-                      href="#"
-                      className="text-white transition hover:opacity-75"
-                    >
+                    <Link className="text-white transition hover:opacity-75">
                       Contact Us
-                    </a>
+                    </Link>
                   </li>
                 </ul>
               </div>
