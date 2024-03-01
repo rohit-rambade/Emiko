@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const FindDealer = () => {
+const BecomeDealer = () => {
   const [phoneNumber, setPhoneNumber] = useState("");
   const [phoneNumberError, setPhoneNumberError] = useState("");
   const [location, setLocation] = useState("");
@@ -151,4 +151,4 @@ const FindDealer = () => {
   );
 };
 
-export default FindDealer;
+export default BecomeDealer;
