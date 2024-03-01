@@ -66,7 +66,7 @@ const Home = () => {
           <div className="container px-5 mx-auto">
             <div className="text-center py-4">
               <h1 className=" text-4xl font-semibold italic  text-primary py-8">
-                Our Product
+                Our Products
               </h1>
               <p className="text-xl leading-relaxed mx-auto font-semibold">
                 THE ULTIMATE POWER SOURCE FOR YOUR COMMERCIAL APPLICATIONS

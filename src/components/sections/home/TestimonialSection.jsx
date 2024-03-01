@@ -8,7 +8,7 @@ const TestimonialSection = () => {
       <section className="font-poppins">
         <div className="py-10 mx-auto flex flex-col md:flex-row ">
           <div className=" p-3 space-y-6">
-            <h1 className="text-4xl font-bold text-primary">
+            <h1 className="text-4xl font-semibold text-primary">
               Trust in our Expertise, Experience, and Dedication.
             </h1>
             <p className="text-2xl ">what our clients says</p>

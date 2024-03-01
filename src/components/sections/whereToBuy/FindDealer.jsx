@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import findDealer from "../../../assets/whereToBuy/DindDealer3.jpg";
+import findDealer from "../../../assets/whereToBuy/findDealer3.jpg";
 
 const FindDealer = () => {
   const [phoneNumber, setPhoneNumber] = useState("");
@@ -33,38 +33,29 @@ const FindDealer = () => {
     <>
       <div>
         {/* -----------------------------------------Banner------------------------------------ */}
-        <div class="relative font-[sans-serif] before:absolute before:w-full before:h-full before:inset-0 before:bg-black before:opacity-100 before:z-10">
+        <div class="relative font-[sans-serif] before:absolute before:w-full before:h-full before:inset-0 before:bg-black before:opacity-50 before:z-10">
           <img
             src={findDealer}
             alt="Banner Image"
             class="absolute inset-0 w-full h-full object-cover"
           />
           <div class="min-h-[300px] relative z-50 h-full max-w-6xl mx-auto flex flex-col justify-center items-center text-center text-white p-6">
-            <h2 class="sm:text-4xl text-2xl font-bold mb-6">
-              Explore the World
-            </h2>
+            <h2 class="sm:text-4xl text-2xl font-bold mb-6">Find A Dealer</h2>
             <p class="text-lg text-center text-gray-200">
-              Embark on unforgettable journeys. Book your dream vacation today!
+              Looking for an emiko battery shop nearby ?
             </p>
             <a
               href="javascript:void(0)"
               class="mt-8 bg-transparent text-white text-base font-semibold py-2.5 px-6 border-2 border-white rounded hover:bg-white hover:text-black transition duration-300 ease-in-out"
             >
-              Book Now
+              Contact Us
             </a>
           </div>
         </div>
         {/* -----------------------------------------Banner------------------------------------ */}
         <div>
-          <div
-            className=""
-            style={{
-              backgroundImage: `url(${findDealer})`,
-              backgroundSize: "cover",
-            }}
-          ></div>
           <div className="max-w-screen-md mx-auto p-5 ">
-            <div className="grid grid-cols-1  border">
+            <div className="grid grid-cols-1  border shadow-2xl">
               <form className="md:col-span-8 p-10" onSubmit={handleSubmit}>
                 <div className="flex flex-wrap -mx-3 mb-6">
                   <div className="w-full md:w-1/2 px-3 mb-6 md:mb-0">
