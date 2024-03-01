@@ -7,6 +7,9 @@ import Careers from "../pages/Careers";
 import About from "../pages/About";
 import History from "../pages/History";
 import FindDealer from "../components/sections/whereToBuy/FindDealer";
+import BecomeDealer from "../components/sections/whereToBuy/BecomeDealer";
+import BecomeDistributor from "../components/sections/whereToBuy/BecomeDistributor";
+import WhereToBuy from "../pages/WhereToBuy";
 
 export const router = createBrowserRouter([
   {
@@ -24,13 +27,8 @@ export const router = createBrowserRouter([
       {
         path: "aboutus",
         element: <About />,
-        children: [
-          {
-            path: "history",
-            element: <History />,
-          },
-        ],
       },
+
       {
         path: "faq",
         element: <Faq />,
@@ -45,7 +43,19 @@ export const router = createBrowserRouter([
       },
       {
         path: "where-to-buy",
+        element: <WhereToBuy />,
+      },
+      {
+        path: "find-dealer",
         element: <FindDealer />,
+      },
+      {
+        path: "become-dealer",
+        element: <BecomeDealer />,
+      },
+      {
+        path: "become-distributor",
+        element: <BecomeDistributor />,
       },
     ],
   },

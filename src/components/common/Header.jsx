@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 import logo from "../../assets/logo.png";
 import SubMenu from "./SubMenu";
@@ -8,9 +8,35 @@ import { Link, NavLink } from "react-router-dom";
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [activeMenu, setActiveMenu] = useState(null);
+  const [isMobile, setIsMobile] = useState(false);
 
-  const toggleSubMenu = (index) => {
-    setActiveMenu(activeMenu === index ? null : index);
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+
+    handleResize();
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
+  const toggleSubMenu = (menuId) => {
+    setActiveMenu(activeMenu === menuId ? null : menuId);
+  };
+
+  const handleNavLinkClick = (hasSubMenu) => {
+    if (isMobile && !hasSubMenu) {
+      setIsOpen(false);
+    }
+  };
+
+  const handleSubMenuClick = () => {
+    if (isMobile) {
+      setIsOpen(false);
+    }
   };
 
   return (
@@ -25,13 +51,14 @@ const Header = () => {
               <img src={logo} className="h-12 md:h-16" alt="Emiko Logo" />
             </Link>
             <div className="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
-              <button
+              <a
                 type="button"
+                href="tel:18001204954"
                 className="text-black flex w-auto space-x-2 bg-primary hover:bg-secondary focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center  "
               >
                 <FaPhone size={20} color="black" />
                 <span>18001204954</span>
-              </button>
+              </a>
               <button
                 onClick={() => setIsOpen(!isOpen)}
                 data-collapse-toggle="navbar-sticky"
@@ -55,11 +82,14 @@ const Header = () => {
                           <li>
                             <NavLink
                               to={menu.link}
-                              className={({ isActive }) =>
-                                `relative  w-fit block after:block after:content-[''] after:absolute after:h-[3px] after:bg-primary after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-center py-3 md:py-0 ${
-                                  isActive ? "text-red-500" : "text-black"
-                                }`
-                              }
+                              className={`relative w-fit block after:block after:content-[''] after:absolute after:h-[3px] after:bg-primary after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-center py-3 md:py-0 ${
+                                window.location.pathname === menu.link
+                                  ? "text-red-500"
+                                  : "text-black"
+                              }`}
+                              onClick={() => {
+                                handleNavLinkClick(); // Close the menu on mobile after clicking a link
+                              }}
                               aria-current="page"
                             >
                               {menu.title}
@@ -67,8 +97,23 @@ const Header = () => {
                           </li>
                         ) : (
                           <div
-                            className="relative"
-                            onClick={() => toggleSubMenu(menu.id)}
+                            className="relative cursor-pointer"
+                            onClick={() => {
+                              toggleSubMenu(menu.id);
+                              handleSubMenuClick(); // Close menu on mobile after selecting submenu
+                            }}
+                            onMouseEnter={() => {
+                              // Only handle hover event on desktop
+                              if (window.innerWidth >= 768) {
+                                toggleSubMenu(menu.id);
+                              }
+                            }}
+                            onMouseLeave={() => {
+                              // Only handle hover event on desktop
+                              if (window.innerWidth >= 768) {
+                                toggleSubMenu(menu.id);
+                              }
+                            }}
                             key={menu.id}
                           >
                             <li>
@@ -79,7 +124,7 @@ const Header = () => {
                                 {menu.title}
                               </Link>
                             </li>
-                            {menu.submenu && (
+                            {menu.submenu && activeMenu === menu.id && (
                               <SubMenu navMenu={menu} index={activeMenu} />
                             )}
                           </div>

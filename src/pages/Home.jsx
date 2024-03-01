@@ -32,13 +32,13 @@ const Home = () => {
 
   return (
     <div>
-      <div className="relative  h-[88vh]">
+      <div className="relative h-72 md:h-[88vh]">
         {images.map((image, idx) => (
           <img
             key={idx}
             src={image}
             alt={`slide-${idx}`}
-            className={`absolute top-0 left-0 w-full h-full object-left object-cover md:object-fill transition-opacity duration-1000 ${
+            className={`absolute top-0 left-0 md:w-full h-full object-center md:object-left object-contain md:object-fill transition-opacity duration-1000 ${
               idx === index ? "opacity-100" : "opacity-0"
             }`}
           />
@@ -66,13 +66,13 @@ const Home = () => {
           <div className="container px-5 mx-auto">
             <div className="text-center py-4">
               <h1 className=" text-4xl font-semibold italic  text-primary py-8">
-                Our Product
+                Our Products
               </h1>
               <p className="text-xl leading-relaxed mx-auto font-semibold">
                 THE ULTIMATE POWER SOURCE FOR YOUR COMMERCIAL APPLICATIONS
               </p>
             </div>
-            <div className="flex p-8 flex-wrap justify-center sm:-m-4 -mx-4 -mb-10 -mt-4 md:space-y-0 md:gap-y-5 space-y-6 md:space-x-4">
+            <div className="flex p-8 flex-wrap justify-center items-center sm:-m-4 -mx-4 -mb-10 -mt-4 md:space-y-0 md:gap-y-5 space-y-6 md:space-x-4">
               {ourProduct.map((product) => {
                 return (
                   <div

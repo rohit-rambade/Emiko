@@ -9,7 +9,7 @@
     "id": 2,
     "title": "About Us",
     "isSubMenu": true,
-    "link": "aboutus",
+    "link": "/aboutus",
     "submenu": [
       {
         "id": 1,
@@ -21,11 +21,7 @@
         "title": "Vision",
         "link": "/know"
       },
-      {
-        "id": 3,
-        "title": "Events",
-        "link": "/events"
-      },
+
       {
         "id": 4,
         "title": "Contact",
@@ -46,23 +42,23 @@
   {
     "id": 5,
     "title": "Where to Buy",
-    "link": "/where-to-buy",
+    "link": "where-to-buy",
     "isSubMenu": true,
     "submenu": [
       {
         "id": 1,
-        "title": "Find a Dealer",
+        "title": "Find A Dealer",
         "link": "/find-dealer"
       },
       {
         "id": 2,
-        "title": "Become a dealer",
+        "title": "Become A Dealer",
         "link": "/become-dealer"
       },
       {
         "id": 3,
-        "title": "Join",
-        "link": "/join"
+        "title": "Become A Distributor",
+        "link": "/become-distributor"
       }
     ]
   },

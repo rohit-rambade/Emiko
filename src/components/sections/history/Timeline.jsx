@@ -6,16 +6,16 @@ import watch from "../../../assets/history/oldWatch .jpg";
 const Timeline = () => {
   return (
     <>
-      <div className="relative w-full h-96 flex justify-center items-center  bg-gradient-to-r from-orange-200 to-orange-50 ">
+      <div className="relative w-full h-96 flex justify-center items-center  bg-gradient-to-r from-orange-200 to-orange-50">
         <img
           src={watch}
           className=" opacity-40 absolute object-cover w-full h-full"
         ></img>
-        <div className="absolute flex flex-col justify-center items-center ">
-          <h3 className="font-poppins font-bold   text-4xl py-4">
+        <div className="absolute flex flex-col justify-center items-center text-center px-2">
+          <h3 className="font-bold   text-4xl py-2">
             EMIKO SUCCESS THROUGH THE YEARS
           </h3>
-          <p>
+          <p className="text-xl md:text-2xl">
             Tracing the Evolution of Emiko Batteries: Powering Progress through
             Time
           </p>
@@ -26,97 +26,181 @@ const Timeline = () => {
         Our Journey
       </h3>
       {/* <!-- component --> */}
-      <div className="container  mx-auto w-full h-full">
-        <div className="relative wrap overflow-hidden p-10 h-full">
-          <div
-            className="border-2-2 absolute border-opacity-50 border-gray-700 h-full border"
-            style={{ left: "50%" }}
-          ></div>
-          {/* <!-- right timeline --> */}
-          <div className="mb-8 flex justify-between items-center w-full right-timeline">
-            <div className="order-1 w-5/12"></div>
-            <div className="z-20 flex items-center justify-center order-1 bg-gray-400 shadow-xl w-8 h-8 rounded-full">
-              <div className="p-2 bg-gray-800 rounded-full 2-4 h-4"></div>
+      {/* --------------------------------------------------------Timeline--------------------------------------------------- */}
+      <div className="flex justify-center items-center px-2">
+        <div className="flex flex-col md:grid grid-cols-9 mx-auto p-2 text-black">
+          {/* <!-- left --> */}
+          <div className="flex flex-row-reverse md:contents">
+            <div className="bg-red-500 col-start-1 col-end-5 p-4 rounded-xl my-4 ml-auto shadow-md">
+              <h3 className="font-semibold text-lg mb-1">1988</h3>
+              <h3 className="font-semibold text-base mb-1">
+                Chinchwad Plant, Pune
+              </h3>
+              <p className="leading-tight text-justify">
+                Associated with Exide Industries for battery parts manufacturing
+                & plant activities
+              </p>
             </div>
-            <div className="order-1 bg-red-400 rounded-lg shadow-xl w-5/12 px-6 py-4">
-              <h3 className="mb-3 font-bold text-gray-800 text-xl">2022</h3>
-              <p className="text-sm leading-snug tracking-wide text-gray-900 text-opacity-100">
-                Launched the longest-range GC2 lithium-ion golf car battery
-                Introduced a 48V GC2 lithium-ion battery to the golf industry
-                Launched the 24V/36V lithium-ion battery line.
+            <div className="col-start-5 col-end-6 md:mx-auto relative mr-10">
+              <div className="h-full w-6 flex items-center justify-center">
+                <div className="h-full w-1 bg-gray-400 pointer-events-none"></div>
+              </div>
+              <div className="w-6 h-6 absolute top-1/2 -mt-3 rounded-full bg-gray-800 shadow"></div>
+            </div>
+          </div>
+          {/* <!-- right --> */}
+          <div className="flex md:contents">
+            <div className="col-start-5 col-end-6 mr-10 md:mx-auto relative">
+              <div className="h-full w-6 flex items-center justify-center">
+                <div className="h-full w-1 bg-gray-400 pointer-events-none"></div>
+              </div>
+              <div className="w-6 h-6 absolute top-1/2 -mt-3 rounded-full bg-gray-800 shadow"></div>
+            </div>
+            <div className="bg-red-500 col-start-6 col-end-10 p-4 rounded-xl my-4 mr-auto shadow-md">
+              <h3 className="font-semibold text-lg mb-1">2000</h3>
+              <h3 className="font-semibold text-base mb-1">
+                Chikali Plant, Pune
+              </h3>
+              <p className="leading-tight text-justify">
+                Established the first plant for injection molding and battery
+                charging
               </p>
             </div>
           </div>
-
-          {/* <!-- left timeline --> */}
-          <div className="mb-8 flex justify-between flex-row-reverse items-center w-full left-timeline">
-            <div className="order-1 w-5/12"></div>
-            <div className="z-20 flex items-center justify-center order-1 bg-gray-400 shadow-xl w-8 h-8 rounded-full">
-              <div className="p-2 bg-gray-800 rounded-full 2-4 h-4"></div>
+          {/* <!-- left --> */}
+          <div className="flex flex-row-reverse md:contents">
+            <div className="bg-red-500 col-start-1 col-end-5 p-4 rounded-xl my-4 ml-auto shadow-md">
+              <h3 className="font-semibold text-lg mb-1">2005</h3>
+              <h3 className="font-semibold text-base mb-1">
+                Chikali Plant Expansion
+              </h3>
+              <p className="leading-tight text-justify">
+                Opened a second plant in Chikali for battery charging
+              </p>
             </div>
-            <div className="order-1 bg-red-400 rounded-lg shadow-xl w-5/12 px-6 py-4">
-              <h3 className="mb-3 font-bold text-gray-900 text-xl">2018</h3>
-              <p className="text-sm font-medium leading-snug tracking-wide text-gray-900 text-opacity-100">
-                Acquired by C&D Technologies, a portfolio company of KPS Capital
-                Partners.
+            <div className="col-start-5 col-end-6 md:mx-auto relative mr-10">
+              <div className="h-full w-6 flex items-center justify-center">
+                <div className="h-full w-1 bg-gray-400 pointer-events-none"></div>
+              </div>
+              <div className="w-6 h-6 absolute top-1/2 -mt-3 rounded-full bg-gray-800 shadow"></div>
+            </div>
+          </div>
+          {/* <!-- right --> */}
+          <div className="flex md:contents">
+            <div className="col-start-5 col-end-6 mr-10 md:mx-auto relative">
+              <div className="h-full w-6 flex items-center justify-center">
+                <div className="h-full w-1 bg-gray-400 pointer-events-none"></div>
+              </div>
+              <div className="w-6 h-6 absolute top-1/2 -mt-3 rounded-full bg-gray-800 shadow"></div>
+            </div>
+            <div className="bg-red-500 col-start-6 col-end-10 p-4 rounded-xl my-4 mr-auto shadow-md w-full md:w-2/6">
+              <h3 className="font-semibold text-lg mb-1">2009</h3>
+              <h3 className="font-semibold text-base mb-1">
+                Bawal Plant, Haryana
+              </h3>
+              <p className="leading-tight text-justify">
+                Set up the Bawal plant
               </p>
             </div>
           </div>
-
-          {/* <!-- right timeline --> */}
-          <div className="mb-8 flex justify-between items-center w-full right-timeline">
-            <div className="order-1 w-5/12"></div>
-            <div className="z-20 flex items-center justify-center order-1 bg-gray-400 shadow-xl w-8 h-8 rounded-full">
-              <div className="p-2 bg-gray-800 rounded-full 2-4 h-4"></div>
+          {/* <!-- left --> */}
+          <div className="flex flex-row-reverse md:contents">
+            <div className="bg-red-500 col-start-1 col-end-5 p-4 rounded-xl my-4 ml-auto shadow-md">
+              <h3 className="font-semibold text-lg mb-1">2011</h3>
+              <h3 className="font-semibold text-base mb-1">
+                Shikrapur Plant, Pune
+              </h3>
+              <p className="leading-tight text-justify">
+                tarted smelting operations with a capacity of 2000MT/month
+              </p>
             </div>
-            <div className="order-1 bg-red-400 rounded-lg shadow-xl w-5/12 px-6 py-4">
-              <h3 className="mb-3 font-bold text-gray-800 text-xl">2013</h3>
-              <p className="text-sm leading-snug tracking-wide text-gray-900 text-opacity-100">
-                Launched two new deep-cycle 8V batteries: Traveler™ 8V, the
-                longest-life battery and Ranger 160™, the longest-range battery.
-                Received Frost & Sullivan 2013 “Innovative Enterprise” award.
-                Received Genie's “Outstanding Performance” award for 2012.
-                Received 2012 “Application Solar Project of the Year” award for
-                a solar-powered rural street lighting project in Dubai, U.A.E.
-                Received investment from Charlesbank Capital Partners.
+            <div className="col-start-5 col-end-6 md:mx-auto relative mr-10">
+              <div className="h-full w-6 flex items-center justify-center">
+                <div className="h-full w-1 bg-gray-400 pointer-events-none"></div>
+              </div>
+              <div className="w-6 h-6 absolute top-1/2 -mt-3 rounded-full bg-gray-800 shadow"></div>
+            </div>
+          </div>
+          {/* <!-- right --> */}
+          <div className="flex md:contents">
+            <div className="col-start-5 col-end-6 mr-10 md:mx-auto relative">
+              <div className="h-full w-6 flex items-center justify-center">
+                <div className="h-full w-1 bg-gray-400 pointer-events-none"></div>
+              </div>
+              <div className="w-6 h-6 absolute top-1/2 -mt-3 rounded-full bg-gray-800 shadow"></div>
+            </div>
+            <div className="bg-red-500 col-start-6 col-end-10 p-4 rounded-xl my-4 mr-auto shadow-md">
+              <h3 className="font-semibold text-lg mb-1">2012</h3>
+              <h3 className="font-semibold text-base mb-1">
+                Corporate Head Office, Pune
+              </h3>
+              <p className="leading-tight text-justify">
+                Started a new battery manufacturing plant in Hosur, Tamil Nadu
               </p>
             </div>
           </div>
-
-          {/* <!-- left timeline --> */}
-          <div className="mb-8 flex justify-between flex-row-reverse items-center w-full left-timeline">
-            <div className="order-1 w-5/12"></div>
-            <div className="z-20 flex items-center justify-center order-1 bg-gray-400 shadow-xl w-8 h-8 rounded-full">
-              <div className="p-2 bg-gray-800 rounded-full 2-4 h-4"></div>
+          {/* <!-- left --> */}
+          <div className="flex flex-row-reverse md:contents">
+            <div className="bg-red-500 col-start-1 col-end-5 p-4 rounded-xl my-4 ml-auto shadow-md">
+              <h3 className="font-semibold text-lg mb-1">2012</h3>
+              <h3 className="font-semibold text-base mb-1">
+                Chinchwad Plant, Pune
+              </h3>
+              <p className="leading-tight text-justify">
+                Establishes the corporate office in Pune
+              </p>
             </div>
-            <div className="order-1 bg-red-400 rounded-lg shadow-xl w-5/12 px-6 py-4">
-              <h3 className="mb-3 font-bold text-gray-900 text-xl">2012</h3>
-              <p className="text-sm font-medium leading-snug tracking-wide text-gray-900 text-opacity-100">
-                Selected as one of the "most admired companies" by readers of
-                Golf Course Industry magazine, as well as a company they can
-                trust to provide reliable products and support.
+            <div className="col-start-5 col-end-6 md:mx-auto relative mr-10">
+              <div className="h-full w-6 flex items-center justify-center">
+                <div className="h-full w-1 bg-gray-400 pointer-events-none"></div>
+              </div>
+              <div className="w-6 h-6 absolute top-1/2 -mt-3 rounded-full bg-gray-800 shadow"></div>
+            </div>
+          </div>
+          {/* <!-- right --> */}
+          <div className="flex md:contents">
+            <div className="col-start-5 col-end-6 mr-10 md:mx-auto relative">
+              <div className="h-full w-6 flex items-center justify-center">
+                <div className="h-full w-1 bg-gray-400 pointer-events-none"></div>
+              </div>
+              <div className="w-6 h-6 absolute top-1/2 -mt-3 rounded-full bg-gray-800 shadow"></div>
+            </div>
+            <div className="bg-red-500 col-start-6 col-end-10 p-4 rounded-xl my-4 mr-auto shadow-md">
+              <h3 className="font-semibold text-lg mb-1">2012</h3>
+              <h3 className="font-semibold text-base mb-1">
+                Bawal Manufacturing Plants Expansion
+              </h3>
+              <p className="leading-tight text-justify">
+                Established four manufacturing plants in Bawal, Haryana,
+                <br /> Krish Auto Power India pvt.Ltd,Bawal ,<br />
+                Subu Chem Pvt Ltd,Bawal,
+                <br />
+                Sakshi Auto Parts Pvt ltd,Bawal,
+                <br /> Par Industries pvt ltd,Bawal
               </p>
             </div>
           </div>
-          {/* <!-- right timeline --> */}
-          <div className="mb-8 flex justify-between items-center w-full right-timeline">
-            <div className="order-1 w-5/12"></div>
-            <div className="z-20 flex items-center justify-center order-1 bg-gray-400 shadow-xl w-8 h-8 rounded-full">
-              <div className="p-2 bg-gray-800 rounded-full 2-4 h-4"></div>
-            </div>
-            <div className="order-1 bg-red-400 rounded-lg shadow-xl w-5/12 px-6 py-4">
-              <h3 className="mb-3 font-bold text-gray-800 text-xl">2011</h3>
-              <p className="text-sm leading-snug tracking-wide text-gray-900 text-opacity-100">
-                Received highest in sustained capacity and total ampere hour
-                performance rankings for Trojan's T-875 flooded batteries from
-                independent third-party. Launched industrial line of deep-cycle
-                flooded batteries for renewable energy applications. Added
-                U1-AGM and 22-AGM products to the deep-cycle AGM line.
+          {/* <!-- left --> */}
+          <div className="flex flex-row-reverse md:contents">
+            <div className="bg-red-500 col-start-1 col-end-5 p-4 rounded-xl my-4 ml-auto shadow-md">
+              <h3 className="font-semibold text-lg mb-1">2015</h3>
+              <h3 className="font-semibold text-base mb-1">
+                Malur Plant, Karnataka
+              </h3>
+              <p className="leading-tight text-justify">
+                Established a smelting and refining plant in Malur, Karnataka
               </p>
+            </div>
+            <div className="col-start-5 col-end-6 md:mx-auto relative mr-10">
+              <div className="h-full w-6 flex items-center justify-center">
+                <div className="h-full w-1 bg-gray-400 pointer-events-none"></div>
+              </div>
+              <div className="w-6 h-6 absolute top-1/2 -mt-3 rounded-full bg-gray-800 shadow"></div>
             </div>
           </div>
         </div>
       </div>
+      {/* --------------------------------------------------------TielineEnded--------------------------------------------------- */}
       {/* More about emiko battery div */}
       <div className="my-8">
         <section className="bg-gray-300 ">
