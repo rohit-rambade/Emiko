@@ -7,7 +7,7 @@ const SingleProduct = ({ product }) => {
   return (
     <>
       <div>
-        <div className="relative w-full h-72 md:h-96 flex justify-center items-center bg-gradient-to-bl from-orange-300 to-orange-200">
+        <div className="relative w-full h-72  md:h-96 flex justify-center items-center bg-gradient-to-bl from-orange-300 to-orange-200">
           <img
             src={product?.banner}
             className="  absolute object-cover w-full h-full opacity-50 mix-blend-normal"
@@ -23,21 +23,10 @@ const SingleProduct = ({ product }) => {
         </div>
         <div className="flex flex-col justify-center content-center px-4 md:px-28">
           <h2 className="text-left md:text-center py-8 text-3xl md:text-4xl font-semibold text-primary">
-            Rev Up Your Drive with Reliable Energy
+            {product?.tagline}
           </h2>
           <p className=" text-left text-lg md:text-xl md:text-center">
-            Elevate Your Drive with Advanced Technology: Our Automotive
-            Batteries Redefine Performance. Featuring high-surface carbon for
-            enhanced discharge capabilities and rapid deep cycle recovery, our
-            batteries are designed to thrive in the face of frequent and
-            prolonged power demands. Crafted with a special-grade polyethylene
-            separator, our batteries boast high volume porosity and superior
-            mechanical strength. With minimal water top-up requirements and an
-            impressive life expectancy of up to 5-6 years, these batteries
-            guarantee a reliable and enduring power source. Whether for everyday
-            commuting or heavy-duty industrial applications, our automotive
-            batteries are engineered to power your journey with lasting
-            brilliance.
+            {product?.desc}
           </p>
         </div>
         <div className="flex flex-col md:flex-row bg-gradient-to-b md:bg-gradient-to-r from-red-500 to-white justify-evenly items-center my-16 ">
@@ -48,11 +37,11 @@ const SingleProduct = ({ product }) => {
               className="w-3/4 md:w-96"
             ></img>
           </div>
-          <div className="py-4 flex flex-col gap-y-3 justify-center">
-            <h3 className=" font-semibold text-3xl md:text-4xl underline underline-offset-8 decoration-red-400 py-1">
+          <div className="py-4 flex flex-col gap-y-3  md:justify-center  ">
+            <h3 className=" font-semibold text-3xl text-left md:text-4xl underline underline-offset-8 decoration-red-400 py-1 ">
               FEATURES
             </h3>
-            <ul className="list-disc px-8">
+            <ul className=" list-disc px-4 md:px-8">
               {product?.features?.map((feature) => {
                 return <li key={feature?.id}>{feature?.title}</li>;
               })}
@@ -74,7 +63,7 @@ const SingleProduct = ({ product }) => {
         </div>
         {/* --------------------------------------------------------------------------------------------------------- */}
         {product?.isApplication ? (
-          <div className="h-96 bg-gradient-to-b from-red-500 to-white flex flex-col justify-center items-center">
+          <div className="md:h-full bg-gradient-to-b from-red-500 to-white flex flex-col justify-center items-center">
             <div className="py-4">
               <h3 className=" text-white  text-3xl md:text-6xl font-bold">
                 APPLICATION
@@ -118,6 +107,71 @@ const SingleProduct = ({ product }) => {
                 ></img>
               </div>
             </div>
+            {/* -------------------------------------------------------Product Features-----------------------------------------------------------------  */}
+            <div>
+              <h1 className="md:text-6xl text-white font-bold">ADVANTAGES</h1>
+            </div>
+            <div class="container mx-auto px-20">
+              <div>
+                <div
+                  class="grid grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-5 pt-4 pb-10 lg:pt-6 lg:pb-20 "
+                  style={{ cursor: "auto" }}
+                >
+                  <div class="p-6 rounded-lg  backdrop-filter backdrop-blur-3xl bg-white bg-opacity-50 shadow-xl transition-transform hover:scale-105">
+                    <div class="mb-5"></div>
+
+                    <h3 class="text-lg font-bold mb-2">1. Product</h3>
+
+                    <p class="text-sm leading-6 text-gray-600">
+                      Metus potenti velit sollicitudin porttitor magnis elit
+                    </p>
+                  </div>
+
+                  <div class="p-6 rounded-lg  backdrop-filter backdrop-blur-3xl bg-white bg-opacity-50 shadow-xl transition-transform hover:scale-105">
+                    <div class="mb-5"></div>
+
+                    <h3 class="text-lg font-bold mb-2">2. Features</h3>
+
+                    <p class="text-sm leading-6 text-gray-600">
+                      Metus potenti velit sollicitudin porttitor magnis elit
+                    </p>
+                  </div>
+
+                  <div
+                    class="p-6 rounded-lg  backdrop-filter backdrop-blur-3xl bg-white bg-opacity-50 shadow-xl transition-transform hover:scale-105 "
+                    style={{ cursor: "auto" }}
+                  >
+                    <div class="mb-5" style={{ cursor: "auto" }}></div>
+
+                    <h3 class="text-lg font-bold mb-2">3. Card</h3>
+
+                    <p class="text-sm leading-6 text-gray-600">
+                      Metus potenti velit sollicitudin porttitor magnis elit
+                    </p>
+                  </div>
+
+                  <div class="p-6 rounded-lg  backdrop-filter backdrop-blur-3xl bg-white bg-opacity-50 shadow-xl transition-transform hover:scale-105">
+                    <div class="mb-5"></div>
+
+                    <h3 class="text-lg font-bold mb-2">4. Design</h3>
+
+                    <p class="text-sm leading-6 text-gray-600">
+                      Metus potenti velit sollicitudin porttitor magnis elit
+                    </p>
+                  </div>
+                  <div class="p-6 rounded-lg  backdrop-filter backdrop-blur-3xl bg-white bg-opacity-50 shadow-xl transition-transform hover:scale-105">
+                    <div class="mb-5"></div>
+
+                    <h3 class="text-lg font-bold mb-2">1. Product</h3>
+
+                    <p class="text-sm leading-6 text-gray-600">
+                      Metus potenti velit sollicitudin porttitor magnis elit
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            {/* ------------------------------------------------------------------------------------------------------------------------- */}
           </div>
         ) : (
           ""

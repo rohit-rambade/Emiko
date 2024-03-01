@@ -1,6 +1,6 @@
 import React from "react";
 import Faqs from "../components/sections/faq/Faqs";
-import faqImg from "../assets/faq/faq2.jpg";
+import faqImg from "../assets/faq/faq.jpg";
 const Faq = () => {
   return (
     <div className=" flex flex-col h-full  justify-center items-center">

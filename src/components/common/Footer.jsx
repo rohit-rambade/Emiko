@@ -141,7 +141,7 @@ const Footer = () => {
                     href="#"
                     className="text-white transition hover:opacity-75"
                   >
-                    E-Rikshaw
+                    E-Rickshaw
                   </a>
                 </li>
                 <li>

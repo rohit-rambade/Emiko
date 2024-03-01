@@ -1,13 +1,13 @@
 // import React from "react";
 import battery from "../../../assets/home/section-3-battery.png";
-import banner from "../../../assets/home/section-3-banner.png";
+import banner from "../../../assets/home/section-3-banner4.jpg";
 
 import batteryEMT from "../../../assets/home/batteryemt.png";
 
 const WhyChooseEmiko = () => {
   return (
     <div>
-      <div className="md:relative font-poppins  md:mb-32">
+      <div className="md:relative   md:mb-32">
         <img
           src={banner}
           alt="Banner Image"
