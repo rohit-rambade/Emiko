@@ -14,6 +14,24 @@ import inverterImg from "../assets/product/Inverter/InverterBattery.png";
 import marineImg from "../assets/product/Marine/MarineBattery.png";
 import eRikshawImg from "../assets/product/E-ric/ErikshawBattery.png";
 import solarImg from "../assets/product/Solar/SolarBattery.png";
+
+//Automotive Applications
+import bus from "../assets/product/Icons/Automotive/bus.png"
+import excavator from "../assets/product/Icons/Automotive/excavator_8654464.png"
+import hatchbackcar from "../assets/product/Icons/Automotive/hatchback.png"
+import suv from "../assets/product/Icons/Automotive/suv-transportation-car-suv-svgrepo-com.png"
+import tractor from "../assets/product/Icons/Automotive/tractor-svgrepo-com.svg"
+import jcb from "../assets/product/Icons/Automotive/tractor_2318605.png"
+
+//Inverter Applications
+import home from "../assets/product/Icons/Inverter/home_553376.png"
+import work from "../assets/product/Icons/Inverter/work_10866399.png"
+
+//Marine Applications
+import boatwithcontainer from "../assets/product/Icons/Marine/boat-with-containers_75931.png"
+
+//E-Rikshaw Applications
+import transport from "../assets/product/Icons/E-Rickshaw/transport_11334923.png"
 export const products = [
   {
     id: 1,
@@ -75,17 +93,56 @@ export const products = [
     applicationDetails: [
       {
         id: 1,
-        name: "Two Wheeler",
+        img: bus
       },
       {
         id: 2,
-        name: "Three Wheeler",
+        img: excavator,
       },
       {
         id: 3,
-        name: "Four Wheeler",
+        name: bus,
+      },
+      {
+        id: 4,
+        name: suv,
+      },
+      {
+        id: 5,
+        name: tractor,
+      },
+      {
+        id: 6,
+        name: jcb,
       },
     ],
+    advantages: [
+      {
+        id: 1,
+        title: "High starting power",
+        desc: "combines CCA and low temp performance"
+      },
+      {
+        id: 2,
+        title: "Corrosion-resistant",
+
+      },
+      {
+        id: 3,
+        title: "Vibration-resistant",
+
+      },
+      {
+        id: 4,
+        title: "Ready to install",
+
+      },
+      {
+        id: 5,
+        title: "Long-lasting",
+        desc: "combines high reserve capacity and spill resistance"
+      },
+    ]
   },
   {
     id: 2,
@@ -134,16 +191,13 @@ export const products = [
     applicationDetails: [
       {
         id: 1,
-        name: "Two Wheeler",
+        img: home,
       },
       {
         id: 2,
-        name: "Three Wheeler",
+        img: work,
       },
-      {
-        id: 3,
-        name: "Four Wheeler",
-      },
+
     ],
   },
   {
@@ -188,7 +242,16 @@ export const products = [
       },
     ],
     rangesOfBatteries: marineBattery,
-    isApplication: false,
+    isApplication: true,
+    application: "Application",
+    applicationDetails: [
+      {
+        id: 1,
+        img: boatwithcontainer,
+      },
+
+
+    ],
   },
   {
     id: 4,
@@ -233,7 +296,14 @@ export const products = [
       },
     ],
     rangesOfBatteries: eRikshawBattery,
-    isApplication: false,
+    isApplication: true,
+    applicationDetails: [
+      {
+        id: 1,
+        img: transport
+      },
+
+    ],
   },
   {
     id: 5,
@@ -278,21 +348,7 @@ export const products = [
       },
     ],
     rangesOfBatteries: solarBattery,
-    isApplication: true,
-    application: "Application",
-    applicationDetails: [
-      {
-        id: 1,
-        name: "Two Wheeler",
-      },
-      {
-        id: 2,
-        name: "Three Wheeler",
-      },
-      {
-        id: 3,
-        name: "Four Wheeler",
-      },
-    ],
+    isApplication: false,
+
   },
 ];

@@ -70,112 +70,69 @@ const SingleProduct = ({ product }) => {
               </h3>
             </div>
             <div className="flex justify-center flex-wrap">
-              <div className="flex  p-2 rounded-full bg-white m-4 ">
-                <img
-                  src={scooterLogo}
-                  alt=""
-                  className="p-4"
-                  style={{
-                    width: "100px",
-                    height: "100px",
-                    objectFit: "cover",
-                  }}
-                ></img>
-              </div>
-              <div className="flex p-2 rounded-full bg-white m-4">
-                <img
-                  src={rikshawLogo}
-                  alt=""
-                  className="p-4 "
-                  style={{
-                    width: "100px",
-                    height: "100px",
-                    objectFit: "cover",
-                  }}
-                ></img>
-              </div>
-              <div className="flex p-2 rounded-full bg-white m-4">
-                <img
-                  src={carLogo}
-                  alt=""
-                  className="p-4 "
-                  style={{
-                    width: "100px",
-                    height: "100px",
-                    objectFit: "cover",
-                  }}
-                ></img>
-              </div>
+              {console.log(product.isApplication)}
+              {product.isApplication ? (
+                <>
+                  {product?.applicationDetails?.map((app) => {
+                    return (
+                      <div className="flex  p-2 rounded-full bg-white m-4 ">
+                        <img
+                          src={app.img}
+                          alt=""
+                          className="p-4"
+                          style={{
+                            width: "100px",
+                            height: "100px",
+                            objectFit: "cover",
+                          }}
+                        ></img>
+                      </div>
+                    );
+                  })}
+                </>
+              ) : (
+                <div>
+                  <h1>No Application</h1>
+                </div>
+              )}
             </div>
             {/* -------------------------------------------------------Product Features-----------------------------------------------------------------  */}
-            <div>
-              <h1 className="md:text-6xl text-white font-bold">ADVANTAGES</h1>
-            </div>
-            <div class="container mx-auto px-20">
-              <div>
-                <div
-                  class="grid grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-5 pt-4 pb-10 lg:pt-6 lg:pb-20 "
-                  style={{ cursor: "auto" }}
-                >
-                  <div class="p-6 rounded-lg  backdrop-filter backdrop-blur-3xl bg-white bg-opacity-50 shadow-xl transition-transform hover:scale-105">
-                    <div class="mb-5"></div>
 
-                    <h3 class="text-lg font-bold mb-2">1. Product</h3>
-
-                    <p class="text-sm leading-6 text-gray-600">
-                      Metus potenti velit sollicitudin porttitor magnis elit
-                    </p>
-                  </div>
-
-                  <div class="p-6 rounded-lg  backdrop-filter backdrop-blur-3xl bg-white bg-opacity-50 shadow-xl transition-transform hover:scale-105">
-                    <div class="mb-5"></div>
-
-                    <h3 class="text-lg font-bold mb-2">2. Features</h3>
-
-                    <p class="text-sm leading-6 text-gray-600">
-                      Metus potenti velit sollicitudin porttitor magnis elit
-                    </p>
-                  </div>
-
-                  <div
-                    class="p-6 rounded-lg  backdrop-filter backdrop-blur-3xl bg-white bg-opacity-50 shadow-xl transition-transform hover:scale-105 "
-                    style={{ cursor: "auto" }}
-                  >
-                    <div class="mb-5" style={{ cursor: "auto" }}></div>
-
-                    <h3 class="text-lg font-bold mb-2">3. Card</h3>
-
-                    <p class="text-sm leading-6 text-gray-600">
-                      Metus potenti velit sollicitudin porttitor magnis elit
-                    </p>
-                  </div>
-
-                  <div class="p-6 rounded-lg  backdrop-filter backdrop-blur-3xl bg-white bg-opacity-50 shadow-xl transition-transform hover:scale-105">
-                    <div class="mb-5"></div>
-
-                    <h3 class="text-lg font-bold mb-2">4. Design</h3>
-
-                    <p class="text-sm leading-6 text-gray-600">
-                      Metus potenti velit sollicitudin porttitor magnis elit
-                    </p>
-                  </div>
-                  <div class="p-6 rounded-lg  backdrop-filter backdrop-blur-3xl bg-white bg-opacity-50 shadow-xl transition-transform hover:scale-105">
-                    <div class="mb-5"></div>
-
-                    <h3 class="text-lg font-bold mb-2">1. Product</h3>
-
-                    <p class="text-sm leading-6 text-gray-600">
-                      Metus potenti velit sollicitudin porttitor magnis elit
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
             {/* ------------------------------------------------------------------------------------------------------------------------- */}
           </div>
         ) : (
           ""
         )}
+        <div>
+          <div>
+            <h1 className="md:text-6xl text-black text-center font-bold">
+              ADVANTAGES
+            </h1>
+          </div>
+          <div class="container mx-auto px-20">
+            <div>
+              <div
+                class="grid grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-5 pt-4 pb-10 lg:pt-6 lg:pb-20 "
+                style={{ cursor: "auto" }}
+              >
+                {product?.advantages?.map((item) => {
+                  return (
+                    <div
+                      class="p-6 rounded-lg  backdrop-filter backdrop-blur-3xl bg-white bg-opacity-50 shadow-xl transition-transform hover:scale-105"
+                      key={item.id}
+                    >
+                      <div class="mb-5"></div>
+
+                      <h3 class="text-lg font-bold mb-2">{item.title}</h3>
+
+                      <p class="text-sm leading-6 text-gray-600">{item.desc}</p>
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </>
   );

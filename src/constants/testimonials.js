@@ -1,3 +1,7 @@
+import shaikhSalahuddin from "../assets/Testimonials/T3.png"
+import maheshKaikade from "../assets/Testimonials/T1.png"
+import nitinOswal from "../assets/Testimonials/T2.png"
+import sureshNawale from "../assets/Testimonials/T4.png"
 export const testimonials = [
   {
     id: 1,
@@ -7,6 +11,7 @@ export const testimonials = [
     and durability, ensuring customer satisfaction and trust in our
     product.`,
     location: "Nashik",
+    photo: sureshNawale
   },
   {
     id: 2,
@@ -16,6 +21,7 @@ export const testimonials = [
     testimonial: `EMIKO's inverters offer unparalleled efficiency and reliability,
     making them a preferred choice for our customers' power needs.`,
     location: "Pune",
+    photo: nitinOswal
   },
   {
     id: 3,
@@ -23,6 +29,7 @@ export const testimonials = [
     testimonial: `EMIKO is a reliable and customer-centric brand, providing highquality products and excellent support, making it a top choice for
         dealers.`,
     location: "Beed",
+    photo: shaikhSalahuddin
   },
   {
     id: 4,
@@ -31,5 +38,6 @@ export const testimonials = [
         long-lasting, giving me confidence on the road. I highly
         recommend them for any for any Automotive vehicle`,
     location: "Mumbai",
+    photo: maheshKaikade
   },
 ];
