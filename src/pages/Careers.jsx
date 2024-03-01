@@ -33,7 +33,7 @@ const Careers = () => {
 
   return (
     <div>
-      <div className="flex justify-center content-center">
+      <div className="flex justify-center content-center bg-slate-100">
         <img src={circle} alt="" className="md:w-1/2"></img>
       </div>
       <div className="flex flex-col md:flex-row justify-center items-center text-left bg-gray-200 px-6 md:px-24 py-4 md:py-12">
