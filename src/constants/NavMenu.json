@@ -9,7 +9,6 @@
     "id": 2,
     "title": "About Us",
     "isSubMenu": true,
-    "link": "aboutus",
     "submenu": [
       {
         "id": 1,
