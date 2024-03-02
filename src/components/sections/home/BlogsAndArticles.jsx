@@ -1,69 +1,113 @@
-import React, { useState } from "react";
-import Image1 from "../../../assets/blogs/sparks.jpeg"; // Import your local images
+import React, { useEffect, useRef, useState } from "react";
+import { blogposts } from "../../../constants/blogposts";
+import { FaArrowCircleLeft, FaArrowCircleRight } from "react-icons/fa";
 
 const BlogsAndArticles = () => {
+  const maxScrollWidth = useRef(0);
   const [currentIndex, setCurrentIndex] = useState(0);
+  const carousel = useRef(null);
 
-  const images = [Image1, Image1]; // Use the imported images
-
-  const previous = () => {
+  const movePrev = () => {
     if (currentIndex > 0) {
-      setCurrentIndex(currentIndex - 1);
+      setCurrentIndex((prevState) => prevState - 1);
     }
   };
 
-  const forward = () => {
-    if (currentIndex < images.length - 1) {
-      setCurrentIndex(currentIndex + 1);
+  const moveNext = () => {
+    if (
+      carousel.current !== null &&
+      carousel.current.offsetWidth * currentIndex <= maxScrollWidth.current
+    ) {
+      setCurrentIndex((prevState) => prevState + 1);
     }
   };
+
+  const isDisabled = (direction) => {
+    if (direction === "prev") {
+      return currentIndex <= 0;
+    }
+
+    if (direction === "next" && carousel.current !== null) {
+      return (
+        carousel.current.offsetWidth * currentIndex >= maxScrollWidth.current
+      );
+    }
+
+    return false;
+  };
+
+  useEffect(() => {
+    if (carousel !== null && carousel.current !== null) {
+      carousel.current.scrollLeft = carousel.current.offsetWidth * currentIndex;
+    }
+  }, [currentIndex]);
+
+  useEffect(() => {
+    maxScrollWidth.current = carousel.current
+      ? carousel.current.scrollWidth - carousel.current.offsetWidth
+      : 0;
+  }, []);
 
   return (
-    <>
-      <div className="bg-stone-300 h-full">
-        <h3 className="text-center font-poppins font-normal text-5xl text-primary py-8">
-          Latest from blogs & Articles
-        </h3>
-        {/* ----------------------------------------Slider-------------------------------------------- */}
-        <div className="relative mx-auto max-w-2xl overflow-hidden rounded-md bg-gray-100 p-2 sm:p-4">
-          <div className="absolute right-5 top-5 z-10 rounded-full bg-gray-600 px-2 text-center text-sm text-white">
-            <span>{currentIndex + 1}</span> / <span>{images.length}</span>
-          </div>
-
+    <div className="carousel my-12 mx-auto">
+      <h3 className="text-center font-poppins font-normal text-4xl md:text-5xl text-primary py-8">
+        Latest from blogs & Articles
+      </h3>
+      <div className="relative overflow-hidden">
+        <div className="flex justify-between absolute top-0 left-0 right-0 bottom-0">
           <button
-            onClick={previous}
-            className="absolute left-5 top-1/2 z-10 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full bg-gray-100 shadow-md"
+            onClick={movePrev}
+            className="hover:bg-blue-900/75 text-white w-10 h-full text-center opacity-75 hover:opacity-100 disabled:opacity-75 disabled:cursor-not-allowed z-10 p-0 m-0 transition-all ease-in-out duration-300"
+            disabled={isDisabled("prev")}
           >
-            <i className="fas fa-chevron-left text-2xl font-bold text-gray-500"></i>
-          </button>
+            <FaArrowCircleLeft size={30} color="red" />
 
+            <span className="sr-only">Prev</span>
+          </button>
           <button
-            onClick={forward}
-            className="absolute right-5 top-1/2 z-10 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full bg-gray-100 shadow-md"
+            onClick={moveNext}
+            className="hover:bg-blue-900/75  w-10 h-full text-center opacity-75 hover:opacity-100 disabled:opacity-75 disabled:cursor-not-allowed z-10 p-0 m-0 transition-all ease-in-out duration-300"
+            disabled={isDisabled("next")}
           >
-            <i className="fas fa-chevron-right text-2xl font-bold text-gray-500"></i>
-          </button>
+            <FaArrowCircleRight size={30} color="red" />
 
-          <div className="relative h-80" style={{ width: "30rem" }}>
-            {images.map((image, index) => (
-              <div
-                key={index}
-                className={`absolute top-0 ${
-                  currentIndex === index ? "" : "hidden"
-                }`}
+            <span className="sr-only">Next</span>
+          </button>
+        </div>
+        <div
+          ref={carousel}
+          className="carousel-container relative flex gap-1 overflow-hidden scroll-smooth snap-x snap-mandatory touch-pan-x z-0"
+          style={{ display: "flex", width: "100%" }}
+        >
+          {blogposts.map((resource, index) => (
+            <div
+              key={index}
+              className="carousel-item text-center relative flex-grow h-96 md:h-64 snap-start"
+            >
+              <a
+                href={resource.link}
+                className="h-full w-full aspect-square block bg-origin-padding bg-contain md:bg-cover bg-center bg-no-repeat z-0"
+                style={{ backgroundImage: `url(${resource.imageUrl || ""})` }}
               >
                 <img
-                  src={image}
-                  alt={`image${index + 1}`}
-                  className="rounded-sm"
+                  src={resource.imageUrl || ""}
+                  alt={resource.title}
+                  className="w-full aspect-square hidden"
                 />
-              </div>
-            ))}
-          </div>
+              </a>
+              <a
+                href={resource.link}
+                className="h-full w-full flex items-center aspect-square  absolute top-0 left-0 transition-opacity duration-300 opacity-0 hover:opacity-100 bg-blue-800/75 z-10"
+              >
+                <h3 className="text-white py-6 px-3 mx-auto text-xl">
+                  {resource.title}
+                </h3>
+              </a>
+            </div>
+          ))}
         </div>
-        {/* ----------------------------------------slider-------------------------------------------- */}
       </div>
-    </>
+    </div>
   );
 };
 
