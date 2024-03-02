@@ -32,13 +32,9 @@ const Header = () => {
       setIsOpen(false);
     }
   };
-
-  const handleSubMenuClick = () => {
-    if (isMobile) {
-      setIsOpen(false);
-    }
+  const closeNavbar = () => {
+    setIsOpen(false);
   };
-
   return (
     <div className="sticky top-0 w-full bg-white mx-auto font-poppins z-50 p-2 md:p-2 ">
       <header>
@@ -100,7 +96,7 @@ const Header = () => {
                             className="relative cursor-pointer"
                             onClick={() => {
                               toggleSubMenu(menu.id);
-                              handleSubMenuClick(); // Close menu on mobile after selecting submenu
+                              // Close menu on mobile after selecting submenu
                             }}
                             onMouseEnter={() => {
                               // Only handle hover event on desktop
@@ -116,16 +112,18 @@ const Header = () => {
                             }}
                             key={menu.id}
                           >
-                            <li>
-                              <Link
-                                to={menu.link}
-                                className="relative  w-fit block after:block after:content-[''] after:absolute after:h-[3px] after:bg-primary after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-center py-3 md:py-0"
-                              >
-                                {menu.title}
-                              </Link>
+                            <li
+                              className="relative  w-fit block after:block after:content-[''] after:absolute after:h-[3px] after:bg-primary after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-center py-3 md:py-0"
+                              onClick={() => console.log("clicking on submenu")}
+                            >
+                              {menu.title}
                             </li>
                             {menu.submenu && activeMenu === menu.id && (
-                              <SubMenu navMenu={menu} index={activeMenu} />
+                              <SubMenu
+                                navMenu={menu}
+                                index={activeMenu}
+                                closeNavbar={closeNavbar}
+                              />
                             )}
                           </div>
                         )}

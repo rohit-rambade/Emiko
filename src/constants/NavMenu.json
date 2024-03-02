@@ -9,7 +9,6 @@
     "id": 2,
     "title": "About Us",
     "isSubMenu": true,
-    "link": "/aboutus",
     "submenu": [
       {
         "id": 1,
@@ -42,7 +41,6 @@
   {
     "id": 5,
     "title": "Where to Buy",
-    "link": "where-to-buy",
     "isSubMenu": true,
     "submenu": [
       {
