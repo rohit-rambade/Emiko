@@ -101,19 +101,19 @@ export const products = [
       },
       {
         id: 3,
-        name: bus,
+        img: jcb,
       },
       {
         id: 4,
-        name: suv,
+        img: suv,
       },
       {
         id: 5,
-        name: tractor,
+        img: tractor,
       },
       {
         id: 6,
-        name: jcb,
+        img: hatchbackcar,
       },
     ],
     advantages: [
@@ -199,6 +199,32 @@ export const products = [
       },
 
     ],
+    advantages: [
+      {
+        id: 1,
+        title: "Advanced Battery Technology",
+        desc: "High power, long life"
+      },
+      {
+        id: 2,
+        title: "Super Strong Grid & Plates",
+        desc: "Extended backup, improved charge retention"
+
+      },
+      {
+        id: 3,
+        title: "High Reliability & Long Life",
+        desc: "Extended lifespan, reliable performance"
+
+      },
+      {
+        id: 4,
+        title: "Pre-Charged & Ready to Use",
+        desc: "Factory charged, high-quality acid"
+
+      },
+
+    ]
   },
   {
     id: 3,
@@ -252,6 +278,35 @@ export const products = [
 
 
     ],
+    advantages: [
+      {
+        id: 1,
+        title: "High starting power",
+        desc: "combines CCA and low temp performance"
+      },
+      {
+        id: 2,
+        title: "Corrosion-resistant",
+
+
+      },
+      {
+        id: 3,
+        title: "Vibration-resistant"
+
+      },
+      {
+        id: 4,
+        title: "Spill-proof",
+
+
+      },
+      {
+        id: 5,
+        title: "Extended accessory power",
+        desc: "highlights high reserve capacity"
+      },
+    ]
   },
   {
     id: 4,
@@ -304,6 +359,33 @@ export const products = [
       },
 
     ],
+    advantages: [
+      {
+        id: 1,
+        title: "Durable",
+        desc: "Corrosion-resistant, handles deep discharge."
+      },
+      {
+        id: 2,
+        title: "High Performance",
+        desc: "Thicker plates, faster charging."
+
+      },
+      {
+        id: 3,
+        title: "Long-lasting",
+        desc: "Special additives for consistent mileage and reduced water loss."
+
+      },
+      {
+        id: 4,
+        title: "Vibration-resistant",
+        desc: "Handles rough roads."
+
+      },
+
+
+    ]
   },
   {
     id: 5,
@@ -349,6 +431,32 @@ export const products = [
     ],
     rangesOfBatteries: solarBattery,
     isApplication: false,
+    advantages: [
+      {
+        id: 1,
+        title: "Efficient",
+        desc: "High charge acceptance, low discharge rate, maximum storage."
+      },
+      {
+        id: 2,
+        title: "Low Maintenance",
+        desc: "Hassle-free operation."
 
+      },
+      {
+        id: 3,
+        title: "Versatile",
+        desc: "Easy installation, compatible with various systems."
+
+      },
+      {
+        id: 4,
+        title: "Temperature-resistant:",
+        desc: "Reliable performance in extreme climates."
+
+      },
+
+
+    ]
   },
 ];

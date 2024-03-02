@@ -3,8 +3,11 @@ import React, { useEffect, useState } from "react";
 import logo from "../../assets/logo.png";
 import SubMenu from "./SubMenu";
 import navMenu from "../../constants/NavMenu.json";
-import { FaAlignRight, FaPhone, FaXmark } from "react-icons/fa6";
+import { FaPhone, FaXmark } from "react-icons/fa6";
+import { SlMenu } from "react-icons/sl";
+
 import { Link, NavLink } from "react-router-dom";
+
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [activeMenu, setActiveMenu] = useState(null);
@@ -61,7 +64,7 @@ const Header = () => {
                 type="button"
                 className=" md:hidden  "
               >
-                {isOpen ? <FaXmark size={30} /> : <FaAlignRight size={30} />}
+                {isOpen ? <FaXmark size={30} /> : <SlMenu size={30} />}
               </button>
             </div>
             <div
@@ -70,7 +73,7 @@ const Header = () => {
               } top-full bg-white  left-0  md:p-2  flex flex-col  gap-y-3 md:flex-row  text-left   md:relative md:w-auto md:flex`}
             >
               <div className="flex">
-                <ul className="flex flex-col  w-full p-4 md:p-0 h    md:space-x-8 rtl:space-x-reverse md:flex-row   ">
+                <ul className="flex flex-col  md:items-center  w-full p-4 md:p-0 h    md:space-x-8 rtl:space-x-reverse md:flex-row   ">
                   {navMenu.map((menu) => {
                     return (
                       <div key={menu.id}>
@@ -93,31 +96,28 @@ const Header = () => {
                           </li>
                         ) : (
                           <div
-                            className="relative cursor-pointer"
+                            className="relative cursor-pointer md:p-2  "
                             onClick={() => {
                               toggleSubMenu(menu.id);
                               // Close menu on mobile after selecting submenu
                             }}
                             onMouseEnter={() => {
-                              // Only handle hover event on desktop
-                              if (window.innerWidth >= 768) {
-                                toggleSubMenu(menu.id);
+                              if (!isMobile) {
+                                setActiveMenu(menu.id);
                               }
                             }}
                             onMouseLeave={() => {
-                              // Only handle hover event on desktop
-                              if (window.innerWidth >= 768) {
-                                toggleSubMenu(menu.id);
+                              if (!isMobile) {
+                                setActiveMenu(null);
                               }
                             }}
                             key={menu.id}
                           >
-                            <li
-                              className="relative  w-fit block after:block after:content-[''] after:absolute after:h-[3px] after:bg-primary after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-center py-3 md:py-0"
-                              onClick={() => console.log("clicking on submenu")}
-                            >
-                              {menu.title}
-                            </li>
+                            <div className="flex items-center space-x-3 ">
+                              <li className="relative  w-fit block items-center after:block after:content-[''] after:absolute after:h-[3px] after:bg-primary after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-center py-3 md:py-0">
+                                {menu.title}
+                              </li>
+                            </div>
                             {menu.submenu && activeMenu === menu.id && (
                               <SubMenu
                                 navMenu={menu}
