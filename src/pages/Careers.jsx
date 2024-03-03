@@ -86,8 +86,10 @@ const Careers = () => {
           <p className="text-lg">
             If you think you can innovate and apply your knowledge to the best
             of use, write to us at{" "}
-            <span className="s text-primary">connect@emiko.co.in</span> to
-            apply.
+            <span className="s text-primary">
+              <a href="mailto:connect@emiko.co.in">connect@emiko.co.in</a>
+            </span>{" "}
+            to apply.
           </p>
           <h1 className="text-blue-800 text-xl">
             Alternatively, please submit your application here
@@ -107,7 +109,7 @@ const Careers = () => {
                   className="appearance-none block w-full bg-gray-200 text-gray-700 border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
                   id="grid-first-name"
                   type="text"
-                  placeholder="Jane"
+                  placeholder="Firstname"
                 />
                 <p className="text-primary text-base ">
                   Please fill out this field.

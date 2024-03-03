@@ -1,9 +1,10 @@
 import React from "react";
 import carrer from "../../../assets/carrer.png";
+import { Link } from "react-router-dom";
 const ExploreOpportunities = () => {
   return (
     <>
-      <div className="flex flex-col md:flex-row justify-center items-center md:m-14 px-4">
+      <div className="font-poppins  flex flex-col md:flex-row justify-center items-center md:m-14 px-4">
         <div className="md:w-1/2">
           <h1 className=" text-4xl font-semibold italic  text-primary py-8">
             Explore Opportunities
@@ -22,11 +23,14 @@ const ExploreOpportunities = () => {
             <li>Human Resource</li>
             <li>Finance</li>
           </ul>
-          <button className="relative flex h-[50px] w-80 md:w-96 items-center justify-center overflow-hidden bg-red-400 text-black rounded-full shadow-2xl transition-all before:absolute before:h-0 before:w-0 before:rounded-full before:bg-red-500 before:duration-500 before:ease-out hover:shadow-red-500 hover:before:h-56 hover:before:w-96">
+          <Link
+            to="/carrers"
+            className="relative flex h-[50px] w-80 md:w-96 items-center justify-center overflow-hidden bg-red-400 text-black rounded-full shadow-2xl transition-all before:absolute before:h-0 before:w-0 before:rounded-full before:bg-red-500 before:duration-500 before:ease-out hover:shadow-red-500 hover:before:h-56 hover:before:w-96"
+          >
             <span className="relative z-10 font-poppins text-xl">
               Join our career community
             </span>
-          </button>
+          </Link>
         </div>
         <div className="md:w-1/2 py-8">
           <img src={carrer} alt=""></img>

@@ -4,7 +4,7 @@ import emikoCube from "../../../assets/home/emikoCubes.png";
 const WorkCulture = () => {
   return (
     <>
-      <div className="flex flex-col justify-center content-center md:text-center text-left py-6 px-4 ">
+      <div className="font-poppins flex flex-col justify-center content-center md:text-center text-left py-6 px-4 ">
         <div>
           <h1 className="text-4xl py-4 ">Our work culture</h1>
           <p className="md:px-24 text-lg py-2">
