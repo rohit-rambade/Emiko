@@ -31,7 +31,7 @@ const BecomeDistributor = () => {
 
   return (
     <>
-      <div>
+      <div className="font-poppins">
         {/* -----------------------------------------Banner------------------------------------ */}
         <div class="relative font-[sans-serif] before:absolute before:w-full before:h-full before:inset-0 before:bg-black before:opacity-50 before:z-10">
           <img
@@ -72,7 +72,7 @@ const BecomeDistributor = () => {
                     className="appearance-none block w-full bg-gray-200 text-gray-700 border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
                     id="grid-first-name"
                     type="text"
-                    placeholder="Jane"
+                    placeholder="Firstname"
                   />
                   <p className="text-primary text-base ">
                     Please fill out this field.
@@ -89,7 +89,7 @@ const BecomeDistributor = () => {
                     className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
                     id="grid-last-name"
                     type="text"
-                    placeholder="Doe"
+                    placeholder="Lastname"
                   />
                 </div>
               </div>

@@ -3,10 +3,11 @@ import blogs from "../../../assets/history/blogsLogo.jpg";
 import career from "../../../assets/history/careerLogo.jpg";
 import faq from "../../../assets/history/faqLogo.jpg";
 import watch from "../../../assets/history/oldWatch .jpg";
+import { Link } from "react-router-dom";
 const Timeline = () => {
   return (
     <>
-      <div className="relative w-full h-96 flex justify-center items-center  bg-gradient-to-r from-orange-200 to-orange-50">
+      <div className="font-poppins relative w-full h-96 flex justify-center items-center  bg-gradient-to-r from-orange-200 to-orange-50">
         <img
           src={watch}
           className=" opacity-40 absolute object-cover w-full h-full"
@@ -225,27 +226,31 @@ const Timeline = () => {
               </div>
 
               <div className="w-full max-w-xs text-center">
-                <img
-                  className="object-cover object-center w-full h-48 mx-auto rounded-lg"
-                  src={career}
-                  alt="avatar"
-                />
+                <Link to="/carrers">
+                  <img
+                    className="object-cover object-center w-full h-48 mx-auto rounded-lg"
+                    src={career}
+                    alt="avatar"
+                  />
 
-                <div className="mt-2">
-                  <h3 className="text-lg font-medium text-black ">Careers</h3>
-                </div>
+                  <div className="mt-2">
+                    <h3 className="text-lg font-medium text-black ">Careers</h3>
+                  </div>
+                </Link>
               </div>
 
               <div className="w-full max-w-xs text-center">
-                <img
-                  className="object-cover object-center w-full h-48 mx-auto rounded-lg"
-                  src={faq}
-                  alt="avatar"
-                />
+                <Link to="/faq">
+                  <img
+                    className="object-cover object-center w-full h-48 mx-auto rounded-lg"
+                    src={faq}
+                    alt="avatar"
+                  />
 
-                <div className="mt-2">
-                  <h3 className="text-lg font-medium text-black ">FAQ</h3>
-                </div>
+                  <div className="mt-2">
+                    <h3 className="text-lg font-medium text-black ">FAQ</h3>
+                  </div>
+                </Link>
               </div>
             </div>
           </div>

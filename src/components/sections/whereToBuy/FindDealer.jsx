@@ -31,7 +31,7 @@ const FindDealer = () => {
 
   return (
     <>
-      <div>
+      <div className="font-poppins">
         {/* -----------------------------------------Banner------------------------------------ */}
         <div class="relative font-[sans-serif] before:absolute before:w-full before:h-full before:inset-0 before:bg-black before:opacity-50 before:z-10">
           <img

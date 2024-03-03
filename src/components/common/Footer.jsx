@@ -1,9 +1,65 @@
-import React from "react";
+import React, { useState } from "react";
 import { FaLocationArrow, FaPhone } from "react-icons/fa6";
 import { MdEmail } from "react-icons/md";
 import { Link } from "react-router-dom";
+import SuccessPopUp from "./SuccessPopUp";
 
 const Footer = () => {
+  const [formData, setFormData] = useState({
+    fullname: "",
+    email: "",
+    contact: "",
+    message: "",
+  });
+  const [showSuccessModal, setShowSuccessModal] = useState(false);
+  const handleInputChange = (e) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    });
+  };
+
+  const handleCloseModal = () => {
+    setShowSuccessModal(false);
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    try {
+      console.log("Form submitted:", formData);
+
+      // Clear form data after submission
+      setFormData({
+        fullname: "",
+        email: "",
+        contact: "",
+        message: "",
+      });
+
+      // Use a more descriptive key in the form data
+      const response = await fetch(
+        "https://docs.google.com/forms/d/1KTpgWgaY-67kmIS-NWrlAakY_C0Qa2x2OIYXtqUuluc/formResponse",
+        {
+          method: "POST",
+          mode: "no-cors",
+          body: new URLSearchParams({
+            "entry.2103262084": formData.fullname,
+            "entry.495060411": formData.email,
+            "entry.727878866": formData.contact,
+            "entry.879114805": formData.message,
+          }).toString(),
+          headers: {
+            "Content-Type": "application/x-www-form-urlencoded",
+          },
+        }
+      );
+      setShowSuccessModal(true);
+    } catch (error) {
+      console.error("Error submitting form:", error);
+    }
+  };
+  console.log(formData);
   return (
     <footer id="footer-section" className="bg-gray-400 text-white p-5">
       <div className="">
@@ -154,29 +210,41 @@ const Footer = () => {
             </div>
           </div>
           <div className="md:w-1/4">
-            <form className="flex flex-col gap-y-4">
+            <form className="flex flex-col gap-y-4" onSubmit={handleSubmit}>
               <input
                 type="text"
                 className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5      "
                 placeholder="Name*"
+                name="fullname"
+                value={formData.fullname}
+                onChange={handleInputChange}
                 required
               />
               <input
                 type="email"
                 className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5      "
                 placeholder="Email*"
+                name="email"
+                value={formData.email}
+                onChange={handleInputChange}
                 required
               />
               <input
                 type="text"
-                id="contactno"
+                id="contact"
                 placeholder="Contact*"
+                name="contact"
+                value={formData.contact}
+                onChange={handleInputChange}
                 className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5      "
                 required
               />
               <textarea
                 id="message"
                 rows="4"
+                value={formData.message}
+                name="message"
+                onChange={handleInputChange}
                 className="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500      "
                 placeholder="Message"
               ></textarea>
@@ -188,6 +256,9 @@ const Footer = () => {
                 Send
               </button>
             </form>
+            {showSuccessModal && (
+              <SuccessPopUp handleCloseModal={handleCloseModal} />
+            )}
           </div>
         </div>
       </div>

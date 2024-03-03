@@ -1,5 +1,6 @@
 import React from "react";
 import batteryCharge from "../../../assets/battry-charge.png";
+import { Link } from "react-router-dom";
 const BatteryTips = () => {
   return (
     <div>
@@ -15,34 +16,42 @@ const BatteryTips = () => {
           </div>
           <div className="flex p-5 flex-wrap justify-center sm:-m-4 -mx-4 -mb-10 -mt-4 md:space-y-0 md:gap-y-5 space-y-6 md:space-x-4">
             <div className="p-4 w-full md:w-1/3 space-y-7 lg:w-1/4  flex flex-col text-center items-center hover:bg-black hover:delay-200 duration-1000 ease-out hover:text-white cursor-pointer shadow-[0_3px_10px_rgb(0,0,0,0.2)]">
-              <div className=" inline-flex items-center justify-center rounded-full  flex-shrink-0 ">
-                <img src={batteryCharge} alt="" className="w-32" />
-              </div>
-              <div className="flex-grow">
-                <p className=" text-lg ">
-                  How do i know that my battery needs replacement?
-                </p>
-              </div>
+              <Link to="/faq">
+                <div className=" inline-flex items-center justify-center rounded-full  flex-shrink-0 ">
+                  <img src={batteryCharge} alt="" className="w-32" />
+                </div>
+                <div className="flex-grow">
+                  <p className=" text-lg ">
+                    How do i know that my battery needs replacement?
+                  </p>
+                </div>
+              </Link>
+            </div>
+
+            <div className="p-4 w-full md:w-1/3 space-y-7 lg:w-1/4  flex flex-col text-center items-center hover:bg-black hover:delay-200 duration-1000 ease-out hover:text-white cursor-pointer shadow-[0_3px_10px_rgb(0,0,0,0.2)]">
+              <Link to="/faq">
+                <div className=" inline-flex items-center justify-center rounded-full  flex-shrink-0 ">
+                  <img src={batteryCharge} alt="" className="w-32" />
+                </div>
+                <div className="flex-grow">
+                  <p className=" text-lg ">
+                    Tips while replacing the battery or cleaning terminals
+                  </p>
+                </div>
+              </Link>
             </div>
             <div className="p-4 w-full md:w-1/3 space-y-7 lg:w-1/4  flex flex-col text-center items-center hover:bg-black hover:delay-200 duration-1000 ease-out hover:text-white cursor-pointer shadow-[0_3px_10px_rgb(0,0,0,0.2)]">
-              <div className=" inline-flex items-center justify-center rounded-full  flex-shrink-0 ">
-                <img src={batteryCharge} alt="" className="w-32" />
-              </div>
-              <div className="flex-grow">
-                <p className=" text-lg ">
-                  Tips while replacing the battery or cleaning terminals
-                </p>
-              </div>
-            </div>
-            <div className="p-4 w-full md:w-1/3 space-y-7 lg:w-1/4  flex flex-col text-center items-center hover:bg-black hover:delay-200 duration-1000 ease-out hover:text-white cursor-pointer shadow-[0_3px_10px_rgb(0,0,0,0.2)]">
-              <div className=" inline-flex items-center justify-center rounded-full  flex-shrink-0 ">
-                <img src={batteryCharge} alt="" className="w-32" />
-              </div>
-              <div className="flex-grow">
-                <p className=" text-lg  ">
-                  Battery Recycling- how to handle and used batteries with care
-                </p>
-              </div>
+              <Link to="/faq">
+                <div className=" inline-flex items-center justify-center rounded-full  flex-shrink-0 ">
+                  <img src={batteryCharge} alt="" className="w-32" />
+                </div>
+                <div className="flex-grow">
+                  <p className=" text-lg  ">
+                    Battery Recycling- how to handle and used batteries with
+                    care
+                  </p>
+                </div>
+              </Link>
             </div>
           </div>
         </div>

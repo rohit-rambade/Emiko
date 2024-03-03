@@ -32,13 +32,13 @@ const Careers = () => {
   // -------------------------------------------------for form------------------------------------
 
   return (
-    <div>
+    <div className="font-poppins">
       <div className="flex justify-center content-center bg-slate-100">
         <img src={circle} alt="" className="md:w-1/2"></img>
       </div>
       <div className="flex flex-col md:flex-row justify-center items-center text-left bg-gray-200 px-6 md:px-24 py-4 md:py-12">
         <div className=" md:w-1/2 text-blue-600 font-semibold text-4xl font-poppins ">
-          <h3 className="my-6 leading-loose">
+          <h3 className="my-6 md:leading-tight">
             We promote a culture of collaboration, freedom and innovation.
           </h3>
         </div>
@@ -61,7 +61,7 @@ const Careers = () => {
               Our Departments
             </h2>
 
-            <div className="grid gap-8 mt-8 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 py-4">
+            <div className="grid gap-8 mt-8 place-content-center sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 py-4">
               {departments.map((department) => {
                 return (
                   <div className="flex flex-col justify-center content-center w-full max-w-xs text-center bg-white shadow-xl gap-y-4 transition-all duration-700 hover:scale-110 cursor-pointer">
@@ -86,8 +86,10 @@ const Careers = () => {
           <p className="text-lg">
             If you think you can innovate and apply your knowledge to the best
             of use, write to us at{" "}
-            <span className="s text-primary">connect@emiko.co.in</span> to
-            apply.
+            <span className="s text-primary">
+              <a href="mailto:connect@emiko.co.in">connect@emiko.co.in</a>
+            </span>{" "}
+            to apply.
           </p>
           <h1 className="text-blue-800 text-xl">
             Alternatively, please submit your application here
@@ -107,7 +109,7 @@ const Careers = () => {
                   className="appearance-none block w-full bg-gray-200 text-gray-700 border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
                   id="grid-first-name"
                   type="text"
-                  placeholder="Jane"
+                  placeholder="Firstname"
                 />
                 <p className="text-primary text-base ">
                   Please fill out this field.

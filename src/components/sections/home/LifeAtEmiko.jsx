@@ -3,7 +3,7 @@ import React from "react";
 const LifeAtEmiko = () => {
   return (
     <>
-      <div className="  flex flex-col md:flex-row justify-center mx-auto">
+      <div className="font-poppins  flex flex-col md:flex-row justify-center mx-auto">
         <div className="flex  bg-primary items-center justify-center text-white md:text-center text-center font-poppins font-semibold text-2xl p-4 md:p-4">
           <h3 className="">Great Place To Learn</h3>
         </div>
