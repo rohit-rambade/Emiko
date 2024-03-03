@@ -3,7 +3,7 @@ import Faqs from "../components/sections/faq/Faqs";
 import faqImg from "../assets/faq/faq.jpg";
 const Faq = () => {
   return (
-    <div className=" flex flex-col h-full  justify-center items-center">
+    <div className=" flex flex-col h-full  justify-center items-center font-poppins">
       <div className="flex justify-center content-center text-center py-6">
         <img src={faqImg} alt="" className=" object-center md:w-3/5"></img>
       </div>

@@ -31,17 +31,21 @@ const Product = () => {
   };
   return (
     <div>
-      <h1 className="text-primary text-4xl font-semibold py-8 px-4">
+      <h1 className="text-primary text-4xl font-semibold py-8 px-4 text-center">
         Products
       </h1>
-      <h3 className="font-semibold text-3xl px-4">
+      <h3 className="font-semibold text-3xl md:text-4xl px-4 text-center">
         Power up your life with our services
       </h3>
       <div className="flex flex-wrap gap-y-3 md:gapy justify-evenly items-center my-8">
         {products.map((product) => {
+          const isSelected =
+            selectedProduct && selectedProduct.id === product.id;
           return (
             <button
-              className="relative flex h-[50px] p-2 w-28 md:w-52 text-sm md:text-base  items-center justify-center overflow-hidden bg-red-100 font-semibold text-black rounded-full shadow-2xl "
+              className={`relative flex h-[50px] p-2 w-28 md:w-52 text-sm md:text-base items-center justify-center overflow-hidden bg-red-100 font-semibold text-black rounded-full shadow-2xl ${
+                isSelected ? "border-2 border-primary" : ""
+              }`}
               key={product.id}
               onClick={() => handleProductClick(product)}
             >
