@@ -11,7 +11,6 @@ const App = () => {
       <ScrollToTop />
       <Header />
       <Outlet />
-      {/* <FindDealer /> */}
       <Footer />
     </>
   );

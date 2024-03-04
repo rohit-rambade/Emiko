@@ -106,7 +106,7 @@ const SingleProduct = ({ product }) => {
           )}
           <div>
             <div>
-              <h1 className="md:text-6xl text-primary text-center font-bold">
+              <h1 className="text-3xl md:text-6xl text-primary text-center font-bold">
                 ADVANTAGES
               </h1>
             </div>

@@ -8,12 +8,12 @@ const Blogs = () => {
   const settings = {
     dots: true,
     infinite: true,
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    autoplay: true,
     speed: 2000,
-    autoplaySpeed: 5000,
-    cssEase: "linear",
+    slidesToShow: 3,
+    slidesToScroll: 3,
+    autoplay: true,
+
+    autoplaySpeed: 2000,
 
     responsive: [
       {
@@ -45,28 +45,28 @@ const Blogs = () => {
 
   return (
     <div className="font-poppins">
-      <h3 className="text-center font-poppins font-normal text-4xl md:text-5xl text-primary py-8">
+      <h3 className="text-center font-normal text-4xl md:text-5xl text-primary py-8">
         Latest from blogs & Articles
       </h3>
-      <Slider {...settings}>
-        {blogposts.map((blog) => (
-          <div key={blog.id}>
-            <div className="p-2 md:p-8">
+      <div className="max-w-screen-xl mx-auto px-4 overflow-hidden">
+        <Slider {...settings} className="w-full">
+          {blogposts.map((blog) => (
+            <div key={blog.id} className="px-2 md:px-8">
               <div className="flex flex-col justify-center items-center">
                 <img src={blog.imageUrl} alt={blog.title} className="" />
               </div>
               <div className="p-2">
                 <a
                   href={blog.link}
-                  className=" text-2xl hover:text-blue-700 hover:underline"
+                  className="text-2xl hover:text-blue-700 hover:underline"
                 >
                   {blog.title}
                 </a>
               </div>
             </div>
-          </div>
-        ))}
-      </Slider>
+          ))}
+        </Slider>
+      </div>
     </div>
   );
 };
