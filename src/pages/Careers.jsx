@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import circle from "../assets/careers/careerCircle.png";
 import { departments } from "../constants/departments";
 import SuccessPopUp from "../components/common/SuccessPopUp";
+import useFormSubmission from "../hooks/useFormSubmission";
 
 const initialState = {
   fullname: "",
@@ -13,7 +14,8 @@ const initialState = {
 };
 const Careers = () => {
   const [formData, setFormData] = useState(initialState);
-  const [showSuccessModal, setShowSuccessModal] = useState(false);
+  const { submitForm, showSuccessModal, setShowSuccessModal } =
+    useFormSubmission();
 
   const handleInputChange = (e) => {
     setFormData({
@@ -22,38 +24,32 @@ const Careers = () => {
     });
   };
 
+  // URL of the Google Form endpoint where the form data will be submitted
+  const googleFormUrl =
+    "https://docs.google.com/forms/d/1K4Y1Ar_QqF0PEcU5NdzUV1-XLuWUcDARrkpmHFZO3o4/formResponse";
+
+  // Define Google Form keys mapping with form data fields
+  const googleFormFields = {
+    "entry.562121278": formData.fullname,
+    "entry.2017627683": formData.email,
+    "entry.138380570": formData.contact,
+    "entry.2112131485": formData.location,
+    "entry.233252045": formData.areaOfInterest,
+    "entry.1780225360": formData.additionalMessage,
+  };
+
+  // Handle form submission
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    try {
-      console.log("Form submitted:", formData);
-
-      // Clear form data after submission
-      setFormData(initialState);
-
-      // Use a more descriptive key in the form data
-      const response = await fetch(
-        "https://docs.google.com/forms/d/1K4Y1Ar_QqF0PEcU5NdzUV1-XLuWUcDARrkpmHFZO3o4/formResponse",
-        {
-          method: "POST",
-          mode: "no-cors",
-          body: new URLSearchParams({
-            "entry.562121278": formData.fullname,
-            "entry.2017627683": formData.email,
-            "entry.138380570": formData.contact,
-            "entry.2112131485": formData.location,
-            "entry.233252045": formData.areaOfInterest,
-            "entry.1780225360": formData.additionalMessage,
-          }).toString(),
-          headers: {
-            "Content-Type": "application/x-www-form-urlencoded",
-          },
-        }
-      );
-      setShowSuccessModal(true);
-    } catch (error) {
-      console.error("Error submitting form:", error);
-    }
+    // Call the submitForm function with necessary parameters
+    submitForm(
+      formData, // Form data to be submitted
+      googleFormUrl, // URL of the Google Form
+      googleFormFields, // Mapping of form fields to Google Form keys
+      setFormData, // Function to clear form data after submission
+      initialState // Initial state of the form data
+    );
   };
   const handleCloseModal = () => {
     setShowSuccessModal(false);
@@ -92,7 +88,10 @@ const Careers = () => {
             <div className="grid gap-8 mt-8 place-content-center sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 py-4">
               {departments.map((department) => {
                 return (
-                  <div className="flex flex-col justify-center content-center w-full max-w-xs text-center bg-white shadow-xl gap-y-4 transition-all duration-700 hover:scale-110 cursor-pointer">
+                  <div
+                    className="flex flex-col justify-center content-center w-full max-w-xs text-center bg-white shadow-xl gap-y-4 transition-all duration-700 hover:scale-110 cursor-pointer"
+                    key={department.id}
+                  >
                     <img
                       className=" object-cover object-center w-full  px-20 bg-white "
                       src={department.imageURL}

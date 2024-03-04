@@ -3,63 +3,56 @@ import { FaLocationArrow, FaPhone } from "react-icons/fa6";
 import { MdEmail } from "react-icons/md";
 import { Link } from "react-router-dom";
 import SuccessPopUp from "./SuccessPopUp";
+import useFormSubmission from "../../hooks/useFormSubmission";
+
+const initialState = {
+  fullname: "",
+  email: "",
+  contact: "",
+  message: "",
+};
 
 const Footer = () => {
-  const [formData, setFormData] = useState({
-    fullname: "",
-    email: "",
-    contact: "",
-    message: "",
-  });
-  const [showSuccessModal, setShowSuccessModal] = useState(false);
+  const [formData, setFormData] = useState(initialState);
+  const { submitForm, showSuccessModal, setShowSuccessModal } =
+    useFormSubmission();
+
   const handleInputChange = (e) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value,
     });
   };
+  // URL of the Google Form endpoint where the form data will be submitted
+  const googleFormUrl =
+    "https://docs.google.com/forms/d/1KTpgWgaY-67kmIS-NWrlAakY_C0Qa2x2OIYXtqUuluc/formResponse";
 
-  const handleCloseModal = () => {
-    setShowSuccessModal(false);
+  // Define Google Form keys mapping with form data fields
+  const googleFormFields = {
+    "entry.2103262084": formData.fullname,
+    "entry.495060411": formData.email,
+    "entry.727878866": formData.contact,
+    "entry.879114805": formData.message,
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    try {
-      console.log("Form submitted:", formData);
+    e.preventDefault();
 
-      // Clear form data after submission
-      setFormData({
-        fullname: "",
-        email: "",
-        contact: "",
-        message: "",
-      });
-
-      // Use a more descriptive key in the form data
-      const response = await fetch(
-        "https://docs.google.com/forms/d/1KTpgWgaY-67kmIS-NWrlAakY_C0Qa2x2OIYXtqUuluc/formResponse",
-        {
-          method: "POST",
-          mode: "no-cors",
-          body: new URLSearchParams({
-            "entry.2103262084": formData.fullname,
-            "entry.495060411": formData.email,
-            "entry.727878866": formData.contact,
-            "entry.879114805": formData.message,
-          }).toString(),
-          headers: {
-            "Content-Type": "application/x-www-form-urlencoded",
-          },
-        }
-      );
-      setShowSuccessModal(true);
-    } catch (error) {
-      console.error("Error submitting form:", error);
-    }
+    // Call the submitForm function with necessary parameters
+    submitForm(
+      formData, // Form data to be submitted
+      googleFormUrl, // URL of the Google Form
+      googleFormFields, // Mapping of form fields to Google Form keys
+      setFormData, // Function to clear form data after submission
+      initialState // Initial state of the form data
+    );
   };
-  console.log(formData);
+  const handleCloseModal = () => {
+    setShowSuccessModal(false);
+  };
+
   return (
     <footer
       id="footer-section"
