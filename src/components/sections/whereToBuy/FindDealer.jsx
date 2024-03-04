@@ -33,7 +33,7 @@ const FindDealer = () => {
     <>
       <div className="font-poppins">
         {/* -----------------------------------------Banner------------------------------------ */}
-        <div class="relative font-[sans-serif] before:absolute before:w-full before:h-full before:inset-0 before:bg-black before:opacity-50 before:z-10">
+        <div class="relative  before:absolute before:w-full before:h-full before:inset-0 before:bg-black before:opacity-50 before:z-10">
           <img
             src={findDealer}
             alt="Banner Image"

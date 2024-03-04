@@ -6,12 +6,13 @@ import navMenu from "../../constants/NavMenu.json";
 import { FaPhone, FaXmark } from "react-icons/fa6";
 import { SlMenu } from "react-icons/sl";
 
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useLocation } from "react-router-dom";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [activeMenu, setActiveMenu] = useState(null);
   const [isMobile, setIsMobile] = useState(false);
+  const location = useLocation();
 
   useEffect(() => {
     const handleResize = () => {
@@ -42,9 +43,9 @@ const Header = () => {
     <div className="sticky top-0 w-full bg-white mx-auto font-poppins z-50 p-2 md:p-2 ">
       <header>
         <nav>
-          <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto ">
+          <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-2 md:p-0 ">
             <Link
-              to=""
+              to="/"
               className="flex items-center space-x-3 rtl:space-x-reverse"
             >
               <img src={logo} className="h-12 md:h-16" alt="Emiko Logo" />
@@ -64,7 +65,7 @@ const Header = () => {
                 type="button"
                 className=" md:hidden  "
               >
-                {isOpen ? <FaXmark size={30} /> : <SlMenu size={30} />}
+                {isOpen ? <FaXmark size={35} /> : <SlMenu size={35} />}
               </button>
             </div>
             <div
@@ -82,7 +83,7 @@ const Header = () => {
                             <NavLink
                               to={menu.link}
                               className={`relative w-fit block after:block after:content-[''] after:absolute after:h-[3px] after:bg-primary after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-center py-3 md:py-0 ${
-                                window.location.pathname === menu.link
+                                location.pathname === menu.link
                                   ? "text-red-500"
                                   : "text-black"
                               }`}

@@ -18,7 +18,10 @@ const TestimonialSection = () => {
             <div className="flex flex-col md:flex-row md:flex-wrap justify-center gap-y-3  space-y-4 md:space-y-0 md:space-x-5">
               {testimonials.map((item) => {
                 return (
-                  <div className="overflow-hidden w-full flex justify-center   md:w-[30%] shadow-xl bg-primary rounded-2xl">
+                  <div
+                    className="overflow-hidden w-full flex justify-center   md:w-[30%] shadow-xl bg-primary rounded-2xl"
+                    key={item.id}
+                  >
                     <div className="flex flex-col md:flex-row items-center justify-center  bg-white rounded-tl-full ">
                       <div className="  items-center justify-center flex py-2">
                         <div className="flex flex-col  items-center justify-center ">

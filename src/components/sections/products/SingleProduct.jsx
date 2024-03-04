@@ -71,12 +71,14 @@ const SingleProduct = ({ product }) => {
                 </h3>
               </div>
               <div className="flex justify-center flex-wrap">
-                {console.log(product.isApplication)}
                 {product.isApplication ? (
                   <>
-                    {product?.applicationDetails?.map((app) => {
+                    {product?.applicationDetails?.map((app, index) => {
                       return (
-                        <div className="flex  p-2 rounded-full bg-white m-4 ">
+                        <div
+                          className="flex  p-2 rounded-full bg-white m-4 "
+                          key={(app, index)}
+                        >
                           <img
                             src={app.img}
                             alt=""
@@ -106,27 +108,27 @@ const SingleProduct = ({ product }) => {
           )}
           <div>
             <div>
-              <h1 className="md:text-6xl text-primary text-center font-bold">
+              <h1 className="text-3xl md:text-6xl text-primary text-center font-bold">
                 ADVANTAGES
               </h1>
             </div>
-            <div class="container mx-auto px-20">
+            <div className="container mx-auto px-20">
               <div>
                 <div
-                  class="grid grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-5 pt-4 pb-10 lg:pt-6 lg:pb-20 "
+                  className="grid grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-5 pt-4 pb-10 lg:pt-6 lg:pb-20 "
                   style={{ cursor: "auto" }}
                 >
                   {product?.advantages?.map((item) => {
                     return (
                       <div
-                        class="p-6 rounded-lg  backdrop-filter backdrop-blur-3xl bg-white bg-opacity-50 shadow-xl transition-transform hover:scale-105"
+                        className="p-6 rounded-lg  backdrop-filter backdrop-blur-3xl bg-white bg-opacity-50 shadow-xl transition-transform hover:scale-105"
                         key={item.id}
                       >
-                        <div class="mb-5"></div>
+                        <div className="mb-5"></div>
 
-                        <h3 class="text-lg font-bold mb-2">{item.title}</h3>
+                        <h3 className="text-lg font-bold mb-2">{item.title}</h3>
 
-                        <p class="text-sm leading-6 text-gray-600">
+                        <p className="text-sm leading-6 text-gray-600">
                           {item.desc}
                         </p>
                       </div>

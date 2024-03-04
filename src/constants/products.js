@@ -16,22 +16,22 @@ import eRikshawImg from "../assets/product/E-ric/ErikshawBattery.png";
 import solarImg from "../assets/product/Solar/SolarBattery.png";
 
 //Automotive Applications
-import bus from "../assets/product/Icons/Automotive/bus.png"
-import excavator from "../assets/product/Icons/Automotive/excavator_8654464.png"
-import hatchbackcar from "../assets/product/Icons/Automotive/hatchback.png"
-import suv from "../assets/product/Icons/Automotive/suv-transportation-car-suv-svgrepo-com.png"
-import tractor from "../assets/product/Icons/Automotive/tractor-svgrepo-com.svg"
-import jcb from "../assets/product/Icons/Automotive/tractor_2318605.png"
+import bus from "../assets/product/Icons/Automotive/bus.png";
+import excavator from "../assets/product/Icons/Automotive/excavator_8654464.png";
+import hatchbackcar from "../assets/product/Icons/Automotive/hatchback.png";
+import suv from "../assets/product/Icons/Automotive/suv-transportation-car-suv-svgrepo-com.png";
+import tractor from "../assets/product/Icons/Automotive/tractor-svgrepo-com.svg";
+import jcb from "../assets/product/Icons/Automotive/tractor_2318605.png";
 
 //Inverter Applications
-import home from "../assets/product/Icons/Inverter/home_553376.png"
-import work from "../assets/product/Icons/Inverter/work_10866399.png"
+import home from "../assets/product/Icons/Inverter/home_553376.png";
+import work from "../assets/product/Icons/Inverter/work_10866399.png";
 
 //Marine Applications
-import boatwithcontainer from "../assets/product/Icons/Marine/boat-with-containers_75931.png"
+import boatwithcontainer from "../assets/product/Icons/Marine/boat-with-containers_75931.png";
 
 //E-Rikshaw Applications
-import transport from "../assets/product/Icons/E-Rickshaw/transport_11334923.png"
+import transport from "../assets/product/Icons/E-Rickshaw/transport_11334923.png";
 export const products = [
   {
     id: 1,
@@ -83,7 +83,7 @@ export const products = [
         title: "Features. Long Back Up.",
       },
       {
-        id: 6,
+        id: 7,
         title: "Battery Warrenty. 60 Months.",
       },
     ],
@@ -93,7 +93,7 @@ export const products = [
     applicationDetails: [
       {
         id: 1,
-        img: bus
+        img: bus,
       },
       {
         id: 2,
@@ -120,29 +120,26 @@ export const products = [
       {
         id: 1,
         title: "High starting power",
-        desc: "combines CCA and low temp performance"
+        desc: "combines CCA and low temp performance",
       },
       {
         id: 2,
         title: "Corrosion-resistant",
-
       },
       {
         id: 3,
         title: "Vibration-resistant",
-
       },
       {
         id: 4,
         title: "Ready to install",
-
       },
       {
         id: 5,
         title: "Long-lasting",
-        desc: "combines high reserve capacity and spill resistance"
+        desc: "combines high reserve capacity and spill resistance",
       },
-    ]
+    ],
   },
   {
     id: 2,
@@ -181,7 +178,7 @@ export const products = [
         title: "Rapid charging",
       },
       {
-        id: 6,
+        id: 7,
         title: "Safety",
       },
     ],
@@ -197,34 +194,29 @@ export const products = [
         id: 2,
         img: work,
       },
-
     ],
     advantages: [
       {
         id: 1,
         title: "Advanced Battery Technology",
-        desc: "High power, long life"
+        desc: "High power, long life",
       },
       {
         id: 2,
         title: "Super Strong Grid & Plates",
-        desc: "Extended backup, improved charge retention"
-
+        desc: "Extended backup, improved charge retention",
       },
       {
         id: 3,
         title: "High Reliability & Long Life",
-        desc: "Extended lifespan, reliable performance"
-
+        desc: "Extended lifespan, reliable performance",
       },
       {
         id: 4,
         title: "Pre-Charged & Ready to Use",
-        desc: "Factory charged, high-quality acid"
-
+        desc: "Factory charged, high-quality acid",
       },
-
-    ]
+    ],
   },
   {
     id: 3,
@@ -275,38 +267,31 @@ export const products = [
         id: 1,
         img: boatwithcontainer,
       },
-
-
     ],
     advantages: [
       {
         id: 1,
         title: "High starting power",
-        desc: "combines CCA and low temp performance"
+        desc: "combines CCA and low temp performance",
       },
       {
         id: 2,
         title: "Corrosion-resistant",
-
-
       },
       {
         id: 3,
-        title: "Vibration-resistant"
-
+        title: "Vibration-resistant",
       },
       {
         id: 4,
         title: "Spill-proof",
-
-
       },
       {
         id: 5,
         title: "Extended accessory power",
-        desc: "highlights high reserve capacity"
+        desc: "highlights high reserve capacity",
       },
-    ]
+    ],
   },
   {
     id: 4,
@@ -346,7 +331,7 @@ export const products = [
         title: "Features. Long Back Up.",
       },
       {
-        id: 6,
+        id: 7,
         title: "Battery Warrenty. 60 Months.",
       },
     ],
@@ -355,37 +340,31 @@ export const products = [
     applicationDetails: [
       {
         id: 1,
-        img: transport
+        img: transport,
       },
-
     ],
     advantages: [
       {
         id: 1,
         title: "Durable",
-        desc: "Corrosion-resistant, handles deep discharge."
+        desc: "Corrosion-resistant, handles deep discharge.",
       },
       {
         id: 2,
         title: "High Performance",
-        desc: "Thicker plates, faster charging."
-
+        desc: "Thicker plates, faster charging.",
       },
       {
         id: 3,
         title: "Long-lasting",
-        desc: "Special additives for consistent mileage and reduced water loss."
-
+        desc: "Special additives for consistent mileage and reduced water loss.",
       },
       {
         id: 4,
         title: "Vibration-resistant",
-        desc: "Handles rough roads."
-
+        desc: "Handles rough roads.",
       },
-
-
-    ]
+    ],
   },
   {
     id: 5,
@@ -425,7 +404,7 @@ export const products = [
         title: "Features. Long Back Up.",
       },
       {
-        id: 6,
+        id: 7,
         title: "Battery Warrenty. 60 Months.",
       },
     ],
@@ -435,28 +414,23 @@ export const products = [
       {
         id: 1,
         title: "Efficient",
-        desc: "High charge acceptance, low discharge rate, maximum storage."
+        desc: "High charge acceptance, low discharge rate, maximum storage.",
       },
       {
         id: 2,
         title: "Low Maintenance",
-        desc: "Hassle-free operation."
-
+        desc: "Hassle-free operation.",
       },
       {
         id: 3,
         title: "Versatile",
-        desc: "Easy installation, compatible with various systems."
-
+        desc: "Easy installation, compatible with various systems.",
       },
       {
         id: 4,
         title: "Temperature-resistant:",
-        desc: "Reliable performance in extreme climates."
-
+        desc: "Reliable performance in extreme climates.",
       },
-
-
-    ]
+    ],
   },
 ];
