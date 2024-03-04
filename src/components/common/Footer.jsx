@@ -61,7 +61,10 @@ const Footer = () => {
   };
   console.log(formData);
   return (
-    <footer id="footer-section" className="bg-gray-400 text-white p-5">
+    <footer
+      id="footer-section"
+      className="bg-gray-400 text-white p-5 font-poppins"
+    >
       <div className="">
         <div className="flex flex-col md:flex-row gap-y-6">
           <div className="md:w-1/4">

@@ -1,35 +1,63 @@
 import React, { useState } from "react";
 import circle from "../assets/careers/careerCircle.png";
 import { departments } from "../constants/departments";
-const Careers = () => {
-  // -------------------------------------------------for form------------------------------------
-  const [phoneNumber, setPhoneNumber] = useState("");
-  const [phoneNumberError, setPhoneNumberError] = useState("");
-  const [location, setLocation] = useState("");
+import SuccessPopUp from "../components/common/SuccessPopUp";
 
-  const handlePhoneNumberChange = (e) => {
-    const value = e.target.value;
-    setPhoneNumber(value);
-    const phoneNumberPattern = /^\d{10}$/;
-    if (!phoneNumberPattern.test(value)) {
-      setPhoneNumberError("Please enter a valid 10-digit phone number");
-    } else {
-      setPhoneNumberError("");
+const initialState = {
+  fullname: "",
+  email: "",
+  contact: "",
+  location: "",
+  areaOfInterest: "",
+  additionalMessage: "",
+};
+const Careers = () => {
+  const [formData, setFormData] = useState(initialState);
+  const [showSuccessModal, setShowSuccessModal] = useState(false);
+
+  const handleInputChange = (e) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    try {
+      console.log("Form submitted:", formData);
+
+      // Clear form data after submission
+      setFormData(initialState);
+
+      // Use a more descriptive key in the form data
+      const response = await fetch(
+        "https://docs.google.com/forms/d/1K4Y1Ar_QqF0PEcU5NdzUV1-XLuWUcDARrkpmHFZO3o4/formResponse",
+        {
+          method: "POST",
+          mode: "no-cors",
+          body: new URLSearchParams({
+            "entry.562121278": formData.fullname,
+            "entry.2017627683": formData.email,
+            "entry.138380570": formData.contact,
+            "entry.2112131485": formData.location,
+            "entry.233252045": formData.areaOfInterest,
+            "entry.1780225360": formData.additionalMessage,
+          }).toString(),
+          headers: {
+            "Content-Type": "application/x-www-form-urlencoded",
+          },
+        }
+      );
+      setShowSuccessModal(true);
+    } catch (error) {
+      console.error("Error submitting form:", error);
     }
   };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log("Submitted phone number:", phoneNumber);
-    console.log("Submitted location:", location);
-    // Add your form submission logic here
+  const handleCloseModal = () => {
+    setShowSuccessModal(false);
   };
-
-  const handleLocationChange = (e) => {
-    const value = e.target.value;
-    setLocation(value);
-  };
-  // -------------------------------------------------for form------------------------------------
 
   return (
     <div className="font-poppins">
@@ -88,7 +116,7 @@ const Careers = () => {
             of use, write to us at{" "}
             <span className="s text-primary">
               <a href="mailto:connect@emiko.co.in">connect@emiko.co.in</a>
-            </span>{" "}
+            </span>
             to apply.
           </p>
           <h1 className="text-blue-800 text-xl">
@@ -101,34 +129,39 @@ const Careers = () => {
               <div className="w-full  px-3 mb-6 md:mb-0">
                 <label
                   className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
-                  htmlFor="grid-first-name"
+                  htmlFor="firstname"
                 >
-                  First Name
+                  Full Name
                 </label>
                 <input
-                  className="appearance-none block w-full bg-gray-200 text-gray-700 border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
-                  id="grid-first-name"
+                  className="appearance-none block w-full bg-gray-200 text-gray-700 border  rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
+                  id="firstname"
                   type="text"
-                  placeholder="Firstname"
+                  name="fullname"
+                  placeholder="Full Name"
+                  required
+                  value={formData.fullname}
+                  onChange={handleInputChange}
                 />
-                <p className="text-primary text-base ">
-                  Please fill out this field.
-                </p>
               </div>
             </div>
 
             <div className="mb-6">
               <label
-                htmlFor="grid-email"
+                htmlFor="email"
                 className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
               >
                 Email Address
               </label>
               <input
                 className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-                id="grid-email"
+                id="email"
                 type="email"
+                name="email"
+                required
                 placeholder="Email@example.com"
+                value={formData.email}
+                onChange={handleInputChange}
               />
             </div>
 
@@ -142,15 +175,13 @@ const Careers = () => {
               <input
                 type="tel"
                 id="phoneNumber"
-                name="phoneNumber"
-                value={phoneNumber}
-                onChange={handlePhoneNumberChange}
+                name="contact"
+                required
+                value={formData.contact}
+                onChange={handleInputChange}
                 placeholder="Enter your phone number"
                 className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
               />
-              {phoneNumberError && (
-                <span style={{ color: "red" }}>{phoneNumberError}</span>
-              )}
             </div>
 
             <div className="mb-6">
@@ -163,8 +194,9 @@ const Careers = () => {
               <textarea
                 id="location"
                 name="location"
-                value={location}
-                onChange={handleLocationChange}
+                required
+                value={formData.location}
+                onChange={handleInputChange}
                 placeholder="Enter your address"
                 rows={5} // Increase the number of rows
                 className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
@@ -180,9 +212,10 @@ const Careers = () => {
               </label>
               <textarea
                 id="location"
-                name="location"
-                value={location}
-                onChange={handleLocationChange}
+                name="areaOfInterest"
+                required
+                value={formData.areaOfInterest}
+                onChange={handleInputChange}
                 placeholder=""
                 rows={5} // Increase the number of rows
                 className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
@@ -199,6 +232,9 @@ const Careers = () => {
               <textarea
                 rows="8"
                 className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                name="additionalMessage"
+                value={formData.additionalMessage}
+                onChange={handleInputChange}
               ></textarea>
             </div>
 
@@ -213,6 +249,9 @@ const Careers = () => {
               </div>
             </div>
           </form>
+          {showSuccessModal && (
+            <SuccessPopUp handleCloseModal={handleCloseModal} />
+          )}
         </div>
       </div>
       {/* ------------------------------------------------------form--------------------------------------- */}

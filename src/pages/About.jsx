@@ -39,7 +39,7 @@ const About = () => {
           </div>
         </div>
       </section>
-      <section className="bg-gray-100">
+      <section className="bg-gray-100 font-poppins">
         <div className="container mx-auto py-16 px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-8">
             <div className="mt-12 md:mt-0 order-last md:order-first">
