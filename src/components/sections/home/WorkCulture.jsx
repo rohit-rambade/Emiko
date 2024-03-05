@@ -6,7 +6,9 @@ const WorkCulture = () => {
     <>
       <div className="font-poppins flex flex-col justify-center content-center md:text-center text-left py-6 px-4 ">
         <div>
-          <h1 className="text-4xl py-4 ">Our work culture</h1>
+          <h1 className="text-4xl py-4 text-primary font-semibold">
+            Our work culture
+          </h1>
           <p className="md:px-24 text-lg py-2">
             Embrace a dynamic work culture that fosters creativity,
             collaboration, and innovation. We prioritize diversity, encourage

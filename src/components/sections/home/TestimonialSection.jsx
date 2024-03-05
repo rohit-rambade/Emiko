@@ -34,13 +34,14 @@ const TestimonialSection = () => {
                               />
                             </div>
                             <div className="flex flex-col justify-center items-center">
+                              <div className="text-sm font-medium text-primary  mx-4">
+                                <p>{item.role}</p>
+                              </div>
                               <div className="font-bold text-black mx-4">
                                 <p>{item.name}</p>
                               </div>
-                              <div className="text-sm font-medium text-stone-500 hover:text-stone-500 mx-4">
-                                <p>{item.role}</p>
-                              </div>
-                              <div className="text-sm font-medium text-stone-500 hover:text-stone-500 mx-4">
+
+                              <div className="text-sm font-medium text-stone-500  mx-4">
                                 <p>{item.companyName}</p>
                               </div>
                             </div>

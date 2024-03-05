@@ -65,7 +65,7 @@ const Home = () => {
         <section className="text-black font-poppins px-4">
           <div className="container px-5 mx-auto">
             <div className="text-center py-4">
-              <h1 className=" text-4xl font-semibold italic  text-primary py-8">
+              <h1 className=" text-4xl font-semibold   text-primary py-8">
                 Our Products
               </h1>
               <p className="text-xl leading-relaxed mx-auto font-semibold">
@@ -79,7 +79,7 @@ const Home = () => {
                     className="p-4 w-full md:w-1/3 lg:w-1/4  flex flex-col text-center items-center hover:bg-black hover:delay-200 duration-1000 ease-out hover:text-white cursor-pointer shadow-[0_3px_10px_rgb(0,0,0,0.2)]"
                     key={product.id}
                   >
-                    <div className=" inline-flex items-center justify-center rounded-full  flex-shrink-0 hf">
+                    <div className=" inline-flex items-center justify-center rounded-full  flex-shrink-0">
                       <img src={product.imgUrl} alt="" />
                     </div>
                     <div className="flex-grow">

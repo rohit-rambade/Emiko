@@ -7,7 +7,7 @@ const BatteryTips = () => {
       <section className="text-black font-poppins px-4">
         <div className="container px-5 mx-auto">
           <div className="text-center py-4">
-            <h1 className="sm:text-4xl text-4xl font-semibold italic  text-primary py-8 ">
+            <h1 className="sm:text-4xl text-4xl font-semibold   text-primary py-8 ">
               Battery Tips
             </h1>
             <p className="text-xl leading-relaxed mx-auto font-semibold">

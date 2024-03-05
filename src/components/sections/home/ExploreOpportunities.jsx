@@ -6,7 +6,7 @@ const ExploreOpportunities = () => {
     <>
       <div className="font-poppins  flex flex-col md:flex-row justify-center items-center md:m-14 px-4">
         <div className="md:w-1/2">
-          <h1 className=" text-4xl font-semibold italic  text-primary py-8">
+          <h1 className=" text-4xl font-semibold   text-primary py-8">
             Explore Opportunities
           </h1>
           <p className="max-w-lg px-2 text-xl">

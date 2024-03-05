@@ -44,8 +44,8 @@ const Blogs = () => {
   };
 
   return (
-    <div className="font-poppins">
-      <h3 className="text-center font-normal text-4xl md:text-5xl text-primary py-8">
+    <div className="font-poppins container md:flex flex-col mx-auto">
+      <h3 className="text-center text-4xl font-semibold text-primary py-8">
         Latest from blogs & Articles
       </h3>
       <div className="max-w-screen-xl mx-auto px-4 overflow-hidden">

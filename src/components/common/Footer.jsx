@@ -89,7 +89,7 @@ const Footer = () => {
                     <div>
                       <FaPhone size={30} color="black" className="mt-1" />
                     </div>
-                    <a href="tel:18001204954">18001204954</a>
+                    <a href="tel:18001204954">1800 120 4954</a>
                   </div>
                 </li>
                 <li>
@@ -175,7 +175,7 @@ const Footer = () => {
                     href="#"
                     className="text-white transition hover:opacity-75"
                   >
-                    Inveter
+                    Inverter
                   </a>
                 </li>
                 <li>
