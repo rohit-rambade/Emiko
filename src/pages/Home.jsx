@@ -1,3 +1,4 @@
+import { Fade } from "react-awesome-reveal";
 import React, { useEffect, useState } from "react";
 import natureEmiko from "../assets/sllider/nature_emiko.jpg";
 import second from "../assets/sllider/second.jpg";
@@ -64,14 +65,16 @@ const Home = () => {
       <div>
         <section className="text-black font-poppins px-4">
           <div className="container px-5 mx-auto">
-            <div className="text-center py-4">
-              <h1 className=" text-4xl font-semibold   text-primary py-8">
-                Our Products
-              </h1>
-              <p className="text-xl leading-relaxed mx-auto font-semibold">
-                THE ULTIMATE POWER SOURCE FOR YOUR COMMERCIAL APPLICATIONS
-              </p>
-            </div>
+            <Fade direction="up">
+              <div className="text-center py-4">
+                <h1 className=" text-4xl font-semibold   text-primary py-8">
+                  Our Products
+                </h1>
+                <p className="text-xl leading-relaxed mx-auto font-semibold">
+                  THE ULTIMATE POWER SOURCE FOR YOUR COMMERCIAL APPLICATIONS
+                </p>
+              </div>
+            </Fade>
             <div className="flex p-8 flex-wrap justify-center items-center sm:-m-4 -mx-4 -mb-10 -mt-4 md:space-y-0 md:gap-y-5 space-y-6 md:space-x-4">
               {ourProduct.map((product) => {
                 return (
@@ -80,10 +83,14 @@ const Home = () => {
                     key={product.id}
                   >
                     <div className=" inline-flex items-center justify-center rounded-full  flex-shrink-0">
-                      <img src={product.imgUrl} alt="" />
+                      <Fade direction="up">
+                        <img src={product.imgUrl} alt="" />
+                      </Fade>
                     </div>
                     <div className="flex-grow">
-                      <h2 className=" text-lg mb-3">{product.name}</h2>
+                      <Fade direction="up">
+                        <h2 className=" text-lg mb-3">{product.name}</h2>
+                      </Fade>
                     </div>
                   </div>
                 );
