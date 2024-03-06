@@ -7,7 +7,7 @@ export const testimonials = [
     id: 1,
     name: "Mr. Suresh Nawale",
     role: "Distributor",
-    companyName: "Shree Marketing & Multi Services",
+    // companyName: "Shree Marketing & Multi Services",
     testimonial: `EMIKO's automotive batteries deliver unmatched performance
     and durability, ensuring customer satisfaction and trust in our
     product.`,
