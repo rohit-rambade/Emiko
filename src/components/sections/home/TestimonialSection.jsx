@@ -9,12 +9,12 @@ const TestimonialSection = () => {
       <section className="font-poppins">
         <div className="py-10 px-2 mx-auto flex flex-col md:flex-row ">
           <div className=" p-3 space-y-6">
-            <Fade direction="up">
+            <Fade direction="up" triggerOnce="true">
               <h1 className="text-4xl text-center font-semibold text-primary">
                 Trust in our Expertise, Experience, and Dedication.
               </h1>
             </Fade>
-            <Fade direction="up">
+            <Fade direction="up" triggerOnce="true">
               <p className="text-2xl text-center capitalize ">
                 what our clients says
               </p>
@@ -32,7 +32,7 @@ const TestimonialSection = () => {
                         <div className="flex flex-col  items-center justify-center ">
                           <div className="flex flex-col items-center justify-center ">
                             <div className="p-1  flex justify-center">
-                              <Fade direction="up">
+                              <Fade direction="up" triggerOnce="true">
                                 <img
                                   src={item.photo}
                                   alt={item.name}
@@ -40,7 +40,7 @@ const TestimonialSection = () => {
                                 />
                               </Fade>
                             </div>
-                            <Fade direction="up">
+                            <Fade direction="up" triggerOnce="true">
                               <div className="flex flex-col justify-center items-center">
                                 <div className="text-sm font-medium text-primary  mx-4">
                                   <p>{item.role}</p>
@@ -55,7 +55,7 @@ const TestimonialSection = () => {
                               </div>
                             </Fade>
                           </div>
-                          <Fade direction="up">
+                          <Fade direction="up" triggerOnce="true">
                             <div className="m-2 px-8">
                               <p> {item.testimonial}</p>
                             </div>

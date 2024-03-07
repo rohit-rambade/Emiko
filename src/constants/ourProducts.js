@@ -1,6 +1,6 @@
 import battery from "../assets/battery.png";
 import inverter from "../assets/inverter.png";
-import rickshaw from "../assets/rickshaw.png";
+import rickshaw from "../assets/tuktuk2.png";
 import carIcon from "../assets/carIcon.png";
 import homeIcon from "../assets/homeIcon.png";
 import inverterIcon from "../assets/shipIcon.png";

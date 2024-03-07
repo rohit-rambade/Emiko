@@ -7,12 +7,12 @@ const WorkCulture = () => {
     <>
       <div className="font-poppins flex flex-col justify-center content-center md:text-center text-left py-6 px-4 ">
         <div>
-          <Fade direction="up">
+          <Fade direction="up" triggerOnce="true">
             <h1 className="text-4xl py-4 text-primary font-semibold">
               Our work culture
             </h1>
           </Fade>
-          <Fade direction="up">
+          <Fade direction="up" triggerOnce="true">
             <p className="md:px-24 text-lg py-2">
               Embrace a dynamic work culture that fosters creativity,
               collaboration, and innovation. We prioritize diversity, encourage
@@ -23,7 +23,7 @@ const WorkCulture = () => {
             </p>
           </Fade>
         </div>
-        <Fade direction="up">
+        <Fade direction="up" triggerOnce="true">
           {" "}
           <div className=" flex content-center justify-center md:py-8 py-4">
             <img
