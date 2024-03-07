@@ -156,14 +156,6 @@ const Footer = () => {
                     </Link>
                   </li>
                   <li>
-                    <Link
-                      to="/where-to-buy"
-                      className="text-white transition hover:opacity-75"
-                    >
-                      Where to buy
-                    </Link>
-                  </li>
-                  <li>
                     <Link className="text-white transition hover:opacity-75">
                       Contact Us
                     </Link>
@@ -178,44 +170,44 @@ const Footer = () => {
 
               <ul className="mt-6 space-y-4 text-xl ">
                 <li>
-                  <a
-                    href="#"
+                  <Link
+                    to="/products"
                     className="text-white transition hover:opacity-75"
                   >
                     Automotive battery
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a
-                    href="#"
+                  <Link
+                    to="/products"
                     className="text-white transition hover:opacity-75"
                   >
                     Inverter
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a
-                    href="#"
+                  <Link
+                    to="/products"
                     className="text-white transition hover:opacity-75"
                   >
                     Marine Battery
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a
-                    href="#"
+                  <Link
+                    to="/products"
                     className="text-white transition hover:opacity-75"
                   >
                     E-Rickshaw
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a
-                    href="#"
+                  <Link
+                    to="/products"
                     className="text-white transition hover:opacity-75"
                   >
                     Solar Batteries
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>
