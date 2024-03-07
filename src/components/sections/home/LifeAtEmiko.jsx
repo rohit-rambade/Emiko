@@ -6,13 +6,13 @@ const LifeAtEmiko = () => {
     <>
       <div className="font-poppins  flex flex-col md:flex-row justify-center mx-auto">
         <div className="md:w-1/2 flex  bg-primary items-center justify-center text-white md:text-center text-center font-poppins font-semibold text-2xl p-4 md:p-4">
-          <Fade direction="up">
+          <Fade direction="up" triggerOnce="true">
             <h3 className="">Great Place To Learn</h3>
           </Fade>
         </div>
 
         <div className="bg-slate-200 bg-gradient-to-l from-white to-blue-500 py-4  px-4">
-          <Fade direction="up">
+          <Fade direction="up" triggerOnce="true">
             <h1 className="flex md:justify-center text-left md:text-center text-4xl font-semibold   text-primary">
               Life At Emiko
             </h1>

@@ -65,7 +65,7 @@ const Home = () => {
       <div>
         <section className="text-black font-poppins px-4">
           <div className="container px-5 mx-auto">
-            <Fade direction="up">
+            <Fade direction="up" triggerOnce="true">
               <div className="text-center py-4">
                 <h1 className=" text-4xl font-semibold   text-primary py-8">
                   Our Products
@@ -83,12 +83,12 @@ const Home = () => {
                     key={product.id}
                   >
                     <div className=" inline-flex items-center justify-center rounded-full  flex-shrink-0">
-                      <Fade direction="up">
+                      <Fade direction="up" triggerOnce="true">
                         <img src={product.imgUrl} alt="" />
                       </Fade>
                     </div>
                     <div className="flex-grow">
-                      <Fade direction="up">
+                      <Fade direction="up" triggerOnce="true">
                         <h2 className=" text-lg mb-3">{product.name}</h2>
                       </Fade>
                     </div>

@@ -46,13 +46,13 @@ const Blogs = () => {
 
   return (
     <div className="font-poppins container md:flex flex-col mx-auto">
-      <Fade direction="up">
+      <Fade direction="up" triggerOnce="true">
         <h3 className="text-center text-4xl font-semibold text-primary py-8">
           Latest from blogs & Articles
         </h3>
       </Fade>
       <div className="max-w-screen-xl mx-auto px-4 overflow-hidden">
-        <Fade direction="up">
+        <Fade direction="up" triggerOnce="true">
           {" "}
           <Slider {...settings} className="w-full">
             {blogposts.map((blog) => (
