@@ -11,7 +11,7 @@ const About = () => {
       <section className="bg-gray-100 font-poppins">
         <div className="container mx-auto py-16 px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-8 ">
-            <Fade direction="left">
+            <Fade direction="left" triggerOnce="true">
               <div className="max-w-lg">
                 <h2 className="text-3xl font-semibold text-primary sm:text-4xl">
                   About Us
@@ -33,7 +33,7 @@ const About = () => {
                 </p>
               </div>
             </Fade>
-            <Fade direction="right">
+            <Fade direction="right" triggerOnce="true">
               <div className="mt-12 md:mt-0 flex justify-center">
                 <img
                   src={worker}
@@ -48,7 +48,7 @@ const About = () => {
       <section className="bg-gray-100 font-poppins">
         <div className="container mx-auto py-16 px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-8">
-            <Fade direction="left">
+            <Fade direction="left" triggerOnce="true">
               <div className="mt-12 md:mt-0 order-last md:order-first">
                 <img
                   src={group}
@@ -57,7 +57,7 @@ const About = () => {
                 ></img>
               </div>
             </Fade>
-            <Fade direction="right">
+            <Fade direction="right" triggerOnce="true">
               <div className="max-w-lg">
                 <h2 className="text-3xl font-semibold text-primary sm:text-4xl">
                   OUR MISSION
