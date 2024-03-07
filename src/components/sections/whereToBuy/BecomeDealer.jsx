@@ -1,32 +1,65 @@
 import React, { useState } from "react";
 import findDealer from "../../../assets/whereToBuy/findDealer3.jpg";
+import useFormSubmission from "../../../hooks/useFormSubmission";
+import SuccessPopUp from "../../common/SuccessPopUp";
 
+const initialState = {
+  firstname: "",
+  lastname: "",
+  businessName: "",
+  email: "",
+  contact: "",
+  businessAddress: "",
+  typesOfBusiness: "",
+  noOfYearsInBusiness: "",
+  whyYouWantToBecomeDealer: "",
+  additionalMessage: "",
+};
 const BecomeDealer = () => {
-  const [phoneNumber, setPhoneNumber] = useState("");
-  const [phoneNumberError, setPhoneNumberError] = useState("");
-  const [location, setLocation] = useState("");
+  const [formData, setFormData] = useState(initialState);
+  const { submitForm, showSuccessModal, setShowSuccessModal } =
+    useFormSubmission();
 
-  const handlePhoneNumberChange = (e) => {
-    const value = e.target.value;
-    setPhoneNumber(value);
-    const phoneNumberPattern = /^\d{10}$/;
-    if (!phoneNumberPattern.test(value)) {
-      setPhoneNumberError("Please enter a valid 10-digit phone number");
-    } else {
-      setPhoneNumberError("");
-    }
+  const handleInputChange = (e) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    });
   };
 
-  const handleSubmit = (e) => {
+  // URL of the Google Form endpoint where the form data will be submitted
+  const googleFormUrl =
+    "https://docs.google.com/forms/d/1Va34lHJwFD83T0X-j3t2Uc5F8altWkuWO8WhXLDuxZ4/formResponse";
+
+  // Define Google Form keys mapping with form data fields
+  const googleFormFields = {
+    "entry.1655190295": formData.firstname,
+    "entry.641018633": formData.lastname,
+    "entry.1920334197": formData.businessName,
+    "entry.407835734": formData.email,
+    "entry.123459358": formData.contact,
+    "entry.2043600025": formData.businessAddress,
+    "entry.697304263": formData.typesOfBusiness,
+    "entry.812980961": formData.noOfYearsInBusiness,
+    "entry.2065788009": formData.whyYouWantToBecomeDealer,
+    "entry.727818344": formData.additionalMessage,
+  };
+
+  // Handle form submission
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log("Submitted phone number:", phoneNumber);
-    console.log("Submitted location:", location);
-    // Add your form submission logic here
-  };
 
-  const handleLocationChange = (e) => {
-    const value = e.target.value;
-    setLocation(value);
+    // Call the submitForm function with necessary parameters
+    submitForm(
+      formData, // Form data to be submitted
+      googleFormUrl, // URL of the Google Form
+      googleFormFields, // Mapping of form fields to Google Form keys
+      setFormData, // Function to clear form data after submission
+      initialState // Initial state of the form data
+    );
+  };
+  const handleCloseModal = () => {
+    setShowSuccessModal(false);
   };
 
   return (
@@ -63,47 +96,53 @@ const BecomeDealer = () => {
                 <div className="w-full md:w-1/2 px-3 mb-6 md:mb-0">
                   <label
                     className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
-                    htmlFor="grid-first-name"
+                    htmlFor="firstname"
                   >
                     First Name
                   </label>
                   <input
-                    className="appearance-none block w-full bg-gray-200 text-gray-700 border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
-                    id="grid-first-name"
+                    className="appearance-none block w-full bg-gray-200 text-gray-700 border rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
                     type="text"
+                    id="firstname"
+                    name="firstname"
+                    required
+                    value={formData.firstname}
+                    onChange={handleInputChange}
                     placeholder="Firstname"
                   />
-                  <p className="text-primary text-base ">
-                    Please fill out this field.
-                  </p>
                 </div>
                 <div className="w-full md:w-1/2 px-3">
                   <label
                     className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
-                    htmlFor="grid-last-name"
+                    htmlFor="lastname"
                   >
                     Last Name
                   </label>
                   <input
                     className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-                    id="grid-last-name"
                     type="text"
+                    id="lastname"
+                    name="lastname"
+                    required
+                    value={formData.lastname}
+                    onChange={handleInputChange}
                     placeholder="Lastname"
                   />
                 </div>
               </div>
               <div className="mb-6">
                 <label
-                  htmlFor="location"
+                  htmlFor="businessName"
                   className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
                 >
                   Business Name
                 </label>
                 <textarea
-                  id="location"
-                  name="location"
-                  value={location}
-                  onChange={handleLocationChange}
+                  id="businessName"
+                  name="businessName"
+                  required
+                  value={formData.businessName}
+                  onChange={handleInputChange}
                   placeholder="Enter your company name"
                   rows={1} // Increase the number of rows
                   className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
@@ -111,52 +150,55 @@ const BecomeDealer = () => {
               </div>
               <div className="mb-6">
                 <label
-                  htmlFor="grid-email"
+                  htmlFor="email"
                   className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
                 >
                   Email Address
                 </label>
                 <input
                   className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-                  id="grid-email"
                   type="email"
+                  id="email"
+                  name="email"
+                  required
+                  value={formData.email}
+                  onChange={handleInputChange}
                   placeholder="Email@example.com"
                 />
               </div>
 
               <div className="mb-6">
                 <label
-                  htmlFor="phoneNumber"
+                  htmlFor="contact"
                   className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
                 >
                   Phone Number
                 </label>
                 <input
                   type="tel"
-                  id="phoneNumber"
-                  name="phoneNumber"
-                  value={phoneNumber}
-                  onChange={handlePhoneNumberChange}
+                  id="contact"
+                  name="contact"
+                  required
+                  value={formData.contact}
+                  onChange={handleInputChange}
                   placeholder="Enter your phone number"
                   className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
                 />
-                {phoneNumberError && (
-                  <span style={{ color: "red" }}>{phoneNumberError}</span>
-                )}
               </div>
 
               <div className="mb-6">
                 <label
-                  htmlFor="location"
+                  htmlFor="businessAddress"
                   className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
                 >
                   business Address
                 </label>
                 <textarea
-                  id="location"
-                  name="location"
-                  value={location}
-                  onChange={handleLocationChange}
+                  id="businessAddress"
+                  name="businessAddress"
+                  required
+                  value={formData.businessAddress}
+                  onChange={handleInputChange}
                   placeholder="Please enter your full address [City, District,  State, Country]"
                   rows={5} // Increase the number of rows
                   className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
@@ -164,16 +206,16 @@ const BecomeDealer = () => {
               </div>
               <div className="mb-6">
                 <label
-                  htmlFor="location"
+                  htmlFor="typesOfBusiness"
                   className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
                 >
                   Type of business
                 </label>
                 <textarea
-                  id="location"
-                  name="location"
-                  value={location}
-                  onChange={handleLocationChange}
+                  id="typesOfBusiness"
+                  name="typesOfBusiness"
+                  value={formData.typesOfBusiness}
+                  onChange={handleInputChange}
                   placeholder="e.g. Retail, Service"
                   rows={5} // Increase the number of rows
                   className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
@@ -181,36 +223,33 @@ const BecomeDealer = () => {
               </div>
               <div className="mb-6">
                 <label
-                  htmlFor="phoneNumber"
+                  htmlFor="noOfYearsInBusiness"
                   className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
                 >
                   Number of years in business
                 </label>
                 <input
                   type="num"
-                  id="noOfYears"
-                  name="phoneNumber"
-                  value={phoneNumber}
-                  onChange={handlePhoneNumberChange}
+                  id="noOfYearsInBusiness"
+                  name="noOfYearsInBusiness"
+                  value={formData.noOfYearsInBusiness}
+                  onChange={handleInputChange}
                   placeholder="Enter number of years in business"
                   className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
                 />
-                {phoneNumberError && (
-                  <span style={{ color: "red" }}>{phoneNumberError}</span>
-                )}
               </div>
               <div className="mb-6">
                 <label
-                  htmlFor="location"
+                  htmlFor="whyYouWantToBecomeDealer"
                   className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
                 >
                   Why do you want to become a dealer for Emiko Battery?
                 </label>
                 <textarea
-                  id="location"
-                  name="location"
-                  value={location}
-                  onChange={handleLocationChange}
+                  id="whyYouWantToBecomeDealer"
+                  name="whyYouWantToBecomeDealer"
+                  value={formData.whyYouWantToBecomeDealer}
+                  onChange={handleInputChange}
                   placeholder=""
                   rows={5} // Increase the number of rows
                   className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
@@ -221,12 +260,17 @@ const BecomeDealer = () => {
                 <div className="w-full px-3">
                   <label
                     className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
-                    htmlFor="grid-password"
+                    htmlFor="additionalMessage"
                   >
                     Additional Message/Battery Requirement
                   </label>
                   <textarea
                     rows="8"
+                    id="additionalMessage"
+                    name="additionalMessage"
+                    required
+                    value={formData.additionalMessage}
+                    onChange={handleInputChange}
                     className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
                   ></textarea>
                 </div>
@@ -240,6 +284,9 @@ const BecomeDealer = () => {
                 </div>
               </div>
             </form>
+            {showSuccessModal && (
+              <SuccessPopUp handleCloseModal={handleCloseModal} />
+            )}
           </div>
         </div>
       </div>

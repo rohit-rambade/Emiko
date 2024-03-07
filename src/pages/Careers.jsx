@@ -26,16 +26,16 @@ const Careers = () => {
 
   // URL of the Google Form endpoint where the form data will be submitted
   const googleFormUrl =
-    "https://docs.google.com/forms/d/1K4Y1Ar_QqF0PEcU5NdzUV1-XLuWUcDARrkpmHFZO3o4/formResponse";
+    "https://docs.google.com/forms/d/1w8xsCRBtVOrTPCVdrL30qw5wjAYjw0qygC9B_-4ZFUc/formResponse";
 
   // Define Google Form keys mapping with form data fields
   const googleFormFields = {
-    "entry.562121278": formData.fullname,
-    "entry.2017627683": formData.email,
-    "entry.138380570": formData.contact,
-    "entry.2112131485": formData.location,
-    "entry.233252045": formData.areaOfInterest,
-    "entry.1780225360": formData.additionalMessage,
+    "entry.2124187975": formData.fullname,
+    "entry.365035607": formData.email,
+    "entry.1307504302": formData.contact,
+    "entry.1093003370": formData.location,
+    "entry.1553920664": formData.areaOfInterest,
+    "entry.233510410": formData.additionalMessage,
   };
 
   // Handle form submission

@@ -26,14 +26,14 @@ const Footer = () => {
   };
   // URL of the Google Form endpoint where the form data will be submitted
   const googleFormUrl =
-    "https://docs.google.com/forms/d/1KTpgWgaY-67kmIS-NWrlAakY_C0Qa2x2OIYXtqUuluc/formResponse";
+    "https://docs.google.com/forms/d/1mgt68UuOYeR3NYvFwSxwo328LrBdpSW0yolFZlr9onI/formResponse";
 
   // Define Google Form keys mapping with form data fields
   const googleFormFields = {
-    "entry.2103262084": formData.fullname,
-    "entry.495060411": formData.email,
-    "entry.727878866": formData.contact,
-    "entry.879114805": formData.message,
+    "entry.1275351498": formData.fullname,
+    "entry.2030667428": formData.email,
+    "entry.603646208": formData.contact,
+    "entry.1780901706": formData.message,
   };
 
   const handleSubmit = async (e) => {

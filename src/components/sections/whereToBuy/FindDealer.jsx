@@ -1,32 +1,57 @@
 import React, { useState } from "react";
 import findDealer from "../../../assets/whereToBuy/findDealer3.jpg";
+import useFormSubmission from "../../../hooks/useFormSubmission";
+import SuccessPopUp from "../../common/SuccessPopUp";
 
+const initialState = {
+  firstname: "",
+  lastname: "",
+  email: "",
+  contact: "",
+  preferredLocation: "",
+  additionalMessage: "",
+};
 const FindDealer = () => {
-  const [phoneNumber, setPhoneNumber] = useState("");
-  const [phoneNumberError, setPhoneNumberError] = useState("");
-  const [location, setLocation] = useState("");
+  const [formData, setFormData] = useState(initialState);
+  const { submitForm, showSuccessModal, setShowSuccessModal } =
+    useFormSubmission();
 
-  const handlePhoneNumberChange = (e) => {
-    const value = e.target.value;
-    setPhoneNumber(value);
-    const phoneNumberPattern = /^\d{10}$/;
-    if (!phoneNumberPattern.test(value)) {
-      setPhoneNumberError("Please enter a valid 10-digit phone number");
-    } else {
-      setPhoneNumberError("");
-    }
+  const handleInputChange = (e) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    });
   };
 
-  const handleSubmit = (e) => {
+  // URL of the Google Form endpoint where the form data will be submitted
+  const googleFormUrl =
+    "https://docs.google.com/forms/d/1GstbrrCJrh-eoI8izTtV-m3UPV84kEOAJzfr05h4uyk/formResponse";
+
+  // Define Google Form keys mapping with form data fields
+  const googleFormFields = {
+    "entry.1812853748": formData.firstname,
+    "entry.565781565": formData.lastname,
+    "entry.58649582": formData.email,
+    "entry.147560483": formData.contact,
+    "entry.1211165323": formData.preferredLocation,
+    "entry.1198756940": formData.additionalMessage,
+  };
+
+  // Handle form submission
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log("Submitted phone number:", phoneNumber);
-    console.log("Submitted location:", location);
-    // Add your form submission logic here
-  };
 
-  const handleLocationChange = (e) => {
-    const value = e.target.value;
-    setLocation(value);
+    // Call the submitForm function with necessary parameters
+    submitForm(
+      formData, // Form data to be submitted
+      googleFormUrl, // URL of the Google Form
+      googleFormFields, // Mapping of form fields to Google Form keys
+      setFormData, // Function to clear form data after submission
+      initialState // Initial state of the form data
+    );
+  };
+  const handleCloseModal = () => {
+    setShowSuccessModal(false);
   };
 
   return (
@@ -66,83 +91,89 @@ const FindDealer = () => {
                   <div className="w-full md:w-1/2 px-3 mb-6 md:mb-0">
                     <label
                       className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
-                      htmlFor="grid-first-name"
+                      htmlFor="firstname"
                     >
                       First Name
                     </label>
                     <input
-                      className="appearance-none block w-full bg-gray-200 text-gray-700 border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
-                      id="grid-first-name"
+                      className="appearance-none block w-full bg-gray-200 text-gray-700 border  rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
+                      id="firstname"
+                      name="firstname"
+                      required
+                      value={formData.firstname}
+                      onChange={handleInputChange}
                       type="text"
                       placeholder="First"
                     />
-                    <p className="text-primary text-base ">
-                      Please fill out this field.
-                    </p>
                   </div>
                   <div className="w-full md:w-1/2 px-3">
                     <label
                       className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
-                      htmlFor="grid-last-name"
+                      htmlFor="lastname"
                     >
                       Last Name
                     </label>
                     <input
                       className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-                      id="grid-last-name"
-                      type="text"
+                      id="lastname"
+                      name="lastname"
+                      required
+                      value={formData.lastname}
+                      onChange={handleInputChange}
                       placeholder="Last"
                     />
                   </div>
                 </div>
                 <div className="mb-6">
                   <label
-                    htmlFor="grid-email"
+                    htmlFor="email"
                     className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
                   >
                     Email Address
                   </label>
                   <input
                     className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-                    id="grid-email"
-                    type="email"
+                    id="email"
+                    name="email"
+                    required
+                    value={formData.email}
+                    onChange={handleInputChange}
                     placeholder="Email@example.com"
                   />
                 </div>
 
                 <div className="mb-6">
                   <label
-                    htmlFor="phoneNumber"
+                    htmlFor="contact"
                     className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
                   >
                     Phone Number
                   </label>
                   <input
                     type="tel"
-                    id="phoneNumber"
-                    name="phoneNumber"
-                    value={phoneNumber}
-                    onChange={handlePhoneNumberChange}
+                    id="contact"
+                    name="contact"
+                    required
+                    value={formData.contact}
+                    onChange={handleInputChange}
                     placeholder="Enter your phone number"
                     className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
                   />
-                  {phoneNumberError && (
-                    <span style={{ color: "red" }}>{phoneNumberError}</span>
-                  )}
                 </div>
 
                 <div className="mb-6">
                   <label
-                    htmlFor="location"
+                    htmlFor="preferredLocation"
                     className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
                   >
                     Preferred Location
                   </label>
                   <textarea
-                    id="location"
-                    name="location"
-                    value={location}
-                    onChange={handleLocationChange}
+                    id="preferredLocation"
+                    name="preferredLocation"
+                    required
+                    value={formData.preferredLocation}
+                    onChange={handleInputChange}
                     placeholder="Enter your preferred location"
                     rows={5} // Increase the number of rows
                     className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
@@ -153,12 +184,17 @@ const FindDealer = () => {
                   <div className="w-full px-3">
                     <label
                       className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
-                      htmlFor="grid-password"
+                      htmlFor="additionalMessage"
                     >
                       Additional Message/Battery Requirement
                     </label>
                     <textarea
                       rows="8"
+                      id="additionalMessage"
+                      name="additionalMessage"
+                      required
+                      value={formData.additionalMessage}
+                      onChange={handleInputChange}
                       className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
                     ></textarea>
                   </div>
@@ -172,6 +208,9 @@ const FindDealer = () => {
                   </div>
                 </div>
               </form>
+              {showSuccessModal && (
+                <SuccessPopUp handleCloseModal={handleCloseModal} />
+              )}
             </div>
           </div>
         </div>
