@@ -248,7 +248,7 @@ const Timeline = () => {
             </Fade>
 
             <div className="grid gap-8 mt-8 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3">
-              <div className="w-full max-w-xs text-center">
+              <div className="w-full  text-center">
                 <Fade direction="up" triggerOnce="true">
                   <img
                     className="object-cover object-center w-full h-48 mx-auto rounded-lg"
@@ -266,7 +266,7 @@ const Timeline = () => {
                 </div>
               </div>
 
-              <div className="w-full max-w-xs text-center">
+              <div className="w-full text-center">
                 <Link to="/carrers">
                   <Fade direction="up" triggerOnce="true">
                     <img
@@ -286,7 +286,7 @@ const Timeline = () => {
                 </Link>
               </div>
 
-              <div className="w-full max-w-xs text-center">
+              <div className="w-full  text-center">
                 <Link to="/faq">
                   <Fade direction="up" triggerOnce="true">
                     <img
