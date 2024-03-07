@@ -6,7 +6,7 @@ import { solarBattery } from "./products/solor";
 import inverterBanner from "../assets/product/banners/Inverter.jpg";
 
 import marineBanner from "../assets/product/banners/ship.jpg";
-
+import eRickshawBanner from "../assets/product/E-ric/rickShaw.jpeg";
 import solarBanner from "../assets/product/banners/solar.jpg";
 import carBanner from "../assets/product/banners/car.jpg";
 import automotiveImg from "../assets/product/Automotive/autometive.png";
@@ -32,6 +32,9 @@ import boatwithcontainer from "../assets/product/Icons/Marine/boat-with-containe
 
 //E-Rikshaw Applications
 import transport from "../assets/product/Icons/E-Rickshaw/transport_11334923.png";
+
+// Solar Applications
+import solarIcon from "../assets/product/Icons/Solar/solar.png";
 export const products = [
   {
     id: 1,
@@ -93,27 +96,23 @@ export const products = [
     applicationDetails: [
       {
         id: 1,
-        img: bus,
+        img: hatchbackcar,
       },
       {
         id: 2,
-        img: excavator,
-      },
-      {
-        id: 3,
-        img: jcb,
-      },
-      {
-        id: 4,
         img: suv,
       },
       {
-        id: 5,
+        id: 3,
+        img: bus,
+      },
+      {
+        id: 4,
         img: tractor,
       },
       {
-        id: 6,
-        img: hatchbackcar,
+        id: 5,
+        img: excavator,
       },
     ],
     advantages: [
@@ -125,14 +124,17 @@ export const products = [
       {
         id: 2,
         title: "Corrosion-resistant",
+        desc: "Protects against corrosive elements.",
       },
       {
         id: 3,
         title: "Vibration-resistant",
+        desc: "Withstands vehicle movement vibrations.",
       },
       {
         id: 4,
         title: "Ready to install",
+        desc: "Hassle-free installation, immediate functionality.",
       },
       {
         id: 5,
@@ -216,6 +218,11 @@ export const products = [
         title: "Pre-Charged & Ready to Use",
         desc: "Factory charged, high-quality acid",
       },
+      {
+        id: 5,
+        title: "Efficient Power Conversion",
+        desc: "Efficient DC to AC conversion. Lowered bills.",
+      },
     ],
   },
   {
@@ -277,14 +284,17 @@ export const products = [
       {
         id: 2,
         title: "Corrosion-resistant",
+        desc: "Protects against corrosive elements.",
       },
       {
         id: 3,
         title: "Vibration-resistant",
+        desc: "Withstands vehicle movement vibrations.",
       },
       {
         id: 4,
         title: "Spill-proof",
+        desc: "Safeguards against leaks, ideal for marine environments.",
       },
       {
         id: 5,
@@ -299,7 +309,7 @@ export const products = [
     title: "E-Rickshaw Batteries",
     description: `When power stops, life stops. Before the light goes out, let our batteries take your load.Experience Meets Innovation to Deliver Next-Gen Batteries.`,
 
-    banner: "",
+    banner: eRickshawBanner,
 
     tagline: "Uninterrupted Energy on the Open Seas",
     desc: `Empower Your E-Rickshaw with Cutting-Edge Energy: Our tubular batteries, featuring high surface carbon technology, elevate the performance of E-Rickshaws with enhanced discharge capabilities and rapid deep cycle recovery. Specially designed for prolonged and frequent use in demanding urban environments, these batteries boast an extended life cycle, providing reliable power for an uninterrupted journey. The utilization of advanced polyethylene separators ensures optimal porosity and mechanical strength, minimizing maintenance with low water top-ups. With a life expectancy of up to 5-6 years, our tubular batteries are engineered to meet the rigorous demands of E-Rickshaws, lighting up the path for sustainable and efficient transportation, from city streets to industrial zones`,
@@ -364,6 +374,11 @@ export const products = [
         title: "Vibration-resistant",
         desc: "Handles rough roads.",
       },
+      {
+        id: 5,
+        title: "Rapid Charging Capability",
+        desc: "Rapid charging boosts productivity and profitability.",
+      },
     ],
   },
   {
@@ -409,7 +424,13 @@ export const products = [
       },
     ],
     rangesOfBatteries: solarBattery,
-    isApplication: false,
+    isApplication: true,
+    applicationDetails: [
+      {
+        id: 1,
+        img: solarIcon,
+      },
+    ],
     advantages: [
       {
         id: 1,
@@ -430,6 +451,11 @@ export const products = [
         id: 4,
         title: "Temperature-resistant:",
         desc: "Reliable performance in extreme climates.",
+      },
+      {
+        id: 4,
+        title: "Extended Lifespan",
+        desc: "Prolonged battery durability and reliability.",
       },
     ],
   },

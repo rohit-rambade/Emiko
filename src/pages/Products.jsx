@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import SingleProduct from "../components/sections/products/SingleProduct";
 import { products } from "../constants/products";
 import Loader from "../utils/Loader";
+import { Fade } from "react-awesome-reveal";
 const Product = () => {
   const [selectedProduct, setSelectedProduct] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
@@ -31,26 +32,34 @@ const Product = () => {
   };
   return (
     <div>
-      <h1 className="text-primary text-4xl font-semibold py-8 px-4 text-center">
-        Products
-      </h1>
-      <h3 className="font-semibold text-3xl md:text-4xl px-4 text-center">
-        Power up your life with our services
-      </h3>
+      <Fade direction="up" triggerOnce="true">
+        <h1 className="text-primary text-4xl font-semibold py-8 px-4 text-center">
+          Products
+        </h1>
+      </Fade>
+      <Fade direction="up" triggerOnce="true">
+        <h3 className="font-semibold text-3xl md:text-4xl px-4 text-center">
+          Power up your life with our services
+        </h3>
+      </Fade>
       <div className="flex flex-wrap gap-y-3 md:gapy justify-evenly items-center my-8">
         {products.map((product) => {
           const isSelected =
             selectedProduct && selectedProduct.id === product.id;
           return (
-            <button
-              className={`relative flex h-[50px] p-2 w-28 md:w-52 text-sm md:text-base items-center justify-center overflow-hidden bg-red-100 font-semibold text-black rounded-full shadow-2xl ${
-                isSelected ? "border-2 border-primary" : ""
-              }`}
-              key={product.id}
-              onClick={() => handleProductClick(product)}
-            >
-              <span className="relative z-10 font-poppins">{product.name}</span>
-            </button>
+            <Fade direction="up" triggerOnce="true">
+              <button
+                className={`relative h-12 w-40 overflow-hidden border border-primary text-primary shadow-2xl transition-all duration-200 before:absolute before:bottom-0 before:left-0 before:right-0 before:top-0 before:m-auto before:h-0 before:w-0 rounded-full before:rounded-full before:bg-primary before:duration-300 before:ease-out hover:text-white hover:shadow-primary hover:before:h-40 hover:before:w-40 hover:before:opacity-80 ${
+                  isSelected ? " bg-primary text-white" : ""
+                }`}
+                key={product.id}
+                onClick={() => handleProductClick(product)}
+              >
+                <span className="relative z-10 font-poppins font-semibold">
+                  {product.name}
+                </span>
+              </button>
+            </Fade>
           );
         })}
       </div>

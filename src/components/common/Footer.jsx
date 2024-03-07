@@ -4,6 +4,7 @@ import { MdEmail } from "react-icons/md";
 import { Link } from "react-router-dom";
 import SuccessPopUp from "./SuccessPopUp";
 import useFormSubmission from "../../hooks/useFormSubmission";
+import logo from "../../assets/logo.png";
 
 const initialState = {
   fullname: "",
@@ -25,14 +26,14 @@ const Footer = () => {
   };
   // URL of the Google Form endpoint where the form data will be submitted
   const googleFormUrl =
-    "https://docs.google.com/forms/d/1KTpgWgaY-67kmIS-NWrlAakY_C0Qa2x2OIYXtqUuluc/formResponse";
+    "https://docs.google.com/forms/d/1mgt68UuOYeR3NYvFwSxwo328LrBdpSW0yolFZlr9onI/formResponse";
 
   // Define Google Form keys mapping with form data fields
   const googleFormFields = {
-    "entry.2103262084": formData.fullname,
-    "entry.495060411": formData.email,
-    "entry.727878866": formData.contact,
-    "entry.879114805": formData.message,
+    "entry.1275351498": formData.fullname,
+    "entry.2030667428": formData.email,
+    "entry.603646208": formData.contact,
+    "entry.1780901706": formData.message,
   };
 
   const handleSubmit = async (e) => {
@@ -56,19 +57,25 @@ const Footer = () => {
   return (
     <footer
       id="footer-section"
-      className="bg-gray-400 text-white p-5 font-poppins"
+      className="bg-[#3D3939] text-white px-14 py-8 font-poppins"
     >
       <div className="">
         <div className="flex flex-col md:flex-row gap-y-6">
           <div className="md:w-1/4">
             <div className="">
-              <p className=" uppercase ">About Us</p>
+              <img src={logo} alt="emiko-logo" className="w-2/4 ml-7" />
+              <p className=" uppercase ml-12 text-primary text-xl font-semibold">
+                About Us
+              </p>
             </div>
             <div className="flex flex-col">
-              <p className="mt-4 max-w-xs">
-                EMIKO, by JPG Batteries, enters alternative energy with
-                cutting-edge tech, aiming to revolutionize the industry across
-                diverse segments like solar, e-rickshaws, and batteries.
+              <p className="mt-4 max-w-xs ml-12">
+                JPG Batteries Pvt. Ltd., a subsidiary of a prominent 700 crore
+                group, has been a key player in the lead acid battery industry
+                since 1988. Introducing the EMIKO brand, the company aims to
+                revolutionize the energy sector by providing cutting-edge
+                solutions in power backup, solar energy, e-rickshaws,
+                automotive, and two-wheeler batteries
               </p>
 
               <ul className="mt-8 flex gap-6 flex-col">
@@ -77,25 +84,29 @@ const Footer = () => {
                     <div>
                       <FaLocationArrow
                         size={30}
-                        color="black"
+                        color="white"
                         className="mt-2"
                       />
                     </div>
-                    <p>EMIKO House, Viman Nagar, Pune, Maharashtra, India.</p>
+                    <p>
+                      Ground & 1st Floor, Gera Emporia, behind Phoenix Boundary
+                      Road, off Nagar Road, Clover Park, Viman Nagar, Pune,
+                      Maharashtra 411014
+                    </p>
                   </div>
                 </li>
                 <li>
                   <div className="flex gap-x-4 items-center">
                     <div>
-                      <FaPhone size={30} color="black" className="mt-1" />
+                      <FaPhone size={30} color="white" className="mt-1" />
                     </div>
-                    <a href="tel:18001204954">18001204954</a>
+                    <a href="tel:18001204954">1800 120 4954</a>
                   </div>
                 </li>
                 <li>
                   <div className="flex gap-x-4 items-center">
                     <div>
-                      <MdEmail size={30} color="black" className="mt-1" />
+                      <MdEmail size={30} color="white" className="mt-1" />
                     </div>
                     <a href="mailto:connect@emiko.co.in">connect@emiko.co.in</a>
                   </div>
@@ -107,7 +118,9 @@ const Footer = () => {
           <div className="md:w-1/2 flex flex-col md:flex-row gap-y-4 justify-around">
             <div className="flex ">
               <div>
-                <p className="text-white uppercase">Quick Links</p>
+                <p className=" uppercase text-primary text-xl font-semibold">
+                  Quick Links
+                </p>
 
                 <ul className="mt-6 space-y-4 text-xl uppercase">
                   <li>
@@ -143,14 +156,6 @@ const Footer = () => {
                     </Link>
                   </li>
                   <li>
-                    <Link
-                      to="/where-to-buy"
-                      className="text-white transition hover:opacity-75"
-                    >
-                      Where to buy
-                    </Link>
-                  </li>
-                  <li>
                     <Link className="text-white transition hover:opacity-75">
                       Contact Us
                     </Link>
@@ -159,53 +164,58 @@ const Footer = () => {
               </div>
             </div>
             <div className="">
-              <p className="text-white uppercase">Products</p>
+              <p className=" uppercase text-primary text-xl font-semibold">
+                Products
+              </p>
 
               <ul className="mt-6 space-y-4 text-xl ">
                 <li>
-                  <a
-                    href="#"
+                  <Link
+                    to="/products"
                     className="text-white transition hover:opacity-75"
                   >
                     Automotive battery
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a
-                    href="#"
+                  <Link
+                    to="/products"
                     className="text-white transition hover:opacity-75"
                   >
-                    Inveter
-                  </a>
+                    Inverter
+                  </Link>
                 </li>
                 <li>
-                  <a
-                    href="#"
+                  <Link
+                    to="/products"
                     className="text-white transition hover:opacity-75"
                   >
                     Marine Battery
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a
-                    href="#"
+                  <Link
+                    to="/products"
                     className="text-white transition hover:opacity-75"
                   >
                     E-Rickshaw
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a
-                    href="#"
+                  <Link
+                    to="/products"
                     className="text-white transition hover:opacity-75"
                   >
                     Solar Batteries
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>
           </div>
           <div className="md:w-1/4">
+            <h1 className="text-primary text-xl font-semibold pb-4">
+              QUICK ENQUIRY{" "}
+            </h1>
             <form className="flex flex-col gap-y-4" onSubmit={handleSubmit}>
               <input
                 type="text"
