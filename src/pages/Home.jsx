@@ -12,10 +12,24 @@ import LifeAtEmiko from "../components/sections/home/LifeAtEmiko";
 import ExploreOpportunities from "../components/sections/home/ExploreOpportunities";
 import BlogsAndArticles from "../components/sections/home/BlogsAndArticles";
 import WorkCulture from "../components/sections/home/WorkCulture";
+// sliderImages--------------------
+import slider1 from "../assets/sllider/slider1.jpeg";
+import slider2 from "../assets/sllider/slider2.jpeg";
+import slider3 from "../assets/sllider/slider3.jpeg";
+import slider4 from "../assets/sllider/slider4.jpeg";
+
 const Home = () => {
   const [index, setIndex] = useState(0);
 
-  const images = [mainPage, second, natureEmiko];
+  const images = [
+    mainPage,
+    second,
+    natureEmiko,
+    slider1,
+    slider2,
+    slider3,
+    slider4,
+  ];
 
   useEffect(() => {
     const intervalId = setInterval(() => {
