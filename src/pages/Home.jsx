@@ -12,6 +12,7 @@ import LifeAtEmiko from "../components/sections/home/LifeAtEmiko";
 import ExploreOpportunities from "../components/sections/home/ExploreOpportunities";
 import BlogsAndArticles from "../components/sections/home/BlogsAndArticles";
 import WorkCulture from "../components/sections/home/WorkCulture";
+import { Link } from "react-router-dom";
 const Home = () => {
   const [index, setIndex] = useState(0);
 
@@ -82,16 +83,18 @@ const Home = () => {
                     className="p-4 w-full md:w-1/3 lg:w-1/4  flex flex-col text-center items-center hover:bg-black hover:delay-200 duration-1000 ease-out hover:text-white cursor-pointer shadow-[0_3px_10px_rgb(0,0,0,0.2)]"
                     key={product.id}
                   >
-                    <div className=" inline-flex items-center justify-center rounded-full  flex-shrink-0">
-                      <Fade direction="up" triggerOnce="true">
-                        <img src={product.imgUrl} alt="" />
-                      </Fade>
-                    </div>
-                    <div className="flex-grow">
-                      <Fade direction="up" triggerOnce="true">
-                        <h2 className=" text-lg mb-3">{product.name}</h2>
-                      </Fade>
-                    </div>
+                    <Link to={`/products/${product.id - 1}`}>
+                      <div className=" inline-flex items-center justify-center rounded-full  flex-shrink-0">
+                        <Fade direction="up" triggerOnce="true">
+                          <img src={product.imgUrl} alt="" />
+                        </Fade>
+                      </div>
+                      <div className="flex-grow">
+                        <Fade direction="up" triggerOnce="true">
+                          <h2 className=" text-lg mb-3">{product.name}</h2>
+                        </Fade>
+                      </div>
+                    </Link>
                   </div>
                 );
               })}
