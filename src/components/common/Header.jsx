@@ -54,7 +54,7 @@ const Header = () => {
               <a
                 type="button"
                 href="tel:18001204954"
-                className="text-black flex w-auto space-x-2 bg-primary  hover:bg-secondary focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center  "
+                className="text-black flex w-auto space-x-2 bg-primary  hover:bg-secondary focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-2 custom:px-4 py-2 text-center  "
               >
                 <FaPhone size={20} color="black" />
                 <span className="text-white font-semibold">1800 120 4954</span>
