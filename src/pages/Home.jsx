@@ -84,7 +84,7 @@ const Home = () => {
                   >
                     <div className=" inline-flex items-center justify-center rounded-full  flex-shrink-0">
                       <Fade direction="up" triggerOnce="true">
-                        <img src={product.imgUrl} alt="" />
+                        <img src={product.imgUrl} alt="Battery Manufacturer in India"/>
                       </Fade>
                     </div>
                     <div className="flex-grow">

@@ -8,28 +8,28 @@ import { Fade } from "react-awesome-reveal";
 const WhyChooseEmiko = () => {
   return (
     <div>
-      <div className="md:relative   md:mb-32">
+      <div className="md:relative md:mb-32">
         <Fade direction="up" triggerOnce="true">
           <img
             src={banner}
             alt="Banner Image"
-            className="w-full hidden md:block"
+            className="hidden w-full md:block"
           />
         </Fade>
 
-        <div className="md:absolute -bottom-28 py-5 md:px-20 left-0 right-0 ">
-          <div className="flex flex-col md:flex-row md:relative justify-start items-center bg-primary  md:h-44 md:mx-16">
+        <div className="left-0 right-0 py-5 md:absolute -bottom-28 md:px-20 ">
+          <div className="flex flex-col items-center justify-start md:flex-row md:relative bg-primary md:h-44 md:mx-16">
             <Fade direction="up" triggerOnce="true">
               {" "}
-              <div className="flex flex-col space-y-9 md:flex-row items-center p-2 md:p-5 ">
+              <div className="flex flex-col items-center p-2 space-y-9 md:flex-row md:p-5 ">
                 <div className="w-fit">
-                  <h1 className="text-2xl text-white font-semibold">
+                  <h2 className="text-2xl font-semibold text-white">
                     Why Choose EMIKO?
-                  </h1>
+                  </h2>
                 </div>
                 <Fade direction="up" triggerOnce="true">
                   <div>
-                    <ul className="md:flex md:justify-center space-y-6 md:space-y-0 justify-center  md:space-x-10  list-disc font-semibold md:text-lg px-8 text-white">
+                    <ul className="justify-center px-8 space-y-6 font-semibold text-white list-disc md:flex md:justify-center md:space-y-0 md:space-x-10 md:text-lg">
                       <li className="md:w-1/3 ">
                         Exceptional Performance & durability
                       </li>
@@ -40,7 +40,7 @@ const WhyChooseEmiko = () => {
               </div>
             </Fade>
 
-            <div className=" p-6 md:p-0 md:absolute md:-right-12 w-5/6 md:w-1/4 flex justify-start">
+            <div className="flex justify-start w-5/6 p-6 md:p-0 md:absolute md:-right-12 md:w-1/4">
               <Fade direction="up" triggerOnce="true">
                 <img src={batteryEMT} alt="battery" className="w-full" />
               </Fade>

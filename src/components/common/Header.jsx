@@ -40,30 +40,30 @@ const Header = () => {
     setIsOpen(false);
   };
   return (
-    <div className="sticky top-0 w-full bg-white mx-auto font-poppins z-50 p-2 md:p-2 ">
+    <div className="sticky top-0 z-50 w-full p-2 mx-auto bg-white font-poppins md:p-2 ">
       <header>
         <nav>
-          <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-2 md:p-0 ">
+          <div className="flex flex-wrap items-center justify-between max-w-screen-xl p-2 mx-auto md:p-0 ">
             <Link
               to="/"
               className="flex items-center space-x-3 rtl:space-x-reverse"
             >
               <img src={logo} className="h-10 md:h-16" alt="Emiko Logo" />
             </Link>
-            <div className="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
+            <div className="flex space-x-3 md:order-2 md:space-x-0 rtl:space-x-reverse">
               <a
                 type="button"
                 href="tel:18001204954"
-                className="text-black flex w-auto md:space-x-2 bg-primary hover:bg-secondary focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-1  py-2 text-center  "
+                className="flex w-auto px-1 py-2 text-sm font-medium text-center text-black rounded-lg md:space-x-2 bg-primary hover:bg-secondary focus:ring-4 focus:outline-none focus:ring-blue-300 "
               >
                 <FaPhone className="hidden md:block" size={20} color="black" />
-                <span className="text-white font-semibold">1800 120 4954</span>
+                <span className="font-semibold text-white">1800 120 4954</span>
               </a>
               <button
                 onClick={() => setIsOpen(!isOpen)}
                 data-collapse-toggle="navbar-sticky"
                 type="button"
-                className=" md:hidden  "
+                className=" md:hidden"
               >
                 {isOpen ? <FaXmark size={35} /> : <SlMenu size={35} />}
               </button>
@@ -74,7 +74,7 @@ const Header = () => {
               } top-full bg-white  left-0  md:p-2  flex flex-col  gap-y-3 md:flex-row  text-left   md:relative md:w-auto md:flex`}
             >
               <div className="flex">
-                <ul className="flex flex-col  md:items-center  w-full p-4 md:p-0 h    md:space-x-8 rtl:space-x-reverse md:flex-row   ">
+                <ul className="flex flex-col w-full p-4 md:items-center md:p-0 h md:space-x-8 rtl:space-x-reverse md:flex-row ">
                   {navMenu.map((menu) => {
                     return (
                       <div key={menu.id}>
@@ -97,7 +97,7 @@ const Header = () => {
                           </li>
                         ) : (
                           <div
-                            className="relative cursor-pointer md:p-2  "
+                            className="relative cursor-pointer md:p-2"
                             onClick={() => {
                               toggleSubMenu(menu.id);
                               // Close menu on mobile after selecting submenu
