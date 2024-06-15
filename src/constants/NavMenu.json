@@ -8,19 +8,8 @@
   {
     "id": 2,
     "title": "About Us",
-    "isSubMenu": true,
-    "submenu": [
-      {
-        "id": 1,
-        "title": "History",
-        "link": "/history"
-      },
-      {
-        "id": 2,
-        "title": "Vision",
-        "link": "/aboutus"
-      }
-    ]
+    "link": "/aboutus",
+    "isSubMenu": false
   },
   {
     "id": 3,

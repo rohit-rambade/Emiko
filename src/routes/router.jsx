@@ -41,10 +41,10 @@ export const router = createBrowserRouter([
         path: "carrers",
         element: <Careers />,
       },
-      {
-        path: "history",
-        element: <History />,
-      },
+      // {
+      //   path: "history",
+      //   element: <History />,
+      // },
       // {
       //   path: "where-to-buy",
       //   element: <WhereToBuy />,

@@ -4,6 +4,7 @@ import worker from "../assets/aboutUs/workerr.jpg";
 import group from "../assets/aboutUs/group.jpg";
 
 import { Outlet } from "react-router-dom";
+import Timeline from "../components/sections/history/Timeline";
 
 const About = () => {
   return (
@@ -81,6 +82,7 @@ const About = () => {
           </div>
         </div>
       </section>
+      <Timeline />
       <Outlet />
     </>
   );

@@ -88,7 +88,7 @@ const SingleProduct = ({ product }) => {
               >
                 <Fade direction="up" triggerOnce="true">
                   {" "}
-                  <img src={battery.url} alt="profile-picture" />
+                  <img src={battery.url} alt="Battery Manufacturer" />
                 </Fade>
               </div>
             );
